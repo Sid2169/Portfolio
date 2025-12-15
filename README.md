@@ -181,3 +181,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Keep the related setup steps aligned with the current scripts.
 - **React component structure** — Check that metadata changes are reflected in the deployed preview.
 - **project scripts** — Use the existing project patterns when extending this area.
+- **styling conventions** — Update the documentation if the visible behavior changes.
