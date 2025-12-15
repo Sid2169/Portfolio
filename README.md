@@ -87,3 +87,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Use the existing project patterns when extending this area.
 - **environment configuration** — Use the existing project patterns when extending this area.
 - **Vercel deployment** — Confirm the expected behavior on a clean checkout.
+- **browser support** — Confirm the layout at mobile, tablet, and desktop widths.
