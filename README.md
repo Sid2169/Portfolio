@@ -18,3 +18,4 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Additional Notes
 
 - **build output** — Check the required environment values before deploying.
+- **React component structure** — Include a short reproduction step when reporting issues.
