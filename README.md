@@ -182,3 +182,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Check that metadata changes are reflected in the deployed preview.
 - **project scripts** — Use the existing project patterns when extending this area.
 - **styling conventions** — Update the documentation if the visible behavior changes.
+- **browser support** — Verify that links and references still resolve.
