@@ -183,3 +183,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **project scripts** — Use the existing project patterns when extending this area.
 - **styling conventions** — Update the documentation if the visible behavior changes.
 - **browser support** — Verify that links and references still resolve.
+- **accessibility** — Verify the change in both development and production builds.
