@@ -185,3 +185,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Verify that links and references still resolve.
 - **accessibility** — Verify the change in both development and production builds.
 - **Vite setup** — Verify that links and references still resolve.
+- **SEO metadata** — Confirm the layout at mobile, tablet, and desktop widths.
