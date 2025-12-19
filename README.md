@@ -186,3 +186,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Verify the change in both development and production builds.
 - **Vite setup** — Verify that links and references still resolve.
 - **SEO metadata** — Confirm the layout at mobile, tablet, and desktop widths.
+- **error states** — Use the existing project patterns when extending this area.
