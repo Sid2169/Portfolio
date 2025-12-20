@@ -190,3 +190,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Keep commands copy-pasteable for new contributors.
 - **navigation** — Verify that links and references still resolve.
 - **responsive layout** — Confirm the expected behavior on a clean checkout.
+- **React component structure** — Prefer small, focused changes over broad rewrites.
