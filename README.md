@@ -188,3 +188,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Confirm the layout at mobile, tablet, and desktop widths.
 - **error states** — Use the existing project patterns when extending this area.
 - **responsive layout** — Keep commands copy-pasteable for new contributors.
+- **navigation** — Verify that links and references still resolve.
