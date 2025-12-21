@@ -1,5 +1,6 @@
 import { words } from '../constants/index.js'
 import  Button  from '../components/Button.jsx'
+import HeroExperience from '../components/HeroModels/HeroExperience.jsx'
 
 const Hero = () => {
   return (
@@ -31,11 +32,11 @@ const Hero = () => {
                             </span>
                         </h1>
                         <h1>into Products That</h1>
-                        <h1>Actually Works</h1>                        
+                        <h1>Actually Work</h1>                        
                     </div>
 
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I am Siddhartha, a developer based in India with a passion for making things that solve problems and make life easier for myself and others.
+                        Hi, I am Siddhartha, a developer based in India with a passion for making <br />things that solve problems and make life easier for myself and others.
                     </p>
 
                     <Button
@@ -46,6 +47,11 @@ const Hero = () => {
                 </div>
             </header>
             {/*RIGHT: 3D MODEL */}
+            <figure>
+                <div className="hero-3d-layout">
+                    <HeroExperience />
+                </div>
+            </figure>
         </div>
     </section>
   )
