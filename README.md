@@ -193,3 +193,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Prefer small, focused changes over broad rewrites.
 - **browser support** — Check the relevant browser or runtime support.
 - **content updates** — Check the relevant browser or runtime support.
+- **SEO metadata** — Keep the related setup steps aligned with the current scripts.
