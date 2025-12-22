@@ -191,3 +191,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Verify that links and references still resolve.
 - **responsive layout** — Confirm the expected behavior on a clean checkout.
 - **React component structure** — Prefer small, focused changes over broad rewrites.
+- **browser support** — Check the relevant browser or runtime support.
