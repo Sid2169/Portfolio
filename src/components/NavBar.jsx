@@ -11,7 +11,7 @@ const NavBar = () => {
             setScrolled(prev => prev !== isScrolled ? isScrolled : prev);
         };
 
-        // handleScroll() //Initial Check
+        handleScroll() //Initial Check
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
