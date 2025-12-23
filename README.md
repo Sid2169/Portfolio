@@ -195,3 +195,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Check the relevant browser or runtime support.
 - **SEO metadata** — Keep the related setup steps aligned with the current scripts.
 - **browser support** — Add a screenshot or example when it clarifies the workflow.
+- **routing** — Note any external service limits or required keys.
