@@ -197,3 +197,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Add a screenshot or example when it clarifies the workflow.
 - **routing** — Note any external service limits or required keys.
 - **routing** — Confirm the expected behavior on a clean checkout.
+- **project scripts** — Check that metadata changes are reflected in the deployed preview.
