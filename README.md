@@ -196,3 +196,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Keep the related setup steps aligned with the current scripts.
 - **browser support** — Add a screenshot or example when it clarifies the workflow.
 - **routing** — Note any external service limits or required keys.
+- **routing** — Confirm the expected behavior on a clean checkout.
