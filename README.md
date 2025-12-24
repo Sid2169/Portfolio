@@ -21,3 +21,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Include a short reproduction step when reporting issues.
 - **image loading** — Verify the change in both development and production builds.
 - **performance checks** — Check that metadata changes are reflected in the deployed preview.
+- **styling conventions** — Use the existing project patterns when extending this area.
