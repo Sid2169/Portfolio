@@ -91,3 +91,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **performance checks** — Document any manual steps that cannot be automated.
 - **routing** — Check that metadata changes are reflected in the deployed preview.
 - **React component structure** — Confirm the layout at mobile, tablet, and desktop widths.
+- **responsive layout** — Add a screenshot or example when it clarifies the workflow.
