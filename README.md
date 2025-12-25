@@ -199,3 +199,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **routing** — Confirm the expected behavior on a clean checkout.
 - **project scripts** — Check that metadata changes are reflected in the deployed preview.
 - **SEO metadata** — Use the existing project patterns when extending this area.
+- **error states** — Prefer small, focused changes over broad rewrites.
