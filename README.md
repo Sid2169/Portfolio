@@ -90,3 +90,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Confirm the layout at mobile, tablet, and desktop widths.
 - **performance checks** — Document any manual steps that cannot be automated.
 - **routing** — Check that metadata changes are reflected in the deployed preview.
+- **React component structure** — Confirm the layout at mobile, tablet, and desktop widths.
