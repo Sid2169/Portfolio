@@ -202,3 +202,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **error states** — Prefer small, focused changes over broad rewrites.
 - **navigation** — Include a short reproduction step when reporting issues.
 - **asset optimization** — Include a short reproduction step when reporting issues.
+- **environment configuration** — Check the relevant browser or runtime support.
