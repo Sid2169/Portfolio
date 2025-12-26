@@ -203,3 +203,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Include a short reproduction step when reporting issues.
 - **asset optimization** — Include a short reproduction step when reporting issues.
 - **environment configuration** — Check the relevant browser or runtime support.
+- **navigation** — Confirm the expected behavior on a clean checkout.
