@@ -29,8 +29,8 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 2, suffix: "+", label: "Years of Experience" },
-  { value: 5, suffix: "+", label: "Satisfied Clients" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 2, suffix: "+", label: "Satisfied Clients" },
   { value: 10, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
@@ -149,6 +149,17 @@ const techStackIcons = [
 
 const expCards = [
   {
+    review: "Demonstrated strong technical initiative by building complex data pipelines and integrating multi-channel marketing APIs. Successfully bridge the gap between raw data and user-friendly insights, delivering high-impact features for the AI analytics dashboard while maintaining high code quality in a fast-paced environment",
+    imgPath: "/images/exp-grippi.png",
+    logoPath: "/images/logo-grippi.png",
+    title: "Full Stack Web Developer Intern",
+    date: "November 2024 - April 2025",
+    responsibilities: ["Integrated third-party APIs from platforms like Meta, Google Ads, and Shopify to aggregate real-time marketing data into a centralized analytics engine.",
+      "Developed interactive data visualization components and dashboards to help users track key performance indicators (KPIs) and ROI across multiple channels.",
+      "Assisted in the implementation of AI-driven notification systems for WhatsApp and Slack, automating the delivery of performance anomalies and marketing insights.",
+      "Optimized backend data processing workflows to ensure low-latency reporting and scalable handling of large-scale advertising datasets.",],
+  },
+  {
     review: "Contributed reliably to a live production website, handled both frontend and backend tasks with confidence, and actively improved existing code. Worked well within the team, picked up new requirements quickly, and delivered meaningful features like the blog system with minimal supervision.",
     imgPath: "/images/exp-cosminder.svg",
     logoPath: "/images/logo-cosminder.svg",
@@ -163,15 +174,6 @@ const expCards = [
   },
 
   /* ===== Empty templates for future experience entries ===== */
-
-  // {
-  //   review: "",
-  //   imgPath: "",
-  //   logoPath: "",
-  //   title: "",
-  //   date: "",
-  //   responsibilities: [],
-  // },
   // {
   //   review: "",
   //   imgPath: "",
@@ -196,10 +198,10 @@ const expLogos = [
     name: "logo-cosminder",
     imgPath: "/images/logo-cosminder.svg",
   },
-  // {
-  //   name: "logo2",
-  //   imgPath: "/images/logo2.png",
-  // },
+  {
+    name: "logo-grippi",
+    imgPath: "/images/logo-grippi.png",
+  },
   // {
   //   name: "logo3",
   //   imgPath: "/images/logo3.png",
