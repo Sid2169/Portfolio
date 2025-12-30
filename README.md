@@ -209,3 +209,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Check that metadata changes are reflected in the deployed preview.
 - **SEO metadata** — Confirm the expected behavior on a clean checkout.
 - **styling conventions** — Check that metadata changes are reflected in the deployed preview.
+- **error states** — Document any manual steps that cannot be automated.
