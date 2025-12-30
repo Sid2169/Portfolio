@@ -208,3 +208,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **asset optimization** — Verify that links and references still resolve.
 - **browser support** — Check that metadata changes are reflected in the deployed preview.
 - **SEO metadata** — Confirm the expected behavior on a clean checkout.
+- **styling conventions** — Check that metadata changes are reflected in the deployed preview.
