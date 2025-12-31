@@ -258,6 +258,10 @@ section {
     @apply w-36 h-full absolute bottom-0 z-20;
   }
 
+  .tech-card {
+    @apply relative;
+  }
+
   .tech-card-animated-bg {
     @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
   }
