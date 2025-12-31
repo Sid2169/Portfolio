@@ -212,3 +212,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **error states** — Document any manual steps that cannot be automated.
 - **asset optimization** — Confirm the expected behavior on a clean checkout.
 - **responsive layout** — Keep the terminology consistent with the rest of the project.
+- **styling conventions** — Check the relevant browser or runtime support.
