@@ -7,7 +7,7 @@ const TechIcon = ({ model }) => {
   const scene = useGLTF(model.modelPath)
 
   useEffect(() => {
-    if (model.name === 'Interactive Developer') {
+    if (model.name === 'Three JS') {
       scene.scene.traverse((child) => {
         if (child.isMesh && child.name === 'Object_5') {
           child.material.dispose?.()
@@ -16,14 +16,14 @@ const TechIcon = ({ model }) => {
       })
     }
 
-    if (model.name === 'Angular Developer') {
-      scene.scene.traverse((child) => {
-        if (child.isMesh && child.name === 'Object_5') {
-          child.material.dispose?.()
-          child.material = new THREE.MeshStandardMaterial({ color: 'white' })
-        }
-      })
-    }
+    // if (model.name === 'Angular Developer') {
+    //   scene.scene.traverse((child) => {
+    //     if (child.isMesh && child.name === 'Object_5') {
+    //       child.material.dispose?.()
+    //       child.material = new THREE.MeshStandardMaterial({ color: 'white' })
+    //     }
+    //   })
+    // }
   }, [scene, model.name])
 
   return (
