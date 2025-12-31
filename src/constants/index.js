@@ -1,4 +1,4 @@
-const navLinks = [
+  const navLinks = [
   {
     name: "Work",
     link: "#work",
@@ -115,28 +115,35 @@ const techStackImgs = [
 
 const techStackIcons = [
   {
-    name: "React & TypeScript",
+    name: "React",
     modelPath: "/models/react_logo-transformed.glb",
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Angular Developer",
-    modelPath: "/models/angular-transformed.glb",
-    scale: 1,
+    name: "Three JS",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
     rotation: [0, 0, 0],
   },
+  
   {
-    name: "Backend (Node & Express)",
+    name: "Backend with Node",
     modelPath: "/models/node-transformed.glb",
     scale: 5,
     rotation: [0, -Math.PI / 2, 0],
   },
+  // {
+  //   name: "PostgreSQL Database",
+  //   modelPath: "/models/postgresql-transformed.glb",
+  //   scale: 1.2,
+  //   rotation: [0, 0, 0],
+  // },
   {
-    name: "PostgreSQL Database",
-    modelPath: "/models/postgresql-transformed.glb",
-    scale: 1.2,
-    rotation: [0, 0, 0],
+    name: "Angular",
+    modelPath: "/models/angular-transformed.glb",
+    scale: 3,
+    rotation: [0, Math.PI, 0],
   },
   {
     name: "Git & GitHub",
@@ -144,6 +151,7 @@ const techStackIcons = [
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
+  
 ];
 
 
