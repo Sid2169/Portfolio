@@ -25,3 +25,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **environment configuration** — Confirm the expected behavior on a clean checkout.
 - **Vercel deployment** — Document any manual steps that cannot be automated.
 - **image loading** — Verify that links and references still resolve.
+- **Vite setup** — Verify the change in both development and production builds.
