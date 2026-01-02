@@ -23,3 +23,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **performance checks** — Check that metadata changes are reflected in the deployed preview.
 - **styling conventions** — Use the existing project patterns when extending this area.
 - **environment configuration** — Confirm the expected behavior on a clean checkout.
+- **Vercel deployment** — Document any manual steps that cannot be automated.
