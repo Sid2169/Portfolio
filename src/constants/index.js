@@ -262,25 +262,26 @@ const testimonials = [
 ];
 
 const socialImgs = [
+  
   {
-    name: "insta",
-    url: "https://www.instagram.com/",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    url: "https://www.facebook.com/",
-    imgPath: "/images/fb.png",
+    name: "github",
+    url: "https://github.com/Sid2169",
+    imgPath: "/images/github.png",
   },
   {
     name: "x",
-    url: "https://www.x.com/",
+    url: "https://x.com/Singh_Sid2169",
     imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/in/siddhartha-singh-952a64256/",
     imgPath: "/images/linkedin.png",
+  },
+  {
+    name: "insta",
+    url: "https://www.instagram.com/siddhartha_2169/",
+    imgPath: "/images/insta.png",
   },
 ];
 
