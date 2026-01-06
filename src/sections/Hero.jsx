@@ -55,7 +55,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I am Siddhartha, a developer based in India with a passion for making <br />things that solve problems and make life easier for myself and others.
+                        Hi, I am Siddhartha, a Fullstack Web developer based in India with a passion for making <br />software that solve problems and make life easier for myself and others.
                     </p>
 
                     <Button
