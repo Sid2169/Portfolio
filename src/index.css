@@ -1,8 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 
+/* Display font: Berkshire Swash */
+@font-face {
+  font-family: "berkshire";
+  src:
+    url("fonts/berkshireswash-regular-webfont.woff2") format("woff2"),
+    url("fonts/berkshireswash-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
+
+
 }
 
 html,
@@ -10,7 +23,7 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: black;
-  color: white;
+  color: #00bfff;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
 }
@@ -19,14 +32,19 @@ section {
   width: 100dvw;
 }
 
+
 @theme {
   --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #00bfff;
+  --color-white-50: white;
   --color-black-50: #1c1c21;
   --color-black-100: #0e0e10;
   --color-black-200: #282732;
   --color-blue-50: #839cb5;
   --color-blue-100: #2d2d38;
+  --logo-font: "berkshire";
+  --accent-color: #17E3A1;
+  --sky-blue: #00bfff;
+  
 }
 
 @layer utilities {
@@ -119,6 +137,9 @@ section {
 
     .logo {
       @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+
+      font-family: var(--logo-font);
+      color: var(--accent-color)
     }
 
     nav.desktop {
@@ -128,7 +149,9 @@ section {
         @apply flex space-x-8;
 
         li {
-          @apply text-white-50 relative;
+          @apply relative;
+
+          color: var(--accent-color);
 
           span {
             @apply transition-colors duration-300 hover:text-white;
@@ -141,17 +164,27 @@ section {
       }
     }
 
-    .contact-btn {
+   .contact-btn {
       @apply flex;
 
-      .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
-
-        span {
-          @apply group-hover:text-white transition-colors duration-300;
-        }
+      &:hover .inner {
+      background-color: #1c1c21;
       }
-    }
+
+      &:hover .inner span {
+        color: var(--accent-color);
+      }
+
+      .inner {
+         @apply px-5 py-2 rounded-lg transition-colors duration-300;
+         background-color: var(--accent-color);
+
+       span {
+         @apply text-black transition-colors duration-300;
+       }
+      } 
+     }
+
   }
 
   .app-showcase {
@@ -206,29 +239,29 @@ section {
     @apply relative z-20 cursor-pointer;
   }
 
-  .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+.cta-button {
+  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
-    .bg-circle {
-      @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-        rounded-full bg-white-50 transition-all duration-500;
-    }
+  .bg-circle {
+    @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
+      w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+      rounded-full bg-[var(--sky-blue)] transition-all duration-500;
+  }
 
-    .text {
-      @apply uppercase md:text-lg text-black transition-all duration-500
-        group-hover:text-white-50 group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
-    }
+  .text {
+    @apply uppercase md:text-lg text-black transition-all duration-500
+      group-hover:text-[var(--sky-blue)] group-hover:-translate-x-5 xl:translate-x-0 -translate-x-5;
+  }
 
-    .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+  .arrow-wrapper {
+    @apply group-hover:bg-[var(--sky-blue)] size-10 rounded-full absolute right-10 top-1/2 
+      -translate-y-1/2 flex justify-center items-center overflow-hidden;
 
-      img {
-        @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
-      }
+    img {
+      @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
     }
   }
+}
 
   .card-border {
     @apply border border-black-50 bg-black-100;
@@ -289,7 +322,9 @@ section {
 
     input,
     textarea {
-      @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
+      @apply w-full px-4 py-4 md:text-base text-sm text-white-50  placeholder:text-blue-50 bg-blue-100 rounded-md;
+
+
     }
 
     a {
