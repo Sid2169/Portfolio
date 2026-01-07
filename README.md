@@ -93,3 +93,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Confirm the layout at mobile, tablet, and desktop widths.
 - **responsive layout** — Add a screenshot or example when it clarifies the workflow.
 - **error states** — Check the relevant browser or runtime support.
+- **performance checks** — Check the relevant browser or runtime support.
