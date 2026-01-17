@@ -27,3 +27,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **image loading** — Verify that links and references still resolve.
 - **Vite setup** — Verify the change in both development and production builds.
 - **routing** — Include a short reproduction step when reporting issues.
+- **Vercel deployment** — Verify that links and references still resolve.
