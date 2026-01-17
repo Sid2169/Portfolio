@@ -31,3 +31,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vite setup** — Check the relevant browser or runtime support.
 - **performance checks** — Prefer small, focused changes over broad rewrites.
 - **accessibility** — Document any manual steps that cannot be automated.
+- **performance checks** — Add a screenshot or example when it clarifies the workflow.
