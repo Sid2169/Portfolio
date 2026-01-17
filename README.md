@@ -30,3 +30,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Verify that links and references still resolve.
 - **Vite setup** — Check the relevant browser or runtime support.
 - **performance checks** — Prefer small, focused changes over broad rewrites.
+- **accessibility** — Document any manual steps that cannot be automated.
