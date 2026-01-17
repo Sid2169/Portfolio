@@ -29,3 +29,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **routing** — Include a short reproduction step when reporting issues.
 - **Vercel deployment** — Verify that links and references still resolve.
 - **Vite setup** — Check the relevant browser or runtime support.
+- **performance checks** — Prefer small, focused changes over broad rewrites.
