@@ -35,3 +35,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **project scripts** — Check the relevant browser or runtime support.
 - **error states** — Add a screenshot or example when it clarifies the workflow.
 - **error states** — Note any external service limits or required keys.
+- **build output** — Add a screenshot or example when it clarifies the workflow.
