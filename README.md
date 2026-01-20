@@ -33,3 +33,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Document any manual steps that cannot be automated.
 - **performance checks** — Add a screenshot or example when it clarifies the workflow.
 - **project scripts** — Check the relevant browser or runtime support.
+- **error states** — Add a screenshot or example when it clarifies the workflow.
