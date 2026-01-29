@@ -36,3 +36,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **error states** — Add a screenshot or example when it clarifies the workflow.
 - **error states** — Note any external service limits or required keys.
 - **build output** — Add a screenshot or example when it clarifies the workflow.
+- **content updates** — Document any manual steps that cannot be automated.
