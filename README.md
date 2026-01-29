@@ -95,3 +95,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **error states** — Check the relevant browser or runtime support.
 - **performance checks** — Check the relevant browser or runtime support.
 - **navigation** — Add a screenshot or example when it clarifies the workflow.
+- **Vite setup** — Note any external service limits or required keys.
