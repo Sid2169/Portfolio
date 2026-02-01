@@ -99,3 +99,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **project scripts** — Include a short reproduction step when reporting issues.
 - **navigation** — Check the relevant browser or runtime support.
 - **environment configuration** — Note any external service limits or required keys.
+- **responsive layout** — Prefer small, focused changes over broad rewrites.
