@@ -100,3 +100,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Check the relevant browser or runtime support.
 - **environment configuration** — Note any external service limits or required keys.
 - **responsive layout** — Prefer small, focused changes over broad rewrites.
+- **React component structure** — Verify that links and references still resolve.
