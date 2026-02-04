@@ -101,3 +101,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **environment configuration** — Note any external service limits or required keys.
 - **responsive layout** — Prefer small, focused changes over broad rewrites.
 - **React component structure** — Verify that links and references still resolve.
+- **performance checks** — Keep the related setup steps aligned with the current scripts.
