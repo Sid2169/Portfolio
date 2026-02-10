@@ -104,3 +104,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **performance checks** — Keep the related setup steps aligned with the current scripts.
 - **responsive layout** — Include a short reproduction step when reporting issues.
 - **asset optimization** — Keep the terminology consistent with the rest of the project.
+- **project scripts** — Confirm the expected behavior on a clean checkout.
