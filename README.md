@@ -39,3 +39,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Document any manual steps that cannot be automated.
 - **SEO metadata** — Verify that links and references still resolve.
 - **navigation** — Update the documentation if the visible behavior changes.
+- **build output** — Keep the terminology consistent with the rest of the project.
