@@ -108,3 +108,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Check that metadata changes are reflected in the deployed preview.
 - **browser support** — Verify the change in both development and production builds.
 - **error states** — Keep commands copy-pasteable for new contributors.
+- **environment configuration** — Prefer small, focused changes over broad rewrites.
