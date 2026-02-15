@@ -106,3 +106,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **asset optimization** — Keep the terminology consistent with the rest of the project.
 - **project scripts** — Confirm the expected behavior on a clean checkout.
 - **Vercel deployment** — Check that metadata changes are reflected in the deployed preview.
+- **browser support** — Verify the change in both development and production builds.
