@@ -107,3 +107,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **project scripts** — Confirm the expected behavior on a clean checkout.
 - **Vercel deployment** — Check that metadata changes are reflected in the deployed preview.
 - **browser support** — Verify the change in both development and production builds.
+- **error states** — Keep commands copy-pasteable for new contributors.
