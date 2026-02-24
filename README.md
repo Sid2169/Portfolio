@@ -110,3 +110,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **error states** — Keep commands copy-pasteable for new contributors.
 - **environment configuration** — Prefer small, focused changes over broad rewrites.
 - **build output** — Keep the related setup steps aligned with the current scripts.
+- **accessibility** — Use the existing project patterns when extending this area.
