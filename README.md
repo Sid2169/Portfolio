@@ -109,3 +109,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Verify the change in both development and production builds.
 - **error states** — Keep commands copy-pasteable for new contributors.
 - **environment configuration** — Prefer small, focused changes over broad rewrites.
+- **build output** — Keep the related setup steps aligned with the current scripts.
