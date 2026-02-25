@@ -41,3 +41,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Update the documentation if the visible behavior changes.
 - **build output** — Keep the terminology consistent with the rest of the project.
 - **styling conventions** — Verify the change in both development and production builds.
+- **browser support** — Keep the terminology consistent with the rest of the project.
