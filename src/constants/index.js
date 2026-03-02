@@ -1,4 +1,4 @@
-  const navLinks = [
+const navLinks = [
   {
     name: "Work",
     link: "#work",
@@ -174,7 +174,7 @@ const expCards = [
     title: "Full Stack Web Developer",
     date: "June 2025 - December 2025",
     responsibilities: [
-      "Maintained and extended core functionality of the company’s primary production website, improving stability, responsiveness, and cross-device user experience.",
+      "Maintained and extended core functionality of the company's primary production website, improving stability, responsiveness, and cross-device user experience.",
       "Developed and integrated a blog management system enabling dynamic content creation, editing, and publishing through a structured backend workflow.",
       "Refactored existing codebase to enhance readability, performance, and long-term maintainability.",
       "Collaborated within an agile team environment to implement features and resolve bugs efficiently.",
@@ -224,13 +224,13 @@ const testimonials = [
       "Sid made major contributions to our UI modernization, blog integration, proprietary LLM API design, and the business logic behind our quant-focused services. His impact was broad and substantial.",
     imgPath: "/images/client1.png",
   },
-  // {
-  //   name: "",
-  //   mentions: "",
-  //   review:
-  //     "",
-  //   imgPath: "/images/client3.png",
-  // },
+  {
+    name: "Om Bharti",
+    mentions: "@DaVinci",
+    review:
+      "Sid's technical expertise and collaborative approach made him an invaluable team member. His contributions to our projects were both innovative and impactful.",
+    imgPath: "/images/client3.png",
+  },
   // {
   //   name: "",
   //   mentions: "",
@@ -285,6 +285,37 @@ const socialImgs = [
   },
 ];
 
+const projects = [
+  {
+    name: "AI Marketing Analytics Dashboard",
+    description: "A comprehensive analytics platform integrating multi-channel marketing data from Meta, Google Ads, and Shopify. Features real-time KPI tracking, AI-driven insights, and automated notifications via WhatsApp and Slack.",
+    techStack: ["React", "Node.js", "Express", "PostgreSQL", "TypeScript", "Third-party APIs"],
+    liveLink: "https://example.com/project1",
+    imagePath: "/images/project1.png",
+  },
+  {
+    name: "Dynamic Blog Management System",
+    description: "Full-featured content management system enabling seamless blog creation, editing, and publishing. Built with modern web technologies to ensure responsive design and optimal performance across all devices.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "TypeScript"],
+    liveLink: "https://example.com/project2",
+    imagePath: "/images/project2.png",
+  },
+  {
+    name: "E-Commerce Platform",
+    description: "Scalable e-commerce solution with real-time inventory management, secure payment processing, and personalized user experiences. Implemented advanced search and filtering capabilities.",
+    techStack: ["Angular", "Node.js", "PostgreSQL", "Stripe API", "AWS"],
+    liveLink: "https://example.com/project3",
+    imagePath: "/images/project3.png",
+  },
+  // {
+  //   name: "",
+  //   description: "",
+  //   techStack: [],
+  //   liveLink: "",
+  //   imagePath: "",
+  // },
+];
+
 export {
   words,
   abilities,
@@ -297,4 +328,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  projects,
 };
