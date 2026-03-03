@@ -139,12 +139,12 @@ const techStackIcons = [
   //   scale: 1.2,
   //   rotation: [0, 0, 0],
   // },
-  {
-    name: "Angular",
-    modelPath: "/models/angular-transformed.glb",
-    scale: 3,
-    rotation: [0, Math.PI, 0],
-  },
+  // {
+  //   name: "Angular",
+  //   modelPath: "/models/angular-transformed.glb",
+  //   scale: 3,
+  //   rotation: [0, Math.PI, 0],
+  // },
   {
     name: "Git & GitHub",
     modelPath: "/models/git-svg-transformed.glb",
