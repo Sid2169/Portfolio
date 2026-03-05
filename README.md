@@ -112,3 +112,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **build output** — Keep the related setup steps aligned with the current scripts.
 - **accessibility** — Use the existing project patterns when extending this area.
 - **performance checks** — Confirm the layout at mobile, tablet, and desktop widths.
+- **asset optimization** — Confirm the layout at mobile, tablet, and desktop widths.
