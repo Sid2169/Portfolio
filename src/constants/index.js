@@ -15,6 +15,10 @@ const navLinks = [
     name: "Testimonials",
     link: "#testimonials",
   },
+  {
+    name: "Resume",
+    link: "/resume.pdf",
+  },
 ];
 
 const words = [

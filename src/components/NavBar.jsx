@@ -23,16 +23,21 @@ const NavBar = () => {
 
             <nav className="desktop">
                 <ul>
-                    {navLinks.map(({link, name}) => {
-                        return (
-                            <li key={name} className="group">
-                                <a href={link}>
+                    {navLinks.map(({ link, name }) => (
+                        <li key={name} className="group">
+                            {name === "Resume" ? (
+                                <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                    <span>{name}</span>
+                                    <span className="underline" />
+                                 </a>
+                                ) : (
+                                 <a href={link}>
                                     <span>{name}</span>
                                     <span className="underline" />
                                 </a>
-                            </li>
-                        )
-                    })}
+                            )}
+                        </li>
+                    ))}
                 </ul>
             </nav>
 
