@@ -114,3 +114,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **performance checks** — Confirm the layout at mobile, tablet, and desktop widths.
 - **asset optimization** — Confirm the layout at mobile, tablet, and desktop widths.
 - **SEO metadata** — Keep commands copy-pasteable for new contributors.
+- **responsive layout** — Confirm the layout at mobile, tablet, and desktop widths.
