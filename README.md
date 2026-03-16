@@ -113,3 +113,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Use the existing project patterns when extending this area.
 - **performance checks** — Confirm the layout at mobile, tablet, and desktop widths.
 - **asset optimization** — Confirm the layout at mobile, tablet, and desktop widths.
+- **SEO metadata** — Keep commands copy-pasteable for new contributors.
