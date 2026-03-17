@@ -116,3 +116,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Keep commands copy-pasteable for new contributors.
 - **responsive layout** — Confirm the layout at mobile, tablet, and desktop widths.
 - **environment configuration** — Keep the related setup steps aligned with the current scripts.
+- **accessibility** — Check the relevant browser or runtime support.
