@@ -117,3 +117,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Confirm the layout at mobile, tablet, and desktop widths.
 - **environment configuration** — Keep the related setup steps aligned with the current scripts.
 - **accessibility** — Check the relevant browser or runtime support.
+- **responsive layout** — Check the required environment values before deploying.
