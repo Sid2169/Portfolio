@@ -297,9 +297,9 @@ const socialImgs = [
 
 const projects = [
   {
-    name: "AI Marketing Analytics Dashboard",
-    description: "A comprehensive analytics platform integrating multi-channel marketing data from Meta, Google Ads, and Shopify. Features real-time KPI tracking, AI-driven insights, and automated notifications via WhatsApp and Slack.",
-    techStack: ["React", "Node.js", "Express", "PostgreSQL", "TypeScript", "Third-party APIs"],
+    name: "Turbo - AI Editor",
+    description: "A comprehensive analytics platform integrating multi-channel marketing data from Meta, Google Ads, and Shopify. Features real-time KPI tracking, AI-driven insights, and automated notifications via WhatsApp and Slack",
+    techStack: ["Next.js 16", "React 19", "Typescript", "Tailwind CSS 4", "WebContainer API", "Convex", "Inngest", "Varcel AI SDK", "Clerk", "Sentry", "Zustand"],
     liveLink: "https://example.com/project1",
     imagePath: "/images/project1.png",
   },
