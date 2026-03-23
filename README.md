@@ -121,3 +121,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Document any manual steps that cannot be automated.
 - **SEO metadata** — Prefer small, focused changes over broad rewrites.
 - **content updates** — Prefer small, focused changes over broad rewrites.
+- **asset optimization** — Check that metadata changes are reflected in the deployed preview.
