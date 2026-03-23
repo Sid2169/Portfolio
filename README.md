@@ -122,3 +122,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Prefer small, focused changes over broad rewrites.
 - **content updates** — Prefer small, focused changes over broad rewrites.
 - **asset optimization** — Check that metadata changes are reflected in the deployed preview.
+- **image loading** — Note any external service limits or required keys.
