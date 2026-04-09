@@ -46,3 +46,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Prefer small, focused changes over broad rewrites.
 - **performance checks** — Note any external service limits or required keys.
 - **SEO metadata** — Add a screenshot or example when it clarifies the workflow.
+- **navigation** — Keep the terminology consistent with the rest of the project.
