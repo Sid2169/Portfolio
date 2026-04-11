@@ -310,7 +310,7 @@ const projects = [
     techStack: ["Next.js 16", "MongoDB", "Google Gemini API", "React 19", "Typescript", "Tailwind CSS 4", "Clerk",  "Mongoose", "Vapi", "ElevenLabs", "Varcel Blob", "PDF.js"],
     liveLink: "https://deep-read-ai-lac.vercel.app/",
     imagePath: "/images/project2.png",
-    githubLink: "https://github.com/Sid2169/deep-read-ai",
+    githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
   // {
   //   name: "E-Commerce Platform",
