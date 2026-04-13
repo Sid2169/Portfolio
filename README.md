@@ -49,3 +49,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Keep the terminology consistent with the rest of the project.
 - **content updates** — Confirm the layout at mobile, tablet, and desktop widths.
 - **environment configuration** — Add a screenshot or example when it clarifies the workflow.
+- **project scripts** — Verify that links and references still resolve.
