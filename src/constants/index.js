@@ -312,13 +312,13 @@ const projects = [
     imagePath: "/images/project2.png",
     githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
-  // {
-  //   name: "E-Commerce Platform",
-  //   description: "Scalable e-commerce solution with real-time inventory management, secure payment processing, and personalized user experiences. Implemented advanced search and filtering capabilities.",
-  //   techStack: ["Angular", "Node.js", "PostgreSQL", "Stripe API", "AWS"],
-  //   liveLink: "https://example.com/project3",
-  //   imagePath: "/images/project3.png",
-  // },
+  {
+    name: "Aero - Weather Dashboard",
+    description: "A glassmorphism dark-themed weather dashboard that delivers real-time conditions, hourly forecasts, air quality data, and 7-day outlooks — with dynamic backgrounds and smooth unit toggling.",
+    techStack: ["JavaScript", "Tailwind CSS", "Weather API"],
+    liveLink: "https://sid2169.github.io/aero/",
+    imagePath: "/images/project3.png",
+  },
   // {
   //   name: "",
   //   description: "",
