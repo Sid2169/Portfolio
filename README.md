@@ -127,3 +127,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Note any external service limits or required keys.
 - **Vite setup** — Prefer small, focused changes over broad rewrites.
 - **image loading** — Include a short reproduction step when reporting issues.
+- **React component structure** — Use the existing project patterns when extending this area.
