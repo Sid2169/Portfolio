@@ -124,3 +124,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **asset optimization** — Check that metadata changes are reflected in the deployed preview.
 - **image loading** — Note any external service limits or required keys.
 - **React component structure** — Keep commands copy-pasteable for new contributors.
+- **content updates** — Note any external service limits or required keys.
