@@ -128,3 +128,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vite setup** — Prefer small, focused changes over broad rewrites.
 - **image loading** — Include a short reproduction step when reporting issues.
 - **React component structure** — Use the existing project patterns when extending this area.
+- **project scripts** — Keep the related setup steps aligned with the current scripts.
