@@ -129,3 +129,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **image loading** — Include a short reproduction step when reporting issues.
 - **React component structure** — Use the existing project patterns when extending this area.
 - **project scripts** — Keep the related setup steps aligned with the current scripts.
+- **routing** — Update the documentation if the visible behavior changes.
