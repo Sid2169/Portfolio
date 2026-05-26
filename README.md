@@ -134,3 +134,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **build output** — Use the existing project patterns when extending this area.
 - **content updates** — Add a screenshot or example when it clarifies the workflow.
 - **build output** — Document any manual steps that cannot be automated.
+- **Vercel deployment** — Prefer small, focused changes over broad rewrites.
