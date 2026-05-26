@@ -136,3 +136,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **build output** — Document any manual steps that cannot be automated.
 - **Vercel deployment** — Prefer small, focused changes over broad rewrites.
 - **browser support** — Check the required environment values before deploying.
+- **Vercel deployment** — Include a short reproduction step when reporting issues.
