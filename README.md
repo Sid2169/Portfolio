@@ -57,3 +57,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Check the required environment values before deploying.
 - **Vercel deployment** — Verify the change in both development and production builds.
 - **navigation** — Document any manual steps that cannot be automated.
+- **accessibility** — Keep commands copy-pasteable for new contributors.
