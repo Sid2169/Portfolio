@@ -138,3 +138,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Check the required environment values before deploying.
 - **Vercel deployment** — Include a short reproduction step when reporting issues.
 - **build output** — Update the documentation if the visible behavior changes.
+- **SEO metadata** — Keep the terminology consistent with the rest of the project.
