@@ -139,3 +139,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Include a short reproduction step when reporting issues.
 - **build output** — Update the documentation if the visible behavior changes.
 - **SEO metadata** — Keep the terminology consistent with the rest of the project.
+- **accessibility** — Note any external service limits or required keys.
