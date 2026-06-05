@@ -58,3 +58,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Verify the change in both development and production builds.
 - **navigation** — Document any manual steps that cannot be automated.
 - **accessibility** — Keep commands copy-pasteable for new contributors.
+- **accessibility** — Include a short reproduction step when reporting issues.
