@@ -61,3 +61,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Include a short reproduction step when reporting issues.
 - **build output** — Keep commands copy-pasteable for new contributors.
 - **styling conventions** — Verify that links and references still resolve.
+- **routing** — Keep commands copy-pasteable for new contributors.
