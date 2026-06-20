@@ -64,3 +64,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **routing** — Keep commands copy-pasteable for new contributors.
 - **Vercel deployment** — Keep the terminology consistent with the rest of the project.
 - **accessibility** — Confirm the layout at mobile, tablet, and desktop widths.
+- **styling conventions** — Keep the terminology consistent with the rest of the project.
