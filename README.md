@@ -141,3 +141,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Keep the terminology consistent with the rest of the project.
 - **accessibility** — Note any external service limits or required keys.
 - **SEO metadata** — Check that metadata changes are reflected in the deployed preview.
+- **navigation** — Check the required environment values before deploying.
