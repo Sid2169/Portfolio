@@ -65,3 +65,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Keep the terminology consistent with the rest of the project.
 - **accessibility** — Confirm the layout at mobile, tablet, and desktop widths.
 - **styling conventions** — Keep the terminology consistent with the rest of the project.
+- **browser support** — Update the documentation if the visible behavior changes.
