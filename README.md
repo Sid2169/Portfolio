@@ -142,3 +142,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Note any external service limits or required keys.
 - **SEO metadata** — Check that metadata changes are reflected in the deployed preview.
 - **navigation** — Check the required environment values before deploying.
+- **image loading** — Prefer small, focused changes over broad rewrites.
