@@ -145,3 +145,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **image loading** — Prefer small, focused changes over broad rewrites.
 - **Vite setup** — Include a short reproduction step when reporting issues.
 - **build output** — Verify the change in both development and production builds.
+- **image loading** — Keep commands copy-pasteable for new contributors.
