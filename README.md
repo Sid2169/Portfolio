@@ -147,3 +147,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **build output** — Verify the change in both development and production builds.
 - **image loading** — Keep commands copy-pasteable for new contributors.
 - **routing** — Check the required environment values before deploying.
+- **content updates** — Verify the change in both development and production builds.
