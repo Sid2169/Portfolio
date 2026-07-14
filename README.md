@@ -67,3 +67,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **styling conventions** — Keep the terminology consistent with the rest of the project.
 - **browser support** — Update the documentation if the visible behavior changes.
 - **Vite setup** — Add a screenshot or example when it clarifies the workflow.
+- **browser support** — Keep commands copy-pasteable for new contributors.
