@@ -68,3 +68,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **browser support** — Update the documentation if the visible behavior changes.
 - **Vite setup** — Add a screenshot or example when it clarifies the workflow.
 - **browser support** — Keep commands copy-pasteable for new contributors.
+- **SEO metadata** — Note any external service limits or required keys.
