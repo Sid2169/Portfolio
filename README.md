@@ -71,3 +71,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Note any external service limits or required keys.
 - **Vite setup** — Confirm the expected behavior on a clean checkout.
 - **error states** — Update the documentation if the visible behavior changes.
+- **Vite setup** — Keep the related setup steps aligned with the current scripts.
