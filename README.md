@@ -151,3 +151,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Include a short reproduction step when reporting issues.
 - **asset optimization** — Keep commands copy-pasteable for new contributors.
 - **React component structure** — Check the required environment values before deploying.
+- **routing** — Keep the terminology consistent with the rest of the project.
