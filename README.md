@@ -72,3 +72,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vite setup** — Confirm the expected behavior on a clean checkout.
 - **error states** — Update the documentation if the visible behavior changes.
 - **Vite setup** — Keep the related setup steps aligned with the current scripts.
+- **React component structure** — Add a screenshot or example when it clarifies the workflow.
