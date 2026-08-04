@@ -157,3 +157,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Verify that links and references still resolve.
 - **accessibility** — Keep the related setup steps aligned with the current scripts.
 - **environment configuration** — Check that metadata changes are reflected in the deployed preview.
+- **error states** — Verify that links and references still resolve.
