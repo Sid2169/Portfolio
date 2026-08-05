@@ -159,3 +159,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **environment configuration** — Check that metadata changes are reflected in the deployed preview.
 - **error states** — Verify that links and references still resolve.
 - **image loading** — Check the required environment values before deploying.
+- **project scripts** — Confirm the layout at mobile, tablet, and desktop widths.
