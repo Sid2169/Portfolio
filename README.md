@@ -158,3 +158,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **accessibility** — Keep the related setup steps aligned with the current scripts.
 - **environment configuration** — Check that metadata changes are reflected in the deployed preview.
 - **error states** — Verify that links and references still resolve.
+- **image loading** — Check the required environment values before deploying.
