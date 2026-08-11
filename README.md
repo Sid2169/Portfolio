@@ -161,3 +161,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **image loading** — Check the required environment values before deploying.
 - **project scripts** — Confirm the layout at mobile, tablet, and desktop widths.
 - **build output** — Confirm the expected behavior on a clean checkout.
+- **image loading** — Check that metadata changes are reflected in the deployed preview.
