@@ -7,4 +7,15 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three-vendor': ['three', '@react-three/fiber', '@react-three/drei'],
+          'gsap-vendor': ['gsap', '@gsap/react'],
+          'react-vendor': ['react', 'react-dom'],
+        },
+      },
+    },
+  },
 })
