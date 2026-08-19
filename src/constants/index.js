@@ -121,47 +121,31 @@ const techStackIcons = [
   {
     name: "Next JS",
     modelPath: "/models/nextjs-transformed.png",
-    scale: 3,
-    rotation: [0, Math.PI, 0],
   },
   {
     name: "React",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
+    modelPath: "/images/logos/react.png",
   },
   {
     name: "Three JS",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
+    modelPath: "/images/logos/three.png",
   },
-  
   {
     name: "Backend with Node",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    modelPath: "/images/logos/node.png",
   },
   {
     name: "PostgreSQL Database",
-    modelPath: "/models/postgresql-transformed.png",
-    scale: 1.2,
-    rotation: [0, 0, 0],
+    modelPath: "/images/logos/postgresql.webp",
   },
   {
     name: "Git & GitHub",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+    modelPath: "/images/logos/git.svg",
   },
   {
     name: "Jest",
     modelPath: "/models/jest-transformed.png",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
   },
-  
 ];
 
 
@@ -301,7 +285,7 @@ const projects = [
     description: "Turbo is an AI-powered browser-based IDE inspired by Cursor AI",
     techStack: ["Next.js 16", "Convex", "Inngest", "React 19", "Typescript", "Tailwind CSS 4", "WebContainer API", "Varcel AI SDK", "Clerk", "Sentry", "Zustand"],
     liveLink: "https://turbo-navy-iota.vercel.app/",
-    imagePath: "/images/project1.png",
+    imagePath: "/images/project1.webp",
     githubLink: "https://github.com/Sid2169/turbo",
   },
   {
@@ -309,7 +293,7 @@ const projects = [
     description: "DeepRead is an AI-powered platform for having real-time voice conversations with your books.",
     techStack: ["Next.js 16", "MongoDB", "Google Gemini API", "React 19", "Typescript", "Tailwind CSS 4", "Clerk",  "Mongoose", "Vapi", "ElevenLabs", "Varcel Blob", "PDF.js"],
     liveLink: "https://deep-read-ai-lac.vercel.app/",
-    imagePath: "/images/project2.png",
+    imagePath: "/images/project2.webp",
     githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
   {
@@ -317,7 +301,7 @@ const projects = [
     description: "A glassmorphism dark-themed weather dashboard that delivers real-time conditions, hourly forecasts, air quality data, and 7-day outlooks — with dynamic backgrounds and smooth unit toggling.",
     techStack: ["JavaScript", "Tailwind CSS", "Weather API"],
     liveLink: "https://sid2169.github.io/aero/",
-    imagePath: "/images/project3.png",
+    imagePath: "/images/project3.webp",
   },
   // {
   //   name: "",
