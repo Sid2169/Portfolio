@@ -121,47 +121,31 @@ const techStackIcons = [
   {
     name: "Next JS",
     modelPath: "/models/nextjs-transformed.png",
-    scale: 3,
-    rotation: [0, Math.PI, 0],
   },
   {
     name: "React",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
+    modelPath: "/images/logos/react.png",
   },
   {
     name: "Three JS",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
+    modelPath: "/images/logos/three.png",
   },
-  
   {
     name: "Backend with Node",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    modelPath: "/images/logos/node.png",
   },
   {
     name: "PostgreSQL Database",
     modelPath: "/models/postgresql-transformed.png",
-    scale: 1.2,
-    rotation: [0, 0, 0],
   },
   {
     name: "Git & GitHub",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+    modelPath: "/images/logos/git.svg",
   },
   {
     name: "Jest",
     modelPath: "/models/jest-transformed.png",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
   },
-  
 ];
 
 
