@@ -32,13 +32,6 @@ const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
-const counterItems = [
-  { value: 1, suffix: "+", label: "Years of Experience" },
-  { value: 2, suffix: "+", label: "Satisfied Clients" },
-  { value: 10, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
-];
-
 const logoIconsList = [
   {
     imgPath: "/images/logos/company-logo-1.png",
@@ -354,7 +347,6 @@ const projects = [
 export {
   words,
   logoIconsList,
-  counterItems,
   expCards,
   expLogos,
   testimonials,
