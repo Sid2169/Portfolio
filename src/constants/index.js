@@ -22,14 +22,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Web Platforms",  imgPath: "/images/logos/react-dark.svg" },
+  { text: "AI Systems",     imgPath: "/images/logos/claude-dark.svg" },
+  { text: "REST APIs",      imgPath: "/images/logos/node-dark.svg" },
+  { text: "Full-Stack Apps", imgPath: "/images/logos/nextjs-dark.svg" },
+  { text: "Web Platforms",  imgPath: "/images/logos/react-dark.svg" },
+  { text: "AI Systems",     imgPath: "/images/logos/claude-dark.svg" },
+  { text: "REST APIs",      imgPath: "/images/logos/node-dark.svg" },
+  { text: "Full-Stack Apps", imgPath: "/images/logos/nextjs-dark.svg" },
 ];
 
 const logoIconsList = [
