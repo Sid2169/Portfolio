@@ -6,6 +6,7 @@ import { socialImgs } from "../constants";
 const Contact = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -126,12 +127,24 @@ const Contact = () => {
               {/* TOP: PROFILE HEADER & AVAILABILITY STATUS BADGE */}
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <img 
-                    src="/images/siddhartha.jpg" 
-                    alt="Siddhartha Suman" 
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg shrink-0"
-                    onError={(e) => { e.target.style.display = 'none'; }}
-                  />
+                  <div 
+                    className="relative group cursor-pointer shrink-0" 
+                    onClick={() => setIsImageOpen(true)}
+                    title="Click to enlarge photo"
+                  >
+                    <img 
+                      src="/images/siddhartha.jpg" 
+                      alt="Siddhartha Suman" 
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-cyan-500/25 transition-all duration-300"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                    <div className="absolute inset-0 rounded-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <svg className="w-5 h-5 text-cyan-400 drop-shadow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                      </svg>
+                    </div>
+                  </div>
+
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white">Siddhartha Suman</h3>
                     <p className="text-sm text-cyan-400 font-medium">Full-Stack Software Engineer</p>
@@ -223,6 +236,36 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* LIGHTBOX MODAL FOR ENLARGED PROFILE IMAGE */}
+      {isImageOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300"
+          onClick={() => setIsImageOpen(false)}
+        >
+          <div 
+            className="relative max-w-md w-full bg-[#1c1c21] border border-cyan-400/30 rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col items-center gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsImageOpen(false)}
+              className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-sm font-bold transition-all z-10"
+              title="Close"
+            >
+              ✕
+            </button>
+            <img
+              src="/images/siddhartha.jpg"
+              alt="Siddhartha Suman"
+              className="w-full max-h-[70vh] object-cover rounded-xl border border-white/10"
+            />
+            <div className="text-center pb-2">
+              <h4 className="text-xl font-bold text-white">Siddhartha Suman</h4>
+              <p className="text-sm text-cyan-400 font-medium">Full-Stack Software Engineer</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
