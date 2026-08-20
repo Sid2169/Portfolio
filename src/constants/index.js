@@ -92,14 +92,24 @@ const techStackImgs = [
 ];
 
 
+const corePrimaryStack = [
+  { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
+  { name: "TypeScript", level: "Primary Language", iconPath: "/images/logos/typescript.svg" },
+  { name: "React 19", level: "Frontend Core", iconPath: "/images/logos/react-dark.svg" },
+  { name: "Node.js", level: "Backend Core", iconPath: "/images/logos/node-dark.svg" },
+  { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
+  { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
+  { name: "Anthropic Claude API", level: "AI Integration", iconPath: "/images/logos/claude-dark.svg" },
+];
+
 const techCategories = [
   {
     title: "Frontend & Core",
     icon: "💻",
     description: "App Router, Server Components & State Management",
     skills: [
-      { name: "Next.js / React", iconPath: "/models/nextjs-transformed.png" },
-      { name: "App Router", iconPath: "/models/nextjs-transformed.png" },
+      { name: "Next.js", iconPath: "/images/logos/nextjs-light.svg" },
+      { name: "App Router", iconPath: "/images/logos/nextjs-light.svg" },
       { name: "Server Components", iconPath: "/images/logos/react.png" },
       { name: "Server Actions", iconPath: "/images/logos/react.png" },
       { name: "TypeScript", iconPath: "/images/logos/typescript.svg" },
@@ -353,6 +363,7 @@ export {
   socialImgs,
   techStackIcons,
   techCategories,
+  corePrimaryStack,
   techStackImgs,
   navLinks,
   projects,

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { techCategories } from '../constants'
+import { techCategories, corePrimaryStack } from '../constants'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
@@ -39,14 +39,46 @@ const TechStack = () => {
 
       <div className="relative max-w-7xl mx-auto px-5 md:px-10">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-14">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="text-white">Technical </span>
             <span className="text-cyan-400">Skills & Stack</span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Comprehensive breakdown of my engineering capabilities, frameworks & AI integrations
+            Categorized breakdown of daily production core technologies and supporting ecosystem tools
           </p>
+        </div>
+
+        {/* PRIMARY CORE STACK HIGHLIGHT BANNER */}
+        <div className="mb-10 bg-gradient-to-r from-cyan-950/40 via-gray-900/60 to-purple-950/40 rounded-2xl p-6 md:p-8 border border-cyan-500/30 shadow-xl relative overflow-hidden">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-2">
+                <span>⭐</span> Primary Core Stack & Daily Drivers
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">
+                High-Depth Core Competencies
+              </h3>
+            </div>
+            <p className="text-gray-400 text-xs md:text-sm max-w-md">
+              Primary production frameworks & languages used for core application architecture.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            {corePrimaryStack.map((tech) => (
+              <div 
+                key={tech.name} 
+                className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
+              >
+                <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                <div>
+                  <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
+                  <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Categorized Tech Stack Grid (2x2 on Desktop) */}
