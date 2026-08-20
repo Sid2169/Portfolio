@@ -30,7 +30,7 @@ const TechStack = () => {
   }, [])
 
   return (
-    <section id="skills" ref={containerRef} className="relative w-full py-20 bg-black overflow-hidden">
+    <section id="skills" ref={containerRef} className="relative w-full section-padding bg-black overflow-hidden">
       {/* Ambient Glow Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
@@ -39,12 +39,12 @@ const TechStack = () => {
 
       <div className="relative max-w-7xl mx-auto px-5 md:px-10">
         {/* Section Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="text-white">Technical </span>
             <span className="text-cyan-400">Skills & Stack</span>
           </h2>
-          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Comprehensive breakdown of my engineering capabilities, frameworks & AI integrations
           </p>
         </div>

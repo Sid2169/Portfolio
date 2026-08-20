@@ -88,7 +88,7 @@ const ShowcaseSection = () => {
     <section
       id="work"
       ref={sectionRef}
-      className="relative w-full min-h-screen py-20 px-4 md:px-8 lg:px-16 bg-black overflow-hidden"
+      className="relative w-full section-padding bg-black overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
