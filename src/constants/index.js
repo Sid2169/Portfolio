@@ -303,11 +303,11 @@ const socialImgs = [
     url: "https://www.linkedin.com/in/siddhartha-singh-952a64256/",
     imgPath: "/images/linkedin.png",
   },
-  {
-    name: "insta",
-    url: "https://www.instagram.com/siddhartha_2169/",
-    imgPath: "/images/insta.png",
-  },
+  //{
+  //  name: "insta",
+  //  url: "https://www.instagram.com/siddhartha_2169/",
+  //  imgPath: "/images/insta.png",
+  //},
 ];
 
 const projects = [
