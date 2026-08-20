@@ -22,14 +22,15 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Web Platforms",  imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",     imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST APIs",      imgPath: "/images/logos/node-dark.svg" },
-  { text: "Full-Stack Apps", imgPath: "/images/logos/nextjs-dark.svg" },
-  { text: "Web Platforms",  imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",     imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST APIs",      imgPath: "/images/logos/node-dark.svg" },
-  { text: "Full-Stack Apps", imgPath: "/images/logos/nextjs-dark.svg" },
+  { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
+  { text: "AI Systems",   imgPath: "/images/logos/claude-dark.svg" },
+  { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
+  { text: "Full-Stack",   imgPath: "/images/logos/nextjs-dark.svg" },
+
+  { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
+  { text: "AI Systems",  imgPath: "/images/logos/claude-dark.svg" },
+  { text: "REST APIs",        imgPath: "/images/logos/node-dark.svg" },
+  { text: "Full-Stack",  imgPath: "/images/logos/nextjs-dark.svg" },
 ];
 
 const logoIconsList = [
@@ -197,10 +198,11 @@ const expCards = [
     logoPath: "/images/logo-grippi.png",
     title: "Full Stack Web Developer Intern",
     date: "November 2024 - April 2025",
-    responsibilities: ["Integrated third-party APIs from platforms like Meta, Google Ads, and Shopify to aggregate real-time marketing data into a centralized analytics engine.",
-      "Developed interactive data visualization components and dashboards to help users track key performance indicators (KPIs) and ROI across multiple channels.",
-      "Assisted in the implementation of AI-driven notification systems for WhatsApp and Slack, automating the delivery of performance anomalies and marketing insights.",
-      "Optimized backend data processing workflows to ensure low-latency reporting and scalable handling of large-scale advertising datasets.",],
+    responsibilities: [
+      "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
+      "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
+      "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
+    ],
   },
   {
     review: "Contributed reliably to a live production website, handled both frontend and backend tasks with confidence, and actively improved existing code. Worked well within the team, picked up new requirements quickly, and delivered meaningful features like the blog system with minimal supervision.",
@@ -209,10 +211,10 @@ const expCards = [
     title: "Full Stack Web Developer",
     date: "June 2025 - December 2025",
     responsibilities: [
-      "Maintained and extended core functionality of the company's primary production website, improving stability, responsiveness, and cross-device user experience.",
-      "Developed and integrated a blog management system enabling dynamic content creation, editing, and publishing through a structured backend workflow.",
-      "Refactored existing codebase to enhance readability, performance, and long-term maintainability.",
-      "Collaborated within an agile team environment to implement features and resolve bugs efficiently.",
+      "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
+      "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
+      "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
+      ,
     ],
   },
 

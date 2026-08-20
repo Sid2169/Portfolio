@@ -32,7 +32,7 @@ const Hero = () => {
             <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                 <div className="flex flex-col gap-7">
                     <div className="hero-text">
-                        <h1>I Engineer
+                        <h1>I make
                             <span className="slide">
                                 <span className="wrapper">
                                     {words.map((word) => (
@@ -54,7 +54,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I'm Siddhartha — a Full-Stack Software Engineer specializing in Next.js, <br/> Node.js, and AI integration. I build high-performance, scalable applications <br/>with clean architecture and modern developer tooling.
+                        Hi, I'm Siddhartha — a Full-Stack Web Engineer specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
                     <div className="flex flex-wrap gap-4">
