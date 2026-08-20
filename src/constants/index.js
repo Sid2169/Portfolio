@@ -312,7 +312,7 @@ const socialImgs = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/siddhartha-singh-952a64256/",
+    url: "https://www.linkedin.com/in/siddhartha-suman-952a64256/",
     imgPath: "/images/linkedin.png",
   },
   //{
