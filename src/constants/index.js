@@ -302,6 +302,7 @@ const projects = [
     techStack: ["JavaScript", "Tailwind CSS", "Weather API"],
     liveLink: "https://sid2169.github.io/aero/",
     imagePath: "/images/project3.webp",
+    githubLink: "https://github.com/Sid2169/aero",
   },
   // {
   //   name: "",
