@@ -117,6 +117,62 @@ const techStackImgs = [
 ];
 
 
+const techCategories = [
+  {
+    title: "Frontend & Core",
+    icon: "💻",
+    description: "App Router, Server Components & State Management",
+    skills: [
+      { name: "Next.js / React", iconPath: "/models/nextjs-transformed.png" },
+      { name: "App Router", iconPath: "/models/nextjs-transformed.png" },
+      { name: "Server Components", iconPath: "/images/logos/react.png" },
+      { name: "Server Actions", iconPath: "/images/logos/react.png" },
+      { name: "TypeScript", iconPath: "/images/logos/typescript.svg" },
+      { name: "Tailwind CSS", iconPath: "/images/logos/tailwindcss.svg" },
+      { name: "Zustand", iconPath: "/images/logos/zustand.svg" },
+    ],
+  },
+  {
+    title: "Backend & Data",
+    icon: "⚙️",
+    description: "APIs, Relational & NoSQL Databases",
+    skills: [
+      { name: "Node.js", iconPath: "/images/logos/node.png" },
+      { name: "Express", iconPath: "/images/logos/express.svg" },
+      { name: "PostgreSQL", iconPath: "/images/logos/postgresql.webp" },
+      { name: "MongoDB", iconPath: "/images/logos/mongodb.svg" },
+      { name: "Mongoose", iconPath: "/images/logos/mongodb.svg" },
+      { name: "Convex", iconPath: "/images/logos/convex.svg" },
+    ],
+  },
+  {
+    title: "AI & Realtime",
+    icon: "🧠",
+    description: "LLM APIs, Voice AI & Background Queues",
+    skills: [
+      { name: "Anthropic Claude API", iconPath: "/images/logos/claude.svg" },
+      { name: "Vercel AI SDK", iconPath: "/images/logos/vercel.svg" },
+      { name: "Google Gemini API", iconPath: "/images/logos/gemini.svg" },
+      { name: "Vapi", iconPath: "/images/logos/vapi.svg" },
+      { name: "ElevenLabs", iconPath: "/images/logos/elevenlabs.svg" },
+      { name: "Inngest", iconPath: "/images/logos/inngest.svg" },
+    ],
+  },
+  {
+    title: "Platform & Tooling",
+    icon: "🛠️",
+    description: "DevOps, Authentication & Monitoring",
+    skills: [
+      { name: "Vercel", iconPath: "/images/logos/vercel.svg" },
+      { name: "Clerk", iconPath: "/images/logos/clerk.svg" },
+      { name: "Git & GitHub", iconPath: "/images/logos/git.svg" },
+      { name: "Webpack", iconPath: "/images/logos/webpack.svg" },
+      { name: "Jest", iconPath: "/images/logos/jest.svg" },
+      { name: "Sentry", iconPath: "/images/logos/sentry.svg" },
+    ],
+  },
+];
+
 const techStackIcons = [
   {
     name: "Next JS",
@@ -323,6 +379,7 @@ export {
   testimonials,
   socialImgs,
   techStackIcons,
+  techCategories,
   techStackImgs,
   navLinks,
   projects,

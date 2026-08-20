@@ -15,10 +15,19 @@ const getTechIconPath = (techName) => {
   if (name.includes("javascript")) return "/images/logos/javascript.svg";
   if (name.includes("tailwind")) return "/images/logos/tailwindcss.svg";
   if (name.includes("mongo")) return "/images/logos/mongodb.svg";
-  if (name.includes("git")) return "/images/logos/git.svg";
   if (name.includes("postgres")) return "/images/logos/postgresql.webp";
+  if (name.includes("convex")) return "/images/logos/convex.svg";
+  if (name.includes("clerk")) return "/images/logos/clerk.svg";
+  if (name.includes("inngest")) return "/images/logos/inngest.svg";
+  if (name.includes("claude")) return "/images/logos/claude.svg";
+  if (name.includes("gemini")) return "/images/logos/gemini.svg";
+  if (name.includes("sentry")) return "/images/logos/sentry.svg";
+  if (name.includes("zustand")) return "/images/logos/zustand.svg";
+  if (name.includes("elevenlabs")) return "/images/logos/elevenlabs.svg";
+  if (name.includes("vapi")) return "/images/logos/vapi.svg";
+  if (name.includes("vercel")) return "/images/logos/vercel.svg";
+  if (name.includes("git")) return "/images/logos/git.svg";
   if (name.includes("three")) return "/images/logos/three.png";
-  if (name.includes("python")) return "/images/logos/python.svg";
   return null;
 };
 
