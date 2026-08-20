@@ -313,23 +313,23 @@ const socialImgs = [
 const projects = [
   {
     name: "Turbo - AI Editor",
-    description: "Turbo is an AI-powered browser-based IDE inspired by Cursor AI",
-    techStack: ["Next.js 16", "Convex", "Inngest", "React 19", "Typescript", "Tailwind CSS 4", "WebContainer API", "Varcel AI SDK", "Clerk", "Sentry", "Zustand"],
+    description: "A full-stack, browser-based AI code editor powered by WebContainers — runs Node.js entirely in the browser with zero backend. Streams AI responses token-by-token via the Vercel AI SDK, uses Inngest for durable background job orchestration, and supports real-time multi-user state via Convex. Built to handle concurrent sessions with no cold-start latency.",
+    techStack: ["Next.js 16", "Convex", "Inngest", "React 19", "Typescript", "Tailwind CSS 4", "WebContainer API", "Vercel AI SDK", "Clerk", "Sentry", "Zustand"],
     liveLink: "https://turbo-navy-iota.vercel.app/",
     imagePath: "/images/project1.webp",
     githubLink: "https://github.com/Sid2169/turbo",
   },
   {
     name: "DeepRead AI",
-    description: "DeepRead is an AI-powered platform for having real-time voice conversations with your books.",
-    techStack: ["Next.js 16", "MongoDB", "Google Gemini API", "React 19", "Typescript", "Tailwind CSS 4", "Clerk",  "Mongoose", "Vapi", "ElevenLabs", "Varcel Blob", "PDF.js"],
+    description: "An AI-powered reading platform that parses PDFs up to 200 pages and enables real-time voice Q&A with sub-3s response latency via Vapi and ElevenLabs. Integrates Google Gemini for semantic document understanding and stores embeddings in MongoDB. Full auth, file storage, and serverless deployment on Vercel.",
+    techStack: ["Next.js 16", "MongoDB", "Google Gemini API", "React 19", "Typescript", "Tailwind CSS 4", "Clerk", "Mongoose", "Vapi", "ElevenLabs", "Vercel Blob", "PDF.js"],
     liveLink: "https://deep-read-ai-lac.vercel.app/",
     imagePath: "/images/project2.webp",
     githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
   {
     name: "Aero - Weather Dashboard",
-    description: "A glassmorphism dark-themed weather dashboard that delivers real-time conditions, hourly forecasts, air quality data, and 7-day outlooks — with dynamic backgrounds and smooth unit toggling.",
+    description: "A zero-dependency, client-side weather dashboard fetching live data from a public weather API — renders real-time conditions, hourly forecasts, air quality index, and 7-day outlooks. Achieves a perfect Lighthouse performance score with dynamic background theming and instant unit toggling, all in under 15 KB of JavaScript.",
     techStack: ["JavaScript", "Tailwind CSS", "Weather API"],
     liveLink: "https://sid2169.github.io/aero/",
     imagePath: "/images/project3.webp",
