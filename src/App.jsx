@@ -5,7 +5,6 @@ import Hero from "./sections/Hero"
 const ShowcaseSection = lazy(() => import("./sections/ShowcaseSection"))
 const ExperienceSection = lazy(() => import("./sections/ExperienceSection"))
 const TechStack = lazy(() => import("./sections/TechStack"))
-const FeatureCards = lazy(() => import("./sections/FeatureCards"))
 const Testimonials = lazy(() => import("./sections/Testimonials"))
 const Contact = lazy(() => import("./sections/Contact"))
 const Footer = lazy(() => import("./sections/Footer"))
@@ -19,7 +18,6 @@ const App = () => {
         <ShowcaseSection />
         <ExperienceSection />
         <TechStack />
-        <FeatureCards />
         <Testimonials />
         <Contact />
         <Footer />
