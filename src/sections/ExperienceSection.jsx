@@ -101,10 +101,10 @@ const ExperienceSection = () => {
         />
         <div className="mt-16 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {expCards.map((card) => (
+            {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard card={card}>
+                  <GlowCard card={card} index={index}>
                     <div>
                       <img src={card.imgPath} alt="exp-img" />
                     </div>
