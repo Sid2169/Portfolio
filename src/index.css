@@ -263,6 +263,26 @@ section {
   }
 }
 
+  .cta-button-ghost {
+    @apply px-6 py-4 rounded-lg flex justify-center items-center relative cursor-pointer overflow-hidden
+      border border-[var(--accent-color)] bg-transparent transition-all duration-500
+      hover:bg-[var(--accent-color)];
+
+    /* Circle and arrow not used in ghost variant */
+    .bg-circle {
+      @apply hidden;
+    }
+
+    .text {
+      @apply uppercase md:text-lg text-[var(--accent-color)] transition-colors duration-300
+        group-hover:text-black;
+    }
+
+    .arrow-wrapper {
+      @apply hidden;
+    }
+  }
+
   .card-border {
     @apply border border-black-50 bg-black-100;
   }

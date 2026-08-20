@@ -57,11 +57,19 @@ const Hero = () => {
                         Hi, I am Siddhartha, a Fullstack Web developer based in India with a passion for making <br />software that solve problems and make life easier for myself and others.
                     </p>
 
-                    <Button
-                     className="md:w-80 md:h-16 w-60 h-12"
-                     id="button"
-                     text="See my work"
-                    />
+                    <div className="flex flex-wrap gap-4">
+                      <Button
+                        className="md:w-80 md:h-16 w-60 h-12"
+                        id="button"
+                        text="See my work"
+                      />
+                      <Button
+                        className="md:w-80 md:h-16 w-60 h-12"
+                        text="Download Resume"
+                        href="/resume.pdf"
+                        outlined
+                      />
+                    </div>
                 </div>
             </header>
             {/*RIGHT: 3D MODEL */}
