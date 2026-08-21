@@ -57,7 +57,7 @@ const TechStack = () => {
                 <span>⭐</span> Primary Core Stack & Daily Drivers
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white">
-                High-Depth Core Competencies
+                Core Competencies
               </h3>
             </div>
             <p className="text-gray-400 text-xs md:text-sm max-w-md">

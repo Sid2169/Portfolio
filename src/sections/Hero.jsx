@@ -54,7 +54,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I'm Siddhartha — a Full-Stack Web Engineer specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
+                        Hi, I'm Siddhartha — a Full-Stack Web Dev specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -65,7 +65,7 @@ const Hero = () => {
                       />
                       <Button
                         className="md:w-80 md:h-16 w-60 h-12"
-                        text="Download Resume"
+                        text="View Resume"
                         href="/resume.pdf"
                         outlined
                       />
