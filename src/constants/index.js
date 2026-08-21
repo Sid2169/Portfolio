@@ -1,6 +1,6 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
   },
   {
@@ -23,14 +23,14 @@ const navLinks = [
 
 const words = [
   { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",   imgPath: "/images/logos/claude-dark.svg" },
+  { text: "AI Apps",   imgPath: "/images/logos/claude-dark.svg" },
   { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
-  { text: "Full-Stack",   imgPath: "/images/logos/nextjs-dark.svg" },
+  { text: "Infra",   imgPath: "/images/logos/infra.png" },
 
   { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",  imgPath: "/images/logos/claude-dark.svg" },
+  { text: "AI Apps",  imgPath: "/images/logos/claude-dark.svg" },
   { text: "REST APIs",        imgPath: "/images/logos/node-dark.svg" },
-  { text: "Full-Stack",  imgPath: "/images/logos/nextjs-dark.svg" },
+  { text: "Infra",  imgPath: "/images/logos/infra.png" },
 ];
 
 const logoIconsList = [
@@ -94,18 +94,18 @@ const techStackImgs = [
 
 
 const corePrimaryStack = [
-  { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
   { name: "TypeScript", level: "Primary Language", iconPath: "/images/logos/typescript.svg" },
+  { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
   { name: "React 19", level: "Frontend Core", iconPath: "/images/logos/react-dark.svg" },
   { name: "Node.js", level: "Backend Core", iconPath: "/images/logos/node-dark.svg" },
-  { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
   { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
-  { name: "Anthropic Claude API", level: "AI Integration", iconPath: "/images/logos/claude-dark.svg" },
+  { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
+  { name: "Docker", level: "Development & Deployment", iconPath: "/images/logos/docker.svg" },
 ];
 
 const techCategories = [
   {
-    title: "Frontend & Core",
+    title: "Frontend",
     icon: "💻",
     description: "App Router, Server Components & State Management",
     skills: [
@@ -193,30 +193,32 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Demonstrated strong technical initiative by building complex data pipelines and integrating multi-channel marketing APIs. Successfully bridge the gap between raw data and user-friendly insights, delivering high-impact features for the AI analytics dashboard while maintaining high code quality in a fast-paced environment",
+    review: "Maintained and extended a production Next.js website, built a complete blog management system, and refactored core code to improve performance and maintainability.",
+    imgPath: "/images/exp-cosminder.svg",
+    logoPath: "/images/logo-cosminder.svg",
+    title: "Full Stack Web Developer",
+    date: "June 2025 - December 2025",
+    liveLink: "https://cosminder.com",
+    responsibilities: [
+      "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
+      "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
+      "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
+    ],
+  },
+  {
+    review: "Built and improved data and notification systems across multiple marketing platforms, contributing to near real-time anomaly alerts, centralized analytics, and faster database operations.",
     imgPath: "/images/exp-grippi.png",
     logoPath: "/images/logo-grippi.png",
     title: "Full Stack Web Developer Intern",
     date: "November 2024 - April 2025",
+    liveLink: "https://www.grippi.io",
     responsibilities: [
       "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
       "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
       "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
     ],
   },
-  {
-    review: "Contributed reliably to a live production website, handled both frontend and backend tasks with confidence, and actively improved existing code. Worked well within the team, picked up new requirements quickly, and delivered meaningful features like the blog system with minimal supervision.",
-    imgPath: "/images/exp-cosminder.svg",
-    logoPath: "/images/logo-cosminder.svg",
-    title: "Full Stack Web Developer",
-    date: "June 2025 - December 2025",
-    responsibilities: [
-      "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
-      "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
-      "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
-      ,
-    ],
-  },
+  
 
   /* ===== Empty templates for future experience entries ===== */
   // {
@@ -258,14 +260,14 @@ const testimonials = [
     name: "Adarsh Keshri",
     mentions: "@cosminder",
     review:
-      "Sid made major contributions to our UI modernization, blog integration, proprietary LLM API design, and the business logic behind our quant-focused services. His impact was broad and substantial.",
+      "Siddhartha is someone people can rely on when something needs to get done, and he is generally happy to help others. He takes a lot of pride in his work, which sometimes makes him a little hard to convince.",
     imgPath: "/images/client1.png",
   },
   {
     name: "Om Bharti",
-    mentions: "@DaVinci",
+    mentions: "@Data Vinci",
     review:
-      "Sid's technical expertise and collaborative approach made him an invaluable team member. His contributions to our projects were both innovative and impactful.",
+      "Sid is quite analytical and often pushes for decisions to be backed by data rather than assumptions. He can be opinionated, but he cares about getting the technical details right.",
     imgPath: "/images/client3.png",
   },
   // {
@@ -324,25 +326,25 @@ const socialImgs = [
 
 const projects = [
   {
-    name: "Turbo - AI Editor",
-    description: "A full-stack, browser-based AI code editor powered by WebContainers — runs Node.js entirely in the browser with zero backend. Streams AI responses token-by-token via the Vercel AI SDK, uses Inngest for durable background job orchestration, and supports real-time multi-user state via Convex. Built to handle concurrent sessions with no cold-start latency.",
-    techStack: ["Next.js 16", "Convex", "Inngest", "React 19", "Typescript", "Tailwind CSS 4", "WebContainer API", "Vercel AI SDK", "Clerk", "Sentry", "Zustand"],
+    name: "Turbo - AI Code Editor(Web)",
+    description: "A full-stack, browser-based AI code editor powered by WebContainers — runs Node.js entirely in the browser with zero backend. Streams AI responses token-by-token, uses Inngest for durable background job orchestration, and supports real-time multi-user state. Built to handle concurrent sessions with no cold-start latency.",
+    techStack: ["Next.js 16", "Convex", "Inngest", "Vercel AI SDK", "WebContainer API"],
     liveLink: "https://turbo-navy-iota.vercel.app/",
     imagePath: "/images/project1.webp",
     githubLink: "https://github.com/Sid2169/turbo",
   },
   {
-    name: "DeepRead AI",
-    description: "An AI-powered reading platform that parses PDFs up to 200 pages and enables real-time voice Q&A with sub-3s response latency via Vapi and ElevenLabs. Integrates Google Gemini for semantic document understanding and stores embeddings in MongoDB. Full auth, file storage, and serverless deployment on Vercel.",
-    techStack: ["Next.js 16", "MongoDB", "Google Gemini API", "React 19", "Typescript", "Tailwind CSS 4", "Clerk", "Mongoose", "Vapi", "ElevenLabs", "Vercel Blob", "PDF.js"],
+    name: "DeepRead - Book Reading Voice Assistant",
+    description: "An AI-powered reading platform that parses PDFs up to 200 pages and enables real-time voice Q&A with sub-3s response latency. Integrates Google Gemini for semantic document understanding and stores embeddings in MongoDB. Full auth, file storage, and serverless deployment.",
+    techStack: ["Next.js 16", "Google Gemini API", "Vapi", "ElevenLabs", "Vercel Blob", "PDF.js"],
     liveLink: "https://deep-read-ai-lac.vercel.app/",
     imagePath: "/images/project2.webp",
     githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
   {
     name: "Aero - Weather Dashboard",
-    description: "A zero-dependency, client-side weather dashboard fetching live data from a public weather API — renders real-time conditions, hourly forecasts, air quality index, and 7-day outlooks. Achieves a perfect Lighthouse performance score with dynamic background theming and instant unit toggling, all in under 15 KB of JavaScript.",
-    techStack: ["JavaScript", "Tailwind CSS", "Weather API"],
+    description: "A simple weather dashboard, that shows current, hourly and 7-day weather forecast with 5-day air quality index of any city.",
+    techStack: ["Weather API"],
     liveLink: "https://sid2169.github.io/aero/",
     imagePath: "/images/project3.webp",
     githubLink: "https://github.com/Sid2169/aero",

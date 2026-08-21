@@ -32,7 +32,7 @@ const Hero = () => {
             <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                 <div className="flex flex-col gap-7">
                     <div className="hero-text">
-                        <h1>I make
+                        <h1>I build
                             <span className="slide">
                                 <span className="wrapper">
                                     {words.map((word) => (
@@ -48,13 +48,11 @@ const Hero = () => {
                                     ))}
                                 </span>
                             </span>
-                        </h1>
-                        <h1>Built For Scale &amp;</h1>
-                        <h1>Performance</h1>                        
+                        </h1>                       
                     </div>
 
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I'm Siddhartha — a Full-Stack Web Engineer specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
+                        Hi, I'm from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -65,7 +63,7 @@ const Hero = () => {
                       />
                       <Button
                         className="md:w-80 md:h-16 w-60 h-12"
-                        text="Download Resume"
+                        text="View Resume"
                         href="/resume.pdf"
                         outlined
                       />
