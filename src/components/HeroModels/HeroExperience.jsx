@@ -11,7 +11,10 @@ const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)'});
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas
+      camera={{ position: [0, 0, 15], fov: 45 }}
+      style={{ touchAction: isMobile ? 'pan-y' : 'auto' }}
+    >
       
         <OrbitControls
          enablePan={ false }
