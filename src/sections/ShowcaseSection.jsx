@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -35,6 +35,11 @@ const ShowcaseSection = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const projectRefs = useRef([]);
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpand = (index) => {
+    setExpandedCards((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
 
   useGSAP(() => {
     // Animate section fade in
@@ -104,7 +109,7 @@ const ShowcaseSection = () => {
             <span className="text-cyan-400">Projects</span>
           </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-            Explore my latest work showcasing modern web development and innovative solutions
+            Highlights of my work
           </p>
         </div>
 
@@ -140,9 +145,36 @@ const ShowcaseSection = () => {
                   </h3>
 
                   {/* Project Description */}
-                  <p className="text-gray-400 text-sm mb-5 line-clamp-3 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <div className="mb-5">
+                    <p
+                      className={`text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300 leading-relaxed ${
+                        expandedCards[index] ? "" : "line-clamp-3"
+                      }`}
+                    >
+                      {project.description}
+                    </p>
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-200 focus:outline-none"
+                    >
+                      {expandedCards[index] ? "Show less" : "Read more"}
+                      <svg
+                        className={`w-3 h-3 transition-transform duration-300 ${
+                          expandedCards[index] ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2.5}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
 
                   {/* Tech Stack Badges with Icons */}
                   <div className="flex flex-wrap gap-2 mb-6">
