@@ -23,12 +23,12 @@ const navLinks = [
 
 const words = [
   { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",   imgPath: "/images/logos/claude-dark.svg" },
+  { text: "AI Apps",   imgPath: "/images/logos/claude-dark.svg" },
   { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
   { text: "Infra",   imgPath: "/images/logos/infra.png" },
 
   { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Systems",  imgPath: "/images/logos/claude-dark.svg" },
+  { text: "AI Apps",  imgPath: "/images/logos/claude-dark.svg" },
   { text: "REST APIs",        imgPath: "/images/logos/node-dark.svg" },
   { text: "Infra",  imgPath: "/images/logos/infra.png" },
 ];
@@ -198,11 +198,11 @@ const expCards = [
     logoPath: "/images/logo-cosminder.svg",
     title: "Full Stack Web Developer",
     date: "June 2025 - December 2025",
+    liveLink: "https://cosminder.com",
     responsibilities: [
       "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
       "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
       "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
-      ,
     ],
   },
   {
@@ -211,6 +211,7 @@ const expCards = [
     logoPath: "/images/logo-grippi.png",
     title: "Full Stack Web Developer Intern",
     date: "November 2024 - April 2025",
+    liveLink: "https://www.grippi.io",
     responsibilities: [
       "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
       "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
@@ -333,7 +334,7 @@ const projects = [
     githubLink: "https://github.com/Sid2169/turbo",
   },
   {
-    name: "DeepRead - AI Book Reading Voice Assistant",
+    name: "DeepRead - Book Reading Voice Assistant",
     description: "An AI-powered reading platform that parses PDFs up to 200 pages and enables real-time voice Q&A with sub-3s response latency. Integrates Google Gemini for semantic document understanding and stores embeddings in MongoDB. Full auth, file storage, and serverless deployment.",
     techStack: ["Next.js 16", "Google Gemini API", "Vapi", "ElevenLabs", "Vercel Blob", "PDF.js"],
     liveLink: "https://deep-read-ai-lac.vercel.app/",
