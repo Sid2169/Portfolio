@@ -133,7 +133,7 @@ const Contact = () => {
                     title="Click to enlarge photo"
                   >
                     <img 
-                      src="/images/siddhartha.jpg" 
+                      src="/images/siddhartha.webp" 
                       alt="Siddhartha Suman" 
                       className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-cyan-500/25 transition-all duration-300"
                       onError={(e) => { e.target.style.display = 'none'; }}
@@ -255,7 +255,7 @@ const Contact = () => {
               ✕
             </button>
             <img
-              src="/images/siddhartha.jpg"
+              src="/images/siddhartha.webp"
               alt="Siddhartha Suman"
               className="w-full max-h-[70vh] object-cover rounded-xl border border-white/10"
             />
