@@ -12,6 +12,8 @@ const HeroExperience = () => {
 
   return (
     <Canvas
+      dpr={[1, 1.5]}
+      gl={{ powerPreference: "high-performance", antialias: true }}
       camera={{ position: [0, 0, 15], fov: 45 }}
       style={{ touchAction: isMobile ? 'pan-y' : 'auto' }}
     >
