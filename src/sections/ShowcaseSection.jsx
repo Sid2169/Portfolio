@@ -123,19 +123,37 @@ const ShowcaseSection = () => {
             >
               <div>
                 {/* Project Image */}
-                <div className="relative h-52 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
-                  
-                  {/* Project Screenshot */}
-                  <img
-                    src={project.imagePath}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                {project.liveLink ? (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative h-52 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 block cursor-pointer group/image"
+                    title={`Visit ${project.name} live site`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                    
+                    {/* Project Screenshot */}
+                    <img
+                      src={project.imagePath}
+                      alt={project.name}
+                      className="w-full h-full object-cover group-hover/image:scale-105 group-hover:scale-105 transition-transform duration-500"
+                    />
 
-                  {/* Hover overlay effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
-                </div>
+                    {/* Hover overlay effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+                  </a>
+                ) : (
+                  <div className="relative h-52 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                    <img
+                      src={project.imagePath}
+                      alt={project.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+                  </div>
+                )}
 
                 {/* Project Content */}
                 <div className="p-6 relative z-30">
