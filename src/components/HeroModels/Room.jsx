@@ -37,7 +37,7 @@ export function Room({ isMobile, ...props }) {
   return (
     <group {...props} dispose={null}>
       {!isMobile && (
-        <EffectComposer>
+        <EffectComposer multisampling={0}>
           <SelectiveBloom
             selection={screensRef}
             intensity={1.5} // Strength of the bloom
