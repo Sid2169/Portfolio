@@ -166,3 +166,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **image loading** — Keep the related setup steps aligned with the current scripts.
 - **navigation** — Keep commands copy-pasteable for new contributors.
 - **error states** — Confirm the layout at mobile, tablet, and desktop widths.
+- **responsive layout** — Verify the change in both development and production builds.
