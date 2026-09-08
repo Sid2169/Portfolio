@@ -22,9 +22,7 @@ const Button = ({ text, className, id, targetId = "work", href, outlined = false
         e.preventDefault();
         const target = document.getElementById(targetId);
         if (target) {
-          const offset = window.innerHeight * 0.15;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start'});
         }
       }}
       className={`${className ?? ''} cta-wrapper`}
