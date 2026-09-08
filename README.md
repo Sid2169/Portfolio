@@ -167,3 +167,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **navigation** — Keep commands copy-pasteable for new contributors.
 - **error states** — Confirm the layout at mobile, tablet, and desktop widths.
 - **responsive layout** — Verify the change in both development and production builds.
+- **performance checks** — Update the documentation if the visible behavior changes.
