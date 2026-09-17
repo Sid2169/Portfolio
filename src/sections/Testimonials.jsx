@@ -1,6 +1,7 @@
 import TitleHeader from '../components/TitleHeader'
-import { testimonials } from '../constants'
+import { testimonials, OtherLinks } from '../constants'
 import GlowCard from '../components/GlowCard'
+import Button from '../components/Button'
 
 const Testimonials = () => {
   return (
@@ -19,12 +20,21 @@ const Testimonials = () => {
                             </div>
 
                             <div>
-                                <p className="font-bold">{testimonial.name}</p>
+                                <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">{testimonial.name}</a>
+                                <p className="text-white-50">{testimonial.designation}</p>
                                 <p className="text-white-50">{testimonial.mentions}</p>
                             </div>
                         </div>
                     </GlowCard>
                 ))}
+             </div>
+
+             <div className="flex-center mt-15">
+                <Button
+                  className="md:w-80 md:h-16 w-60 h-12"
+                  text="Submit a Testimonial"
+                  href={OtherLinks.submitTestimonialLink}
+                />
              </div>
         </div>
     </section>
