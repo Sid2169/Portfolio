@@ -341,14 +341,14 @@ const projects = [
     imagePath: "/images/project2.webp",
     githubLink: "https://github.com/Sid2169/DeepReadAI",
   },
-  // {
-  //   name: "Aero - Weather Dashboard",
-  //   description: "A simple weather dashboard, that shows current, hourly and 7-day weather forecast with 5-day air quality index of any city.",
-  //   techStack: ["Weather API"],
-  //   liveLink: "https://sid2169.github.io/aero/",
-  //   imagePath: "/images/project3.webp",
-  //   githubLink: "https://github.com/Sid2169/aero",
-  // },
+  {
+    name: "PG Life",
+    description: "PG Life is a PG (paying guest) accommodation search web app for students and working professionals: browse PG listings in a city, filter them by gender, budget and rent, view photos, amenities and ratings, and shortlist the ones you like.",
+    techStack: ["React", "MySql", "Bootstrap"],
+    liveLink: "https://pglife-production-a9c9.up.railway.app/",
+    imagePath: "/images/project3.webp",
+    githubLink: "https://github.com/Sid2169/PGLife",
+  },
   {
     name: "Odin Showcase",
     description: "A showcase of projects built while following The Odin Project curriculum. A documentation of my journey of learning development",
