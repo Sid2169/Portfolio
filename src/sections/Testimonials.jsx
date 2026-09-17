@@ -19,10 +19,15 @@ const Testimonials = () => {
                                 <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cove" />
                             </div>
 
-                            <div>
-                                <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">{testimonial.name}</a>
-                                <p className="text-white-50">{testimonial.designation}</p>
-                                <p className="text-white-50">{testimonial.mentions}</p>
+                            <div className="flex-1 min-w-0">
+                                <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:underline">
+                                    <p className="font-bold truncate">{testimonial.name}</p>
+                                    <img src="/images/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
+                                </a>
+                                <p className="text-white-50 italic">{testimonial.designation}</p>
+                                <div className="mt-2">
+                                    <a href={testimonial.companyLink} target="_blank" rel="noopener noreferrer" className="text-white-50 cursor-pointer hover:underline break-all">{testimonial.mentions}</a>
+                                </div>
                             </div>
                         </div>
                     </GlowCard>
