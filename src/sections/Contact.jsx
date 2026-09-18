@@ -71,7 +71,7 @@ const Contact = () => {
                     <img 
                       src="/images/siddhartha.webp" 
                       alt="Siddhartha Suman" 
-                      className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-cyan-500/25 transition-all duration-300"
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-cyan-400/25 transition-all duration-300"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                     <div className="absolute inset-0 rounded-full bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -106,7 +106,7 @@ const Contact = () => {
               {/* MIDDLE: DIRECT EMAIL BOX WITH COPY BUTTON */}
               <div className="p-5 rounded-xl bg-[#1c1c21] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3 overflow-hidden w-full">
-                  <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
+                  <div className="p-3 rounded-lg bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 shrink-0">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
