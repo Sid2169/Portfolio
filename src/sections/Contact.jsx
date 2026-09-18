@@ -55,72 +55,8 @@ const Contact = () => {
           sub="💬 Have questions or opportunities? Let’s talk! 🚀"
         />
         <div className="grid-12-cols mt-16 gap-8">
-          {/* LEFT: CONTACT FORM */}
-          <div className="xl:col-span-6">
-            <div className="flex-center card-border rounded-xl p-8 md:p-10 h-full">
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-6"
-              >
-                <div>
-                  <label htmlFor="name" className="block text-white-50 text-sm font-medium mb-2">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="What's your name?"
-                    required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                  />
-                </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-white-50 text-sm font-medium mb-2">Your Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="What's your email address?"
-                    required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-white-50 text-sm font-medium mb-2">Your Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="How can I help you?"
-                    rows="5"
-                    required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                  />
-                </div>
-
-                <button type="submit">
-                  <div className="cta-button group w-full justify-center">
-                    <div className="bg-circle" />
-                    <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
-                    </p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
-                  </div>
-                </button>
-              </form>
-            </div>
-          </div>
-
-          {/* RIGHT: PERSONAL PROFILE & DIRECT CONTACT CARD */}
+          {/* LEFT: PERSONAL PROFILE & DIRECT CONTACT CARD */}
           <div className="xl:col-span-6">
             <div className="card-border rounded-xl p-8 md:p-10 h-full flex flex-col justify-between gap-8 bg-black-100/40">
               
@@ -234,6 +170,72 @@ const Contact = () => {
 
             </div>
           </div>
+          {/* RIGHT: CONTACT FORM */}
+          <div className="xl:col-span-6">
+            <div className="flex-center card-border rounded-xl p-8 md:p-10 h-full">
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="w-full flex flex-col gap-6"
+              >
+                <div>
+                  <label htmlFor="name" className="block text-white-50 text-sm font-medium mb-2">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="What's your name?"
+                    required
+                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-white-50 text-sm font-medium mb-2">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="What's your email address?"
+                    required
+                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-white-50 text-sm font-medium mb-2">Your Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="How can I help you?"
+                    rows="5"
+                    required
+                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                  />
+                </div>
+
+                <button type="submit">
+                  <div className="cta-button group w-full justify-center">
+                    <div className="bg-circle" />
+                    <p className="text">
+                      {loading ? "Sending..." : "Send Message"}
+                    </p>
+                    <div className="arrow-wrapper">
+                      <img src="/images/arrow-down.svg" alt="arrow" />
+                    </div>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          
         </div>
       </div>
 
