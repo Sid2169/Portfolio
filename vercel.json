@@ -1,0 +1,13 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "rewrites": [
+      {
+        "source": "/api/testimonials",
+        "destination": "https://siddhartha-testimonials-api.onrender.com/api/testimonials"
+      },
+      {
+        "source": "/api/photos/:id",
+        "destination": "https://siddhartha-testimonials-api.onrender.com/api/photos/:id"
+      }
+    ]
+  }
