@@ -69,11 +69,11 @@ const NavBar = () => {
                     {navLinks.map(({ link, name }) => (
                         <li key={name} onClick={() => setIsOpen(false)}>
                             {name === "Resume" ? (
-                                <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-lg text-cyan-400 hover:text-white transition-colors block font-medium">
+                                <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-lg text-white hover:text-cyan-400 transition-colors block font-medium">
                                     {name}
                                 </a>
                             ) : (
-                                <a href={link} className="text-lg text-cyan-400 hover:text-white transition-colors block font-medium">
+                                <a href={link} className="text-lg text-white hover:text-cyan-400 transition-colors block font-medium">
                                     {name}
                                 </a>
                             )}
