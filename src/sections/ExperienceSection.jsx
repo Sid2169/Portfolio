@@ -122,7 +122,7 @@ const ExperienceSection = () => {
                       </div>
                       <div>
                         <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-2">
-                          <h1 className="font-semibold text-3xl">{card.title}</h1>
+                          <h1 className="font-semibold text-3xl text-white">{card.title}</h1>
                           {card.liveLink && (
                             <a
                               href={card.liveLink}
