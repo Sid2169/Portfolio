@@ -106,7 +106,7 @@ const ExperienceSection = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                      <img src={card.imgPath} alt="exp-img" className="max-w-[140px] h-auto object-contain" />
                     </div>
                   </GlowCard>
                 </div>
