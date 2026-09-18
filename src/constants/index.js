@@ -259,15 +259,21 @@ const testimonials = [
   {
     name: "Adarsh Keshri",
     mentions: "@cosminder",
+    designation: "Founder/CEO",
+    profileLink: "https://www.linkedin.com/in/adarshk13/",
+    companyLink: "https://cosminder.com",
     review:
       "Siddhartha is someone people can rely on when something needs to get done, and he is generally happy to help others. He takes a lot of pride in his work, which sometimes makes him a little hard to convince.",
     imgPath: "/images/client1.webp",
   },
   {
     name: "Om Bharti",
-    mentions: "@Data Vinci",
+    mentions: "@Grippi.io",
+    designation: "Founding Developer",
+    profileLink: "https://www.linkedin.com/in/om-bhartiofficial/",
+    companyLink: "https://www.grippi.io",
     review:
-      "Sid is quite analytical and often pushes for decisions to be backed by data rather than assumptions. He can be opinionated, but he cares about getting the technical details right.",
+      "Sid is quite analytical by nature and usually prefers decisions to be based on data instead of assumptions. Sometimes he can be a bit opinionated, but he also cares a lot about understanding things correctly and getting the technical details right.",
     imgPath: "/images/client3.webp",
   },
   // {
@@ -366,6 +372,10 @@ const projects = [
   // },
 ];
 
+const OtherLinks = {
+  submitTestimonialLink: "https://testimonials-website-rho.vercel.app/",
+};
+
 export {
   words,
   logoIconsList,
@@ -379,4 +389,5 @@ export {
   techStackImgs,
   navLinks,
   projects,
+  OtherLinks,
 };
