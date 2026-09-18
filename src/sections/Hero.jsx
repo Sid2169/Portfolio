@@ -57,12 +57,12 @@ const Hero = () => {
 
                     <div className="flex flex-wrap gap-4">
                       <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
+                        className="md:w-80 md:h-16 w-full h-12"
                         id="button"
                         text="See my work"
                       />
                       <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
+                        className="md:w-80 md:h-16 w-full h-12"
                         text="View Resume"
                         href="/resume.pdf"
                         outlined
