@@ -20,7 +20,7 @@ const normalizeTestimonial = (item) => ({
   profileLink: item.linkedin,
   imgPath: item.photoUrl,
   mentions: item.company,
-  companyLink: null,
+  companyLink: item.companyUrl ?? item.companyLink,
 })
 
 const Testimonials = () => {
