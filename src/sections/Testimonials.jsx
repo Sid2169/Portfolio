@@ -99,9 +99,9 @@ const Testimonials = () => {
                                 <div className="mt-2">
                                     {testimonial.mentions && (
                                         testimonial.companyLink ? (
-                                            <a href={testimonial.companyLink} target="_blank" rel="noopener noreferrer" className="text-white-50 cursor-pointer hover:underline break-all">{testimonial.mentions}</a>
+                                            <a href={testimonial.companyLink} target="_blank" rel="noopener noreferrer" className="text-white-50 cursor-pointer hover:underline break-all">@{testimonial.mentions.replace(/^@/, '')}</a>
                                         ) : (
-                                            <p className="text-white-50 break-all">{testimonial.mentions}</p>
+                                            <p className="text-white-50 break-all">@{testimonial.mentions.replace(/^@/, '')}</p>
                                         )
                                     )}
                                 </div>

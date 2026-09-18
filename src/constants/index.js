@@ -258,7 +258,7 @@ const expLogos = [
 const testimonials = [
   {
     name: "Adarsh Keshri",
-    mentions: "@cosminder",
+    mentions: "Cosminder Solutions",
     designation: "Founder/CEO",
     profileLink: "https://www.linkedin.com/in/adarshk13/",
     companyLink: "https://cosminder.com",
@@ -268,7 +268,7 @@ const testimonials = [
   },
   {
     name: "Om Bharti",
-    mentions: "@Grippi.io",
+    mentions: "Grippi.io",
     designation: "Founding Developer",
     profileLink: "https://www.linkedin.com/in/om-bhartiofficial/",
     companyLink: "https://www.grippi.io",
