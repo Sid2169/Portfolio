@@ -105,17 +105,17 @@ const Contact = () => {
 
               {/* MIDDLE: DIRECT EMAIL BOX WITH COPY BUTTON */}
               <div className="p-5 rounded-xl bg-[#1c1c21] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3 overflow-hidden">
+                <div className="flex items-center gap-3 overflow-hidden w-full">
                   <div className="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div className="truncate">
+                  <div className="min-w-0 overflow-x-auto">
                     <p className="text-xs text-white-50 font-medium uppercase tracking-wider">Direct Email</p>
                     <a 
                       href={`mailto:${emailAddress}`}
-                      className="text-white hover:text-cyan-400 transition-colors font-mono text-sm md:text-base font-semibold truncate block"
+                      className="text-white hover:text-cyan-400 transition-colors font-mono text-sm md:text-base font-semibold whitespace-nowrap inline-block"
                     >
                       {emailAddress}
                     </a>
