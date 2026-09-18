@@ -143,12 +143,12 @@ section {
   }
 
   .hero-text {
-    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold text-white relative z-10 pointer-events-none;
     img {
       @apply size-8 md:size-10 object-contain;
     }
     .slide {
-      @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      @apply absolute text-cyan-400 pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
     }
   }
 
@@ -182,10 +182,9 @@ section {
     }
 
     .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply text-cyan-400 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
 
       font-family: var(--logo-font);
-      color: var(--accent-color)
     }
 
     nav.desktop {
@@ -197,7 +196,7 @@ section {
         li {
           @apply relative;
 
-          color: var(--accent-color);
+          color: var(--color-cyan-400);
 
           span {
             @apply transition-colors duration-300 hover:text-white;
@@ -213,17 +212,10 @@ section {
    .contact-btn {
       @apply flex;
 
-      &:hover .inner {
-      background-color: #1c1c21;
-      }
-
-      &:hover .inner span {
-        color: var(--accent-color);
-      }
-
       .inner {
-         @apply px-5 py-2 rounded-lg transition-colors duration-300;
-         background-color: var(--accent-color);
+         @apply px-5 py-2 rounded-lg transition-all duration-300
+           bg-gradient-to-r from-cyan-500 to-cyan-600
+           hover:from-cyan-400 hover:to-cyan-500 hover:shadow-lg hover:shadow-cyan-500/25;
 
        span {
          @apply text-black transition-colors duration-300;
@@ -286,12 +278,13 @@ section {
   }
 
 .cta-button {
-  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden
+    hover:shadow-lg hover:shadow-cyan-500/25;
 
   .bg-circle {
     @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-      w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
-      rounded-full bg-[var(--accent-color)] transition-all duration-500;
+      w-[calc(100%_+_80px)] h-[120%] group-hover:size-10 group-hover:right-4 md:group-hover:right-10
+      rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 transition-all duration-500;
   }
 
   .text {
@@ -300,8 +293,9 @@ section {
   }
 
   .arrow-wrapper {
-    @apply group-hover:bg-[var(--accent-color)] size-10 rounded-full absolute right-10 top-1/2 
-      -translate-y-1/2 flex justify-center items-center overflow-hidden;
+    @apply size-10 rounded-full absolute right-4 md:right-10 top-1/2 
+      -translate-y-1/2 flex justify-center items-center overflow-hidden
+      group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-cyan-600;
 
     img {
       @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
@@ -311,8 +305,8 @@ section {
 
   .cta-button-ghost {
     @apply px-6 py-4 rounded-lg flex justify-center items-center relative cursor-pointer overflow-hidden
-      border border-[var(--accent-color)] bg-transparent transition-all duration-500
-      hover:bg-[var(--accent-color)];
+      border border-cyan-500/40 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 transition-all duration-500
+      hover:from-cyan-500 hover:to-cyan-600 hover:border-transparent hover:shadow-lg hover:shadow-cyan-500/25;
 
     /* Circle and arrow not used in ghost variant */
     .bg-circle {

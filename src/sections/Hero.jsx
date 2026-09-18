@@ -51,18 +51,18 @@ const Hero = () => {
                         </h1>                       
                     </div>
 
-                    <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                    <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
                         Hi, I'm from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
                     <div className="flex flex-wrap gap-4">
                       <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
+                        className="md:w-80 md:h-16 w-full h-12"
                         id="button"
                         text="See my work"
                       />
                       <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
+                        className="md:w-80 md:h-16 w-full h-12"
                         text="View Resume"
                         href="/resume.pdf"
                         outlined
