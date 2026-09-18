@@ -373,7 +373,7 @@ const projects = [
 ];
 
 const OtherLinks = {
-  submitTestimonialLink: "/submit-testimonial",
+  submitTestimonialLink: "https://testimonials-website-rho.vercel.app/",
 };
 
 export {
