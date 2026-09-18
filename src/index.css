@@ -304,7 +304,7 @@ section {
       group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-cyan-600;
 
     img {
-      @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;
+      @apply size-5 translate-y-0 animate-bounce transition-transform duration-500;
     }
   }
 }
