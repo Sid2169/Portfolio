@@ -223,7 +223,7 @@ const ShowcaseSection = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-semibold text-xs md:text-sm rounded-xl hover:from-cyan-400 hover:to-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 active:scale-95"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-semibold text-xs md:text-sm rounded-xl hover:from-cyan-300 hover:to-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 active:scale-95"
                   >
                     <span>View Project</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +258,7 @@ const ShowcaseSection = () => {
         <div className="text-center mt-16">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black font-semibold rounded-full hover:from-cyan-400 hover:to-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-semibold rounded-full hover:from-cyan-300 hover:to-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105"
           >
             Let's Work Together
             <svg
