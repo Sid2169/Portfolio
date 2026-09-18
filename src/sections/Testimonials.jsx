@@ -113,7 +113,7 @@ const Testimonials = () => {
 
              <div className="flex-center mt-15">
                 <Button
-                  className="md:w-80 md:h-16 w-full h-12"
+                  className="md:w-96 md:h-16 w-full h-12"
                   text="Submit a Testimonial"
                   href={OtherLinks.submitTestimonialLink}
                 />
