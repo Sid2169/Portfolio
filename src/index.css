@@ -212,17 +212,10 @@ section {
    .contact-btn {
       @apply flex;
 
-      &:hover .inner {
-      background-color: #1c1c21;
-      }
-
-      &:hover .inner span {
-        color: var(--accent-color);
-      }
-
       .inner {
-         @apply px-5 py-2 rounded-lg transition-colors duration-300;
-         background-color: var(--accent-color);
+         @apply px-5 py-2 rounded-lg transition-all duration-300
+           bg-gradient-to-r from-cyan-500 to-cyan-600
+           hover:from-cyan-400 hover:to-cyan-500 hover:shadow-lg hover:shadow-cyan-500/25;
 
        span {
          @apply text-black transition-colors duration-300;
