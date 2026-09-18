@@ -286,12 +286,13 @@ section {
   }
 
 .cta-button {
-  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+  @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden
+    hover:shadow-lg hover:shadow-cyan-500/25;
 
   .bg-circle {
     @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
       w-[calc(100%_+_80px)] h-[120%] group-hover:size-10 group-hover:right-4 md:group-hover:right-10
-      rounded-full bg-[var(--accent-color)] transition-all duration-500;
+      rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 transition-all duration-500;
   }
 
   .text {
@@ -311,8 +312,8 @@ section {
 
   .cta-button-ghost {
     @apply px-6 py-4 rounded-lg flex justify-center items-center relative cursor-pointer overflow-hidden
-      border border-[var(--accent-color)] bg-transparent transition-all duration-500
-      hover:bg-[var(--accent-color)];
+      border border-cyan-500/40 bg-gradient-to-r from-cyan-500/10 to-cyan-600/10 transition-all duration-500
+      hover:from-cyan-500 hover:to-cyan-600 hover:border-transparent hover:shadow-lg hover:shadow-cyan-500/25;
 
     /* Circle and arrow not used in ghost variant */
     .bg-circle {
