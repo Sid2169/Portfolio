@@ -51,7 +51,7 @@ const Hero = () => {
                         </h1>                       
                     </div>
 
-                    <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+                    <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
                         Hi, I'm from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
