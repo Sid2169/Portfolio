@@ -75,3 +75,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Add a screenshot or example when it clarifies the workflow.
 - **navigation** — Check that metadata changes are reflected in the deployed preview.
 - **React component structure** — Keep the related setup steps aligned with the current scripts.
+- **routing** — Verify that links and references still resolve.
