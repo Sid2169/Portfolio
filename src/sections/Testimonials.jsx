@@ -77,12 +77,26 @@ const Testimonials = () => {
                     <GlowCard key={testimonial.id || testimonial.profileLink || `${testimonial.name}-${index}`} card={testimonial}>
                         <div className="flex items-center gap-3">
                             <div>
-                                {testimonial.imgPath ? (
-                                    <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                                {testimonial.profileLink ? (
+                                    <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" aria-label={`${testimonial.name} on LinkedIn`} className="inline-block cursor-pointer">
+                                        {testimonial.imgPath ? (
+                                            <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                                        ) : (
+                                            <div className="w-12 h-12 rounded-full bg-black-200 flex items-center justify-center text-white-50 font-bold text-lg" aria-hidden="true">
+                                                {getInitials(testimonial.name)}
+                                            </div>
+                                        )}
+                                    </a>
                                 ) : (
-                                    <div className="w-12 h-12 rounded-full bg-black-200 flex items-center justify-center text-white-50 font-bold text-lg" aria-hidden="true">
-                                        {getInitials(testimonial.name)}
-                                    </div>
+                                    <>
+                                        {testimonial.imgPath ? (
+                                            <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                                        ) : (
+                                            <div className="w-12 h-12 rounded-full bg-black-200 flex items-center justify-center text-white-50 font-bold text-lg" aria-hidden="true">
+                                                {getInitials(testimonial.name)}
+                                            </div>
+                                        )}
+                                    </>
                                 )}
                             </div>
 
