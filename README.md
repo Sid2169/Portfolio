@@ -77,3 +77,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **React component structure** — Keep the related setup steps aligned with the current scripts.
 - **routing** — Verify that links and references still resolve.
 - **routing** — Verify the change in both development and production builds.
+- **routing** — Use the existing project patterns when extending this area.
