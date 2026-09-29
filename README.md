@@ -169,3 +169,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **responsive layout** — Verify the change in both development and production builds.
 - **performance checks** — Update the documentation if the visible behavior changes.
 - **SEO metadata** — Document any manual steps that cannot be automated.
+- **content updates** — Use the existing project patterns when extending this area.
