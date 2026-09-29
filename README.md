@@ -171,3 +171,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Document any manual steps that cannot be automated.
 - **content updates** — Use the existing project patterns when extending this area.
 - **SEO metadata** — Include a short reproduction step when reporting issues.
+- **build output** — Verify that links and references still resolve.
