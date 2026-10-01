@@ -102,7 +102,7 @@ const ExperienceSection = () => {
         <div className="mt-16 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card, index) => (
-              <div key={card.title} className="exp-card-wrapper">
+              <div key={card.company || card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div>
@@ -121,31 +121,34 @@ const ExperienceSection = () => {
                         <img src={card.logoPath} alt="logo" />
                       </div>
                       <div>
-                        <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-2">
-                          <h1 className="font-semibold text-3xl text-white">{card.title}</h1>
-                          {card.liveLink && (
-                            <a
-                              href={card.liveLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-full hover:bg-cyan-500/20 hover:border-cyan-400 hover:text-cyan-300 transition-all duration-300 hover:shadow-md hover:shadow-cyan-500/20 active:scale-95 cursor-pointer"
-                            >
-                              <span>View Work</span>
-                              <svg
-                                className="w-3.5 h-3.5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                        <div className="mb-2">
+                          <div className="flex flex-wrap items-center gap-3 md:gap-4">
+                            <h1 className="font-semibold text-3xl text-white">{card.company}</h1>
+                            {card.liveLink && (
+                              <a
+                                href={card.liveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-full hover:bg-cyan-500/20 hover:border-cyan-400 hover:text-cyan-300 transition-all duration-300 hover:shadow-md hover:shadow-cyan-500/20 active:scale-95 cursor-pointer"
                               >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                />
-                              </svg>
-                            </a>
-                          )}
+                                <span>View Work</span>
+                                <svg
+                                  className="w-3.5 h-3.5"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  />
+                                </svg>
+                              </a>
+                            )}
+                          </div>
+                          <p className="text-xl italic text-[#839CB5] mt-1">{card.title}</p>
                         </div>
                         <p className="my-5 text-white-50">
                           🗓️&nbsp;{card.date}

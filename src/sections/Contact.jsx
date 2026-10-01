@@ -84,6 +84,26 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white">Siddhartha Suman</h3>
                     <p className="text-sm text-cyan-400 font-medium">Full-Stack Web Dev</p>
+                    <div className="flex items-center gap-4 pt-2">
+                  <span className="text-xs uppercase tracking-wider text-white-50 font-medium">Connect:</span>
+                  <div className="flex items-center gap-3">
+                    {socialImgs.map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-lg bg-[#1c1c21] border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 transition-all group"
+                      >
+                        <img 
+                          src={social.imgPath} 
+                          alt={social.name} 
+                          className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
                   </div>
                 </div>
 
@@ -146,26 +166,7 @@ const Contact = () => {
                   <span>Based in <strong>India</strong> — Open for Remote, Hybrid, & Relocation</span>
                 </div>
 
-                <div className="flex items-center gap-4 pt-2">
-                  <span className="text-xs uppercase tracking-wider text-white-50 font-medium">Connect:</span>
-                  <div className="flex items-center gap-3">
-                    {socialImgs.map((social, index) => (
-                      <a
-                        key={index}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-lg bg-[#1c1c21] border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 transition-all group"
-                      >
-                        <img 
-                          src={social.imgPath} 
-                          alt={social.name} 
-                          className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
-                        />
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                
               </div>
 
             </div>
