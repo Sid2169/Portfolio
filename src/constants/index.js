@@ -26,10 +26,10 @@ const words = [
   { text: "AI Apps",   imgPath: "/images/logos/claude-dark.svg" },
   { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
   { text: "Infra",   imgPath: "/images/logos/infra.png" },
-  { text: "Web Apps 2",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Apps 2",  imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST APIs 2",        imgPath: "/images/logos/node-dark.svg" },
-  { text: "Infra 2",  imgPath: "/images/logos/infra.png" },
+  { text: "Web App",     imgPath: "/images/logos/react-dark.svg" },
+  { text: "AI App",  imgPath: "/images/logos/claude-dark.svg" },
+  { text: "REST API",        imgPath: "/images/logos/node-dark.svg" },
+  { text: "Infras",  imgPath: "/images/logos/infra.png" },
 ];
 
 const logoIconsList = [
