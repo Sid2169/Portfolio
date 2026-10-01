@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 const ROOM_START_ROTATION_Y = -Math.PI / 4
 const ROOM_SWING_ANGLE = Math.PI / 6
-const ROOM_SWING_DURATION = 13
+const ROOM_SWING_DURATION = 11
 
 const HeroExperience = () => {
   const containerRef = useRef(null);
@@ -79,7 +79,7 @@ const HeroExperience = () => {
         dpr={[1, 1.5]}
         gl={{ powerPreference: "high-performance", antialias: true }}
         camera={{ position: [0, 0, 15], fov: 45 }}
-        style={{ touchAction: isMobile ? 'pan-y' : 'auto' }}
+        style={{ touchAction: isTablet ? 'pan-y' : 'auto' }}
       >
         <OrbitControls
          enabled={!isTablet && !isMobile}
