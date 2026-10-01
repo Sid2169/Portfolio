@@ -1,3 +1,5 @@
+import { TESTIMONIALS_API_BASE } from "./src/lib/testimonials.js";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // R3F's <Canvas> creates its WebGL renderer inside a layout effect whose
@@ -10,12 +12,11 @@ const nextConfig = {
     return [
       {
         source: "/api/testimonials",
-        destination: "https://siddhartha-testimonials-api.onrender.com/api/testimonials",
+        destination: `${TESTIMONIALS_API_BASE}/api/testimonials`,
       },
       {
         source: "/api/photos/:id",
-        destination:
-          "https://siddhartha-testimonials-api.onrender.com/api/photos/:id",
+        destination: `${TESTIMONIALS_API_BASE}/api/photos/:id`,
       },
     ]
   },
