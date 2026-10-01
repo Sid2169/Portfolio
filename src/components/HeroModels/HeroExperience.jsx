@@ -14,6 +14,8 @@ const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)'});
 
   useEffect(() => {
+    const node = containerRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -21,13 +23,13 @@ const HeroExperience = () => {
       { threshold: 0.05 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);

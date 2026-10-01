@@ -1,3 +1,4 @@
+"use client"
 import { useRef } from 'react'
 import { techCategories, corePrimaryStack } from '../constants'
 import { useGSAP } from '@gsap/react'

@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from 'react'
 import TitleHeader from '../components/TitleHeader'
 import { testimonials as fallbackTestimonials, OtherLinks } from '../constants'
@@ -36,7 +37,7 @@ const Testimonials = () => {
         })
 
         if (!res.ok) {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Request failed.')
+          if (process.env.NODE_ENV !== "production") console.warn('[Testimonials] Request failed.')
           return
         }
 
@@ -44,19 +45,19 @@ const Testimonials = () => {
         try {
           data = await res.json()
         } catch {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Malformed response.')
+          if (process.env.NODE_ENV !== "production") console.warn('[Testimonials] Malformed response.')
           return
         }
 
         if (!data || !Array.isArray(data.items)) {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Invalid response shape.')
+          if (process.env.NODE_ENV !== "production") console.warn('[Testimonials] Invalid response shape.')
           return
         }
 
         setTestimonialList(data.items.map(normalizeTestimonial))
       } catch (err) {
         if (err.name === 'AbortError') return
-        if (import.meta.env.DEV) console.warn('[Testimonials] Failed to load.')
+        if (process.env.NODE_ENV !== "production") console.warn('[Testimonials] Failed to load.')
       }
     }
 

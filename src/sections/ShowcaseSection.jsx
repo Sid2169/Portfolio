@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -260,7 +261,7 @@ const ShowcaseSection = () => {
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-semibold rounded-full hover:from-cyan-300 hover:to-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105"
           >
-            Let's Work Together
+            Let&apos;s Work Together
             <svg
               className="w-5 h-5"
               fill="none"
