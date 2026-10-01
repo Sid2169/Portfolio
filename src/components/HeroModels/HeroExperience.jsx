@@ -82,12 +82,11 @@ const HeroExperience = () => {
         style={{ touchAction: isTablet ? 'pan-y' : 'auto' }}
       >
         <OrbitControls
-         enabled={!isTablet && !isMobile}
-         enablePan={ false }
-         enableZoom={!isTablet && !isMobile}
+         enablePan={false}
+         enableZoom={!isTablet}
          maxDistance={20}
          minDistance={5}
-         minPolarAngle={Math.PI / 5}
+         minPolarAngle={isTablet ? Math.PI / 2 : Math.PI / 5}
          maxPolarAngle={Math.PI / 2}
          onStart={stopRoomRotation}
         />
@@ -102,7 +101,7 @@ const HeroExperience = () => {
          position={[0, -3.5, 0]}
          rotation={[0, ROOM_START_ROTATION_Y, 0]}
         >
-          <Room isMobile={isMobile || isTablet} />
+          <Room />
         </group>
       </Canvas>
     </div>
