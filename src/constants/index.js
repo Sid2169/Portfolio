@@ -205,19 +205,19 @@ const expCards = [
       "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
     ],
   },
-  // {
-  //   review: "Built and improved data and notification systems across multiple marketing platforms, contributing to near real-time anomaly alerts, centralized analytics, and faster database operations.",
-  //   imgPath: "/images/exp-grippi.png",
-  //   logoPath: "/images/logo-grippi.png",
-  //   title: "Full Stack Web Developer Intern",
-  //   date: "November 2024 - April 2025",
-  //   liveLink: "https://www.grippi.io",
-  //   responsibilities: [
-  //     "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
-  //     "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
-  //     "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
-  //   ],
-  // },
+  {
+    review: "Built and improved data and notification systems across multiple marketing platforms, contributing to near real-time anomaly alerts, centralized analytics, and faster database operations.",
+    imgPath: "/images/exp-grippi.png",
+    logoPath: "/images/logo-grippi.png",
+    title: "Full Stack Web Developer Intern",
+    date: "November 2024 - April 2025",
+    liveLink: "https://www.grippi.io",
+    responsibilities: [
+      "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
+      "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
+      "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
+    ],
+  },
   
 
   /* ===== Empty templates for future experience entries ===== */
