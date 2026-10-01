@@ -1,3 +1,4 @@
+"use client"
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
@@ -33,10 +34,10 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_APP_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_APP_EMAILJS_PUBLIC_KEY
       );
 
       setForm({ name: "", email: "", message: "" });
@@ -84,26 +85,6 @@ const Contact = () => {
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white">Siddhartha Suman</h3>
                     <p className="text-sm text-cyan-400 font-medium">Full-Stack Web Dev</p>
-                    <div className="flex items-center gap-4 pt-2">
-                  <span className="text-xs uppercase tracking-wider text-white-50 font-medium">Connect:</span>
-                  <div className="flex items-center gap-3">
-                    {socialImgs.map((social, index) => (
-                      <a
-                        key={index}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-lg bg-[#1c1c21] border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 transition-all group"
-                      >
-                        <img 
-                          src={social.imgPath} 
-                          alt={social.name} 
-                          className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
-                        />
-                      </a>
-                    ))}
-                  </div>
-                </div>
                   </div>
                 </div>
 
@@ -121,6 +102,27 @@ const Contact = () => {
                 <p className="text-white-50 text-sm md:text-base leading-relaxed">
                   Prefer direct emails over web forms? Feel free to copy my email address or reach out through my active professional profiles below.
                 </p>
+              </div>
+              {/* SOCIAL PROFILES */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <span className="text-xs uppercase tracking-wider text-white-50 font-medium">Connect:</span>
+                <div className="flex items-center gap-3">
+                  {socialImgs.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-lg bg-[#1c1c21] border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 transition-all group"
+                    >
+                      <img 
+                        src={social.imgPath} 
+                        alt={social.name} 
+                        className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
+                      />
+                    </a>
+                  ))}
+                </div>
               </div>
 
               {/* MIDDLE: DIRECT EMAIL BOX WITH COPY BUTTON */}

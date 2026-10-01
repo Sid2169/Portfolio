@@ -1,8 +1,14 @@
+"use client"
+import dynamic from "next/dynamic"
 import { words } from '../constants/index.js'
 import  Button  from '../components/Button.jsx'
-import HeroExperience from '../components/HeroModels/HeroExperience.jsx'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+
+const HeroExperience = dynamic(
+  () => import('../components/HeroModels/HeroExperience.jsx'),
+  { ssr: false }
+)
 
 const Hero = () => {
 
@@ -52,7 +58,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I'm from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
+                        Hi, I&apos;m from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
                     </p>
 
                     <div className="flex flex-wrap gap-4">

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+"use client"
 import TitleHeader from '../components/TitleHeader'
 import { testimonials as fallbackTestimonials, OtherLinks } from '../constants'
 import GlowCard from '../components/GlowCard'
@@ -12,58 +12,13 @@ const getInitials = (name) =>
     .map((word) => word[0]?.toUpperCase() || '')
     .join('') || '?'
 
-const normalizeTestimonial = (item) => ({
-  id: item.id,
-  name: item.name,
-  review: item.view,
-  designation: item.designation,
-  profileLink: item.linkedin,
-  imgPath: item.photoUrl,
-  mentions: item.company,
-  companyLink: item.companyUrl ?? item.companyLink,
-})
-
-const Testimonials = () => {
-  const [testimonialList, setTestimonialList] = useState(fallbackTestimonials)
-
-  useEffect(() => {
-    const controller = new AbortController()
-
-    const loadTestimonials = async () => {
-      try {
-        const res = await fetch('/api/testimonials?sort=newest&page=1&limit=6', {
-          signal: controller.signal,
-        })
-
-        if (!res.ok) {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Request failed.')
-          return
-        }
-
-        let data
-        try {
-          data = await res.json()
-        } catch {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Malformed response.')
-          return
-        }
-
-        if (!data || !Array.isArray(data.items)) {
-          if (import.meta.env.DEV) console.warn('[Testimonials] Invalid response shape.')
-          return
-        }
-
-        setTestimonialList(data.items.map(normalizeTestimonial))
-      } catch (err) {
-        if (err.name === 'AbortError') return
-        if (import.meta.env.DEV) console.warn('[Testimonials] Failed to load.')
-      }
-    }
-
-    loadTestimonials()
-
-    return () => controller.abort()
-  }, [])
+const Testimonials = ({ initialTestimonials }) => {
+  // Rendered straight from props with no client fetch on top. The list the
+  // server rendered is therefore the list the browser keeps, so this section
+  // has a fixed height and never pushes the sections below it down.
+  const testimonialList = initialTestimonials?.length
+    ? initialTestimonials
+    : fallbackTestimonials
 
   return (
     <section id="testimonials" className="flex-center section-padding">
