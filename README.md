@@ -79,3 +79,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **routing** — Verify the change in both development and production builds.
 - **routing** — Use the existing project patterns when extending this area.
 - **performance checks** — Keep commands copy-pasteable for new contributors.
+- **project scripts** — Update the documentation if the visible behavior changes.
