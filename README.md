@@ -172,3 +172,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Use the existing project patterns when extending this area.
 - **SEO metadata** — Include a short reproduction step when reporting issues.
 - **build output** — Verify that links and references still resolve.
+- **SEO metadata** — Check the relevant browser or runtime support.
