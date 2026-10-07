@@ -173,3 +173,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Include a short reproduction step when reporting issues.
 - **build output** — Verify that links and references still resolve.
 - **SEO metadata** — Check the relevant browser or runtime support.
+- **React component structure** — Confirm the expected behavior on a clean checkout.
