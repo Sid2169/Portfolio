@@ -174,3 +174,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **build output** — Verify that links and references still resolve.
 - **SEO metadata** — Check the relevant browser or runtime support.
 - **React component structure** — Confirm the expected behavior on a clean checkout.
+- **Vite setup** — Keep commands copy-pasteable for new contributors.
