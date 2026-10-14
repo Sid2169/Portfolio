@@ -81,3 +81,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **performance checks** — Keep commands copy-pasteable for new contributors.
 - **project scripts** — Update the documentation if the visible behavior changes.
 - **browser support** — Note any external service limits or required keys.
+- **routing** — Prefer small, focused changes over broad rewrites.
