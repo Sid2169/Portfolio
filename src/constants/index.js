@@ -113,7 +113,7 @@ const corePrimaryStack = [
   { name: "Python", level: "AI/ML Language", iconPath: "/images/logos/python.svg" },
   { name: "LangChain", level: "LLM Framework / RAG", iconPath: "/images/logos/langchain.svg" },
   { name: "LangGraph", level: "Agent Orchestration", iconPath: "/images/logos/langgraph.svg" },
-  { name: "pgVector", level: "Postgres Vector Search", iconPath: "/images/logos/postgresql.webp" },
+  { name: "pgVector", level: "Postgres Vector Search", iconPath: "/images/logos/pgvector.svg" },
 ];
 
 const techCategories = [
@@ -131,7 +131,7 @@ const techCategories = [
   {
     title: "Backend & Data",
     icon: "⚙️",
-    description: "APIs, Relational, NoSQL & Vector Databases",
+    description: "NoSQL, Caching & Vector Databases",
     skills: [
       { name: "MongoDB", iconPath: "/images/logos/mongodb.svg" },
       { name: "Mongoose", iconPath: "/images/logos/mongodb.svg" },
@@ -144,11 +144,9 @@ const techCategories = [
   {
     title: "AI & Realtime",
     icon: "🧠",
-    description: "LLM APIs, Voice AI & Background Queues",
+    description: "LLM Streaming, Voice AI, Queues & Observability",
     skills: [
-      { name: "Anthropic Claude API", iconPath: "/images/logos/claude.svg" },
       { name: "Vercel AI SDK", iconPath: "/images/logos/vercel.svg" },
-      { name: "Google Gemini API", iconPath: "/images/logos/gemini.svg" },
       { name: "Vapi", iconPath: "/images/logos/vapi.svg" },
       { name: "ElevenLabs", iconPath: "/images/logos/elevenlabs.svg" },
       { name: "Inngest", iconPath: "/images/logos/inngest.svg" },
