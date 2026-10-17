@@ -22,14 +22,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Apps",   imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
-  { text: "Infra",   imgPath: "/images/logos/infra.png" },
-  { text: "Web App",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI App",  imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST API",        imgPath: "/images/logos/node-dark.svg" },
-  { text: "Infras",  imgPath: "/images/logos/infra.png" },
+  { text: "AI Agents",   imgPath: "/images/logos/ai-agents-dark.svg" },
+  { text: "RAG Apps",    imgPath: "/images/logos/rag-dark.svg" },
+  { text: "LLM Apps",    imgPath: "/images/logos/claude-dark.svg" },
+  { text: "ML Models",   imgPath: "/images/logos/python.svg" },
+  { text: "AI Search",   imgPath: "/images/logos/qdrant.svg" },
+  { text: "Voice AI",    imgPath: "/images/logos/elevenlabs-dark.svg" },
+  { text: "Workflows",   imgPath: "/images/logos/langgraph-dark.svg" },
+  { text: "SaaS Apps",   imgPath: "/images/logos/nextjs-dark.svg" },
 ];
 
 const logoIconsList = [
