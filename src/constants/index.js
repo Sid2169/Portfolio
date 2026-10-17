@@ -92,14 +92,26 @@ const techStackImgs = [
 ];
 
 
+const appliedAIStack = [
+  { name: "LLM APIs (Claude, Gemini, OpenAI)", iconPaths: ["/images/logos/claude.svg", "/images/logos/gemini.svg", "/images/logos/openai.svg"] },
+  { name: "RAG", iconPath: "/images/logos/rag.svg" },
+  { name: "AI Agents", iconPath: "/images/logos/ai-agents.svg" },
+  { name: "MCP", iconPath: "/images/logos/mcp.svg" },
+  { name: "Embeddings", iconPath: "/images/logos/embeddings.svg" },
+  { name: "Hybrid Search", iconPath: "/images/logos/hybrid-search.svg" },
+  { name: "Reranking", iconPath: "/images/logos/reranking.svg" },
+  { name: "LLM Evaluation", iconPath: "/images/logos/llm-evaluation.svg" },
+];
+
 const corePrimaryStack = [
   { name: "TypeScript", level: "Primary Language", iconPath: "/images/logos/typescript.svg" },
   { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
-  { name: "React 19", level: "Frontend Core", iconPath: "/images/logos/react-dark.svg" },
-  { name: "Node.js", level: "Backend Core", iconPath: "/images/logos/node-dark.svg" },
   { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
   { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
-  { name: "Docker", level: "Development & Deployment", iconPath: "/images/logos/docker.svg" },
+  { name: "LangChain", level: "LLM Orchestration", iconPath: "/images/logos/langchain.svg" },
+  { name: "LangGraph", level: "Agent Workflows", iconPath: "/images/logos/langgraph.svg" },
+  { name: "Qdrant", level: "Vector Database", iconPath: "/images/logos/qdrant.svg" },
+  { name: "pgVector", level: "Vector Store", iconPath: "/images/logos/postgresql.webp" },
 ];
 
 const techCategories = [
@@ -108,6 +120,7 @@ const techCategories = [
     icon: "💻",
     description: "App Router, Server Components & State Management",
     skills: [
+      { name: "React", iconPath: "/images/logos/react.png" },
       { name: "Next.js", iconPath: "/images/logos/nextjs-light.svg" },
       { name: "App Router", iconPath: "/images/logos/nextjs-light.svg" },
       { name: "Server Components", iconPath: "/images/logos/react.png" },
@@ -128,6 +141,8 @@ const techCategories = [
       { name: "MongoDB", iconPath: "/images/logos/mongodb.svg" },
       { name: "Mongoose", iconPath: "/images/logos/mongodb.svg" },
       { name: "Convex", iconPath: "/images/logos/convex.svg" },
+      { name: "Redis", iconPath: "/images/logos/redis.svg" },
+      { name: "pytest", iconPath: "/images/logos/pytest.svg" },
     ],
   },
   {
@@ -141,6 +156,8 @@ const techCategories = [
       { name: "Vapi", iconPath: "/images/logos/vapi.svg" },
       { name: "ElevenLabs", iconPath: "/images/logos/elevenlabs.svg" },
       { name: "Inngest", iconPath: "/images/logos/inngest.svg" },
+      { name: "RAGAS", iconPath: "/images/logos/ragas.svg" },
+      { name: "LangSmith", iconPath: "/images/logos/langsmith.svg" },
     ],
   },
   {
@@ -150,9 +167,11 @@ const techCategories = [
     skills: [
       { name: "Vercel", iconPath: "/images/logos/vercel.svg" },
       { name: "Clerk", iconPath: "/images/logos/clerk.svg" },
+      { name: "Docker", iconPath: "/images/logos/docker.svg" },
       { name: "Git & GitHub", iconPath: "/images/logos/git.svg" },
       { name: "Webpack", iconPath: "/images/logos/webpack.svg" },
       { name: "Jest", iconPath: "/images/logos/jest.svg" },
+      { name: "OpenTelemetry", iconPath: "/images/logos/opentelemetry.svg" },
       { name: "Sentry", iconPath: "/images/logos/sentry.svg" },
     ],
   },
@@ -192,30 +211,30 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Maintained and extended a production Next.js website, built a complete blog management system, and refactored core code to improve performance and maintainability.",
+    review: "Built applied AI and ML systems that transform financial data, market signals, and unstructured text into predictive insights, recommendations, and risk signals for SaaS products.",
     imgPath: "/images/exp-cosminder.svg",
     logoPath: "/images/logo-cosminder.svg",
     company: "Cosminder Solutions",
-    title: "Full Stack Web Developer",
+    title: "Applied AI Systems Engineer",
     date: "June 2025 - Present",
     liveLink: "https://cosminder.com",
     responsibilities: [
-      "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
-      "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
-      "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
+      "Developed ML pipelines transforming financial data, market signals, and unstructured text into predictive insights, recommendations, and risk signals for SaaS products",
+      "Implemented financial feature engineering, sentiment analysis, and MLP-based supply-chain simulations, with research trials reporting 18–25% lower forecasting error and 12% lower logistics costs",
+      "Modeled automation across 200 companies, estimating 240 hours of monthly capacity released (1.5 FTE equivalent) under assumptions of two hours of manual work per company monthly and 60% task automation",
     ],
   },
   {
-    review: "Built and improved data and notification systems across multiple marketing platforms, contributing to near real-time anomaly alerts, centralized analytics, and faster database operations.",
+    review: "Built data and notification systems across multiple marketing platforms, delivering near real-time anomaly alerts, a centralized analytics engine, and faster database operations.",
     imgPath: "/images/exp-grippi.png",
     logoPath: "/images/logo-grippi.png",
     company: "Grippi.io",
-    title: "Full Stack Web Developer Intern",
+    title: "Full Stack Engineer",
     date: "November 2024 - April 2025",
     liveLink: "https://www.grippi.io",
     responsibilities: [
-      "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
-      "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
+      "Contributed to AI-driven Slack and WhatsApp alerting systems, reducing marketing anomaly detection latency from daily reporting cycles to near-real-time notifications",
+      "Integrated Meta, Google Ads, and Shopify data into a centralized analytics engine, consolidating data from 3+ platforms",
       "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
     ],
   },
@@ -386,6 +405,7 @@ export {
   socialImgs,
   techStackIcons,
   techCategories,
+  appliedAIStack,
   corePrimaryStack,
   techStackImgs,
   navLinks,

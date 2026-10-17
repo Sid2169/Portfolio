@@ -1,6 +1,6 @@
 "use client"
 import { useRef } from 'react'
-import { techCategories, corePrimaryStack } from '../constants'
+import { techCategories, corePrimaryStack, appliedAIStack } from '../constants'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
@@ -66,13 +66,51 @@ const TechStack = () => {
             </p>
           </div>
 
+          {/* Applied AI Engineering */}
+          <div className="mb-8">
+            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4">
+              Applied AI Engineering
+            </h4>
+            <div className="flex flex-wrap gap-2.5">
+              {appliedAIStack.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm font-medium text-gray-200 hover:text-white hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:scale-[1.03] transition-all duration-300"
+                >
+                  {skill.iconPaths ? (
+                    <span className="flex items-center gap-1">
+                      {skill.iconPaths.map((path) => (
+                        <img key={path} src={path} alt="" className="w-4 h-4 object-contain" />
+                      ))}
+                    </span>
+                  ) : skill.iconPath ? (
+                    <img src={skill.iconPath} alt={skill.name} className="w-4 h-4 object-contain" />
+                  ) : (
+                    <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                  )}
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Primary Stack */}
+          <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4">
+            Primary Stack
+          </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
             {corePrimaryStack.map((tech) => (
               <div 
                 key={tech.name} 
                 className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
               >
-                <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                {tech.iconPath ? (
+                  <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                ) : (
+                  <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                    <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
+                  </span>
+                )}
                 <div>
                   <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
                   <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
