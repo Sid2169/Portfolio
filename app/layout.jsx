@@ -9,23 +9,36 @@ const mona = Mona_Sans({
 })
 
 export const metadata = {
-  title: "Siddhartha Suman | Applied AI Systems Engineer",
+  title: "Siddhartha Suman | AI Engineer & Applied AI Systems Engineer",
   description:
-    "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph. View production projects, work experience, and technical skills.",
+    "AI Engineer and Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph. View production projects, work experience, and technical skills.",
+  keywords: [
+    "AI Engineer",
+    "Applied AI Systems Engineer",
+    "LLM Engineer",
+    "AI/ML Engineer",
+    "RAG",
+    "AI Agents",
+    "LangChain",
+    "LangGraph",
+    "Next.js",
+    "TypeScript",
+    "Python",
+  ],
   icons: {
     icon: "/images/fav.png",
   },
   openGraph: {
     type: "website",
-    title: "Siddhartha Suman | Applied AI Systems Engineer",
+    title: "Siddhartha Suman | AI Engineer & Applied AI Systems Engineer",
     description:
-      "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
+      "AI Engineer and Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Siddhartha Suman | Applied AI Systems Engineer",
+    title: "Siddhartha Suman | AI Engineer & Applied AI Systems Engineer",
     description:
-      "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
+      "AI Engineer and Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
   },
 }
 
