@@ -22,14 +22,14 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Web Apps",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI Apps",   imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST APIs",         imgPath: "/images/logos/node-dark.svg" },
-  { text: "Infra",   imgPath: "/images/logos/infra.png" },
-  { text: "Web App",     imgPath: "/images/logos/react-dark.svg" },
-  { text: "AI App",  imgPath: "/images/logos/claude-dark.svg" },
-  { text: "REST API",        imgPath: "/images/logos/node-dark.svg" },
-  { text: "Infras",  imgPath: "/images/logos/infra.png" },
+  { text: "AI Agents",   imgPath: "/images/logos/ai-agents-dark.svg" },
+  { text: "RAG Apps",    imgPath: "/images/logos/rag-dark.svg" },
+  { text: "LLM Apps",    imgPath: "/images/logos/claude-dark.svg" },
+  { text: "AI Gateways",   imgPath: "/images/logos/python.svg" },
+  { text: "AI Search",   imgPath: "/images/logos/qdrant.svg" },
+  { text: "Voice AI",    imgPath: "/images/logos/elevenlabs-dark.svg" },
+  { text: "Workflows",   imgPath: "/images/logos/langgraph-dark.svg" },
+  { text: "AI SaaS",   imgPath: "/images/logos/nextjs-dark.svg" },
 ];
 
 const logoIconsList = [
@@ -92,27 +92,38 @@ const techStackImgs = [
 ];
 
 
+const appliedAIStack = [
+  { name: "LLM APIs (Claude, Gemini, OpenAI)", level: "Provider APIs", iconPaths: ["/images/logos/claude.svg", "/images/logos/gemini.svg", "/images/logos/openai.svg"] },
+  { name: "RAG", level: "Retrieval Pipeline", iconPath: "/images/logos/rag.svg" },
+  { name: "AI Agents", level: "Agentic Workflows", iconPath: "/images/logos/ai-agents.svg" },
+  { name: "MCP", level: "Tool Protocol", iconPath: "/images/logos/mcp.svg" },
+  { name: "Embeddings", level: "Semantic Vectors", iconPath: "/images/logos/embeddings.svg" },
+  { name: "Hybrid Search", level: "Dense + Sparse", iconPath: "/images/logos/hybrid-search.svg" },
+  { name: "Reranking", level: "Result Refinement", iconPath: "/images/logos/reranking.svg" },
+  { name: "LLM Evaluation", level: "Quality & Metrics", iconPath: "/images/logos/llm-evaluation.svg" },
+];
+
 const corePrimaryStack = [
   { name: "TypeScript", level: "Primary Language", iconPath: "/images/logos/typescript.svg" },
+  { name: "React", level: "UI Library", iconPath: "/images/logos/react.png" },
   { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
-  { name: "React 19", level: "Frontend Core", iconPath: "/images/logos/react-dark.svg" },
-  { name: "Node.js", level: "Backend Core", iconPath: "/images/logos/node-dark.svg" },
-  { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
+  { name: "Node.js", level: "Runtime", iconPath: "/images/logos/node.png" },
   { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
-  { name: "Docker", level: "Development & Deployment", iconPath: "/images/logos/docker.svg" },
+  { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
+  { name: "Python", level: "AI/ML Language", iconPath: "/images/logos/python.svg" },
+  { name: "LangChain", level: "LLM Framework / RAG", iconPath: "/images/logos/langchain.svg" },
+  { name: "LangGraph", level: "Agent Orchestration", iconPath: "/images/logos/langgraph.svg" },
+  { name: "pgVector", level: "Postgres Vector Search", iconPath: "/images/logos/pgvector.svg" },
 ];
 
 const techCategories = [
   {
     title: "Frontend",
     icon: "💻",
-    description: "App Router, Server Components & State Management",
+    description: "Server Components, Server Actions & State Management",
     skills: [
-      { name: "Next.js", iconPath: "/images/logos/nextjs-light.svg" },
-      { name: "App Router", iconPath: "/images/logos/nextjs-light.svg" },
       { name: "Server Components", iconPath: "/images/logos/react.png" },
       { name: "Server Actions", iconPath: "/images/logos/react.png" },
-      { name: "TypeScript", iconPath: "/images/logos/typescript.svg" },
       { name: "Tailwind CSS", iconPath: "/images/logos/tailwindcss.svg" },
       { name: "Zustand", iconPath: "/images/logos/zustand.svg" },
     ],
@@ -120,27 +131,27 @@ const techCategories = [
   {
     title: "Backend & Data",
     icon: "⚙️",
-    description: "APIs, Relational & NoSQL Databases",
+    description: "NoSQL, Caching & Vector Databases",
     skills: [
-      { name: "Node.js", iconPath: "/images/logos/node.png" },
-      { name: "Express", iconPath: "/images/logos/express.svg" },
-      { name: "PostgreSQL", iconPath: "/images/logos/postgresql.webp" },
       { name: "MongoDB", iconPath: "/images/logos/mongodb.svg" },
       { name: "Mongoose", iconPath: "/images/logos/mongodb.svg" },
       { name: "Convex", iconPath: "/images/logos/convex.svg" },
+      { name: "Redis", iconPath: "/images/logos/redis.svg" },
+      { name: "Qdrant", iconPath: "/images/logos/qdrant.svg" },
+      { name: "pytest", iconPath: "/images/logos/pytest.svg" },
     ],
   },
   {
     title: "AI & Realtime",
     icon: "🧠",
-    description: "LLM APIs, Voice AI & Background Queues",
+    description: "LLM Streaming, Voice AI, Queues & Observability",
     skills: [
-      { name: "Anthropic Claude API", iconPath: "/images/logos/claude.svg" },
       { name: "Vercel AI SDK", iconPath: "/images/logos/vercel.svg" },
-      { name: "Google Gemini API", iconPath: "/images/logos/gemini.svg" },
       { name: "Vapi", iconPath: "/images/logos/vapi.svg" },
       { name: "ElevenLabs", iconPath: "/images/logos/elevenlabs.svg" },
       { name: "Inngest", iconPath: "/images/logos/inngest.svg" },
+      { name: "RAGAS", iconPath: "/images/logos/ragas.svg" },
+      { name: "LangSmith", iconPath: "/images/logos/langsmith.svg" },
     ],
   },
   {
@@ -150,9 +161,11 @@ const techCategories = [
     skills: [
       { name: "Vercel", iconPath: "/images/logos/vercel.svg" },
       { name: "Clerk", iconPath: "/images/logos/clerk.svg" },
+      { name: "Docker", iconPath: "/images/logos/docker.svg" },
       { name: "Git & GitHub", iconPath: "/images/logos/git.svg" },
       { name: "Webpack", iconPath: "/images/logos/webpack.svg" },
       { name: "Jest", iconPath: "/images/logos/jest.svg" },
+      { name: "OpenTelemetry", iconPath: "/images/logos/opentelemetry.svg" },
       { name: "Sentry", iconPath: "/images/logos/sentry.svg" },
     ],
   },
@@ -192,30 +205,30 @@ const techStackIcons = [
 
 const expCards = [
   {
-    review: "Maintained and extended a production Next.js website, built a complete blog management system, and refactored core code to improve performance and maintainability.",
+    review: "Built applied AI and ML systems that transform financial data, market signals, and unstructured text into predictive insights, recommendations, and risk signals for SaaS products.",
     imgPath: "/images/exp-cosminder.svg",
     logoPath: "/images/logo-cosminder.svg",
     company: "Cosminder Solutions",
-    title: "Full Stack Web Developer",
+    title: "Applied AI Systems Engineer",
     date: "June 2025 - Present",
     liveLink: "https://cosminder.com",
     responsibilities: [
-      "Maintained and extended the company's primary Next.js website, improving Core Web Vitals and cutting page load time by 25% through code splitting and image optimization",
-      "Built and shipped a blog management feature end to end, cutting average content publishing time from hours to minutes for the non-technical content team",
-      "Refactored core sections of the codebase, reducing duplicate logic by ~30% and shortening onboarding time for new contributors",
+      "Developed ML pipelines transforming financial data, market signals, and unstructured text into predictive insights, recommendations, and risk signals for SaaS products",
+      "Implemented financial feature engineering, sentiment analysis, and MLP-based supply-chain simulations, with research trials reporting 18–25% lower forecasting error and 12% lower logistics costs",
+      "Modeled automation across 200 companies, estimating 240 hours of monthly capacity released (1.5 FTE equivalent) under assumptions of two hours of manual work per company monthly and 60% task automation",
     ],
   },
   {
-    review: "Built and improved data and notification systems across multiple marketing platforms, contributing to near real-time anomaly alerts, centralized analytics, and faster database operations.",
+    review: "Built data and notification systems across multiple marketing platforms, delivering near real-time anomaly alerts, a centralized analytics engine, and faster database operations.",
     imgPath: "/images/exp-grippi.png",
     logoPath: "/images/logo-grippi.png",
     company: "Grippi.io",
-    title: "Full Stack Web Developer Intern",
+    title: "Full Stack Engineer",
     date: "November 2024 - April 2025",
     liveLink: "https://www.grippi.io",
     responsibilities: [
-      "Helped build AI-driven Slack and WhatsApp notification systems, cutting the time to surface marketing performance anomalies from daily reports to near real-time alerts", 
-      "Contributed to third-party API integrations (Meta, Google Ads, Shopify), consolidating data from 3+ platforms into one centralized analytics engine",
+      "Contributed to AI-driven Slack and WhatsApp alerting systems, reducing marketing anomaly detection latency from daily reporting cycles to near-real-time notifications",
+      "Integrated Meta, Google Ads, and Shopify data into a centralized analytics engine, consolidating data from 3+ platforms",
       "Developed automated data pipeline and optimized existing database queries, reducing query time by 15% and improving overall system performance",
     ],
   },
@@ -364,6 +377,33 @@ const projects = [
     imagePath: "/images/project4.webp",
     githubLink: "https://github.com/Sid2169/odin-showcase",
   },
+
+  /* ===== Planned projects (commented out until shipped) ===== */
+  // {
+  //   name: "Enterprise Knowledge AI — RAG & Research Platform",
+  //   description: "Implemented enterprise document intelligence using RAG, hybrid search, reranking, and source-cited answers. Evaluated retrieval and answer quality using faithfulness, relevance, and citation-accuracy metrics. Implemented metadata-filtered vector search and document-level access control.",
+  //   techStack: ["Python", "FastAPI", "LangChain", "PostgreSQL", "pgvector", "Qdrant", "RAGAS"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+  // {
+  //   name: "AI Operations Agent — Tool-Using Workflow Automation",
+  //   description: "Implemented stateful AI agents executing multi-step workflows through tool calling and external API integrations. Added human-in-the-loop approvals, structured outputs, and permission-controlled tool execution. Implemented execution tracing, failure recovery, and task-completion evaluation.",
+  //   techStack: ["Python", "LangGraph", "MCP", "FastAPI", "PostgreSQL"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+  // {
+  //   name: "LLM Gateway — AI Infrastructure & Observability",
+  //   description: "Implemented multi-provider LLM routing with fallback strategies, rate limiting, and inference-cost optimization. Added resilient asynchronous execution with retries, idempotency, and concurrency control. Instrumented latency, token consumption, provider failures, and inference costs.",
+  //   techStack: ["TypeScript", "Node.js", "Express", "PostgreSQL", "Redis", "Inngest", "Docker"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+
   // {
   //   name: "",
   //   description: "",
@@ -386,6 +426,7 @@ export {
   socialImgs,
   techStackIcons,
   techCategories,
+  appliedAIStack,
   corePrimaryStack,
   techStackImgs,
   navLinks,

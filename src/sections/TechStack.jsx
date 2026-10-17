@@ -1,6 +1,6 @@
 "use client"
 import { useRef } from 'react'
-import { techCategories, corePrimaryStack } from '../constants'
+import { techCategories, corePrimaryStack, appliedAIStack } from '../constants'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 
@@ -66,20 +66,76 @@ const TechStack = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            {corePrimaryStack.map((tech) => (
-              <div 
-                key={tech.name} 
-                className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
-              >
-                <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
-                <div>
-                  <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
-                  <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
+          {/* Primary Stack */}
+          <div className="mb-8">
+            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4 text-center">
+              Primary Stack
+            </h4>
+            <div className="grid grid-cols-[repeat(2,minmax(0,10rem))] md:grid-cols-[repeat(5,minmax(0,10rem))] justify-center gap-3">
+              {corePrimaryStack.map((tech) => (
+                <div 
+                  key={tech.name} 
+                  className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
+                >
+                  {tech.iconPath ? (
+                    <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                  ) : (
+                    <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                      <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
+                    </span>
+                  )}
+                  <div>
+                    <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
+                    <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* Applied AI Engineering */}
+          <div>
+            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4 text-center">
+              Applied AI Engineering
+            </h4>
+            <div className="grid grid-cols-[repeat(2,minmax(0,10rem))] md:grid-cols-[repeat(4,minmax(0,10rem))] justify-center gap-3">
+              {appliedAIStack.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
+                >
+                  {skill.iconPaths ? (
+                    <span className="h-8 flex items-center gap-1">
+                      {skill.iconPaths.map((path) => (
+                        <img key={path} src={path} alt={skill.name} className="w-6 h-6 object-contain group-hover:scale-110 transition-transform" />
+                      ))}
+                    </span>
+                  ) : skill.iconPath ? (
+                    <img src={skill.iconPath} alt={skill.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                  ) : (
+                    <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                      <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
+                    </span>
+                  )}
+                  <div>
+                    <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{skill.name}</p>
+                    <span className="text-[10px] text-cyan-400/80 font-medium block">{skill.level}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Supporting Technologies Heading */}
+        <div className="text-center mb-8 md:mb-12">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
+            <span className="text-white">Supporting </span>
+            <span className="text-cyan-400">Technologies & Ecosystem</span>
+          </h3>
+          <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+            Broader tools, libraries, and platforms I bring in to support core application architecture
+          </p>
         </div>
 
         {/* Categorized Tech Stack Grid (2x2 on Desktop) */}

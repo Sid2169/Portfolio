@@ -42,7 +42,7 @@ const Hero = () => {
                             <span className="slide">
                                 <span className="wrapper">
                                     {words.map((word) => (
-                                        <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
+                                        <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2 whitespace-nowrap">
                                             <img 
                                             src={word.imgPath}
                                             alt={word.text}
@@ -58,7 +58,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I&apos;m from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
+                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
