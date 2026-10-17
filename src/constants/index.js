@@ -379,6 +379,33 @@ const projects = [
     imagePath: "/images/project4.webp",
     githubLink: "https://github.com/Sid2169/odin-showcase",
   },
+
+  /* ===== Planned projects (commented out until shipped) ===== */
+  // {
+  //   name: "Enterprise Knowledge AI — RAG & Research Platform",
+  //   description: "Implemented enterprise document intelligence using RAG, hybrid search, reranking, and source-cited answers. Evaluated retrieval and answer quality using faithfulness, relevance, and citation-accuracy metrics. Implemented metadata-filtered vector search and document-level access control.",
+  //   techStack: ["Python", "FastAPI", "LangChain", "PostgreSQL", "pgvector", "Qdrant", "RAGAS"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+  // {
+  //   name: "AI Operations Agent — Tool-Using Workflow Automation",
+  //   description: "Implemented stateful AI agents executing multi-step workflows through tool calling and external API integrations. Added human-in-the-loop approvals, structured outputs, and permission-controlled tool execution. Implemented execution tracing, failure recovery, and task-completion evaluation.",
+  //   techStack: ["Python", "LangGraph", "MCP", "FastAPI", "PostgreSQL"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+  // {
+  //   name: "LLM Gateway — AI Infrastructure & Observability",
+  //   description: "Implemented multi-provider LLM routing with fallback strategies, rate limiting, and inference-cost optimization. Added resilient asynchronous execution with retries, idempotency, and concurrency control. Instrumented latency, token consumption, provider failures, and inference costs.",
+  //   techStack: ["TypeScript", "Node.js", "Express", "PostgreSQL", "Redis", "Inngest", "Docker"],
+  //   liveLink: "https://example.com/PLACEHOLDER",
+  //   imagePath: "/images/project-placeholder.webp",
+  //   githubLink: "https://github.com/PLACEHOLDER",
+  // },
+
   // {
   //   name: "",
   //   description: "",
