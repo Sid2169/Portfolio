@@ -66,12 +66,39 @@ const TechStack = () => {
             </p>
           </div>
 
-          {/* Applied AI Engineering */}
+          {/* Primary Stack */}
           <div className="mb-8">
-            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4">
+            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4 text-center">
+              Primary Stack
+            </h4>
+            <div className="grid grid-cols-[repeat(2,minmax(0,10rem))] md:grid-cols-[repeat(5,minmax(0,10rem))] justify-center gap-3">
+              {corePrimaryStack.map((tech) => (
+                <div 
+                  key={tech.name} 
+                  className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
+                >
+                  {tech.iconPath ? (
+                    <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                  ) : (
+                    <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
+                      <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
+                    </span>
+                  )}
+                  <div>
+                    <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
+                    <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Applied AI Engineering */}
+          <div>
+            <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4 text-center">
               Applied AI Engineering
             </h4>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
+            <div className="grid grid-cols-[repeat(2,minmax(0,10rem))] md:grid-cols-[repeat(4,minmax(0,10rem))] justify-center gap-3">
               {appliedAIStack.map((skill) => (
                 <div
                   key={skill.name}
@@ -97,31 +124,6 @@ const TechStack = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Primary Stack */}
-          <h4 className="text-sm md:text-base font-semibold text-cyan-400 uppercase tracking-wider mb-4">
-            Primary Stack
-          </h4>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
-            {corePrimaryStack.map((tech) => (
-              <div 
-                key={tech.name} 
-                className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
-              >
-                {tech.iconPath ? (
-                  <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
-                ) : (
-                  <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
-                    <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
-                  </span>
-                )}
-                <div>
-                  <p className="text-white text-xs md:text-sm font-bold group-hover:text-cyan-400 transition-colors">{tech.name}</p>
-                  <span className="text-[10px] text-cyan-400/80 font-medium block">{tech.level}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 
