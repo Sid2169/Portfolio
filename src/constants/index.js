@@ -25,11 +25,11 @@ const words = [
   { text: "AI Agents",   imgPath: "/images/logos/ai-agents-dark.svg" },
   { text: "RAG Apps",    imgPath: "/images/logos/rag-dark.svg" },
   { text: "LLM Apps",    imgPath: "/images/logos/claude-dark.svg" },
-  { text: "ML Models",   imgPath: "/images/logos/python.svg" },
+  { text: "AI Gateways",   imgPath: "/images/logos/python.svg" },
   { text: "AI Search",   imgPath: "/images/logos/qdrant.svg" },
   { text: "Voice AI",    imgPath: "/images/logos/elevenlabs-dark.svg" },
   { text: "Workflows",   imgPath: "/images/logos/langgraph-dark.svg" },
-  { text: "SaaS Apps",   imgPath: "/images/logos/nextjs-dark.svg" },
+  { text: "AI SaaS",   imgPath: "/images/logos/nextjs-dark.svg" },
 ];
 
 const logoIconsList = [
