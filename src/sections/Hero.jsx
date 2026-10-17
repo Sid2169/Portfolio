@@ -58,7 +58,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I&apos;m from India — a <strong>Full-Stack Web Dev</strong> specializing in  —  <br/>  <strong>Next.js, TypeScript, Node.js, and AI integration. </strong>
+                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS.
                     </p>
 
                     <div className="flex flex-wrap gap-4">

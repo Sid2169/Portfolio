@@ -9,23 +9,23 @@ const mona = Mona_Sans({
 })
 
 export const metadata = {
-  title: "Siddhartha Suman | Full-Stack Software Engineer",
+  title: "Siddhartha Suman | Applied AI Systems Engineer",
   description:
-    "Full-Stack Software Engineer specializing in Next.js, React, Node.js, TypeScript, and AI integrations. View production projects, work experience, and technical skills.",
+    "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph. View production projects, work experience, and technical skills.",
   icons: {
     icon: "/images/fav.png",
   },
   openGraph: {
     type: "website",
-    title: "Siddhartha Suman | Full-Stack Software Engineer",
+    title: "Siddhartha Suman | Applied AI Systems Engineer",
     description:
-      "Full-Stack Software Engineer specializing in Next.js, React, Node.js, TypeScript, and AI integrations.",
+      "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Siddhartha Suman | Full-Stack Software Engineer",
+    title: "Siddhartha Suman | Applied AI Systems Engineer",
     description:
-      "Full-Stack Software Engineer specializing in Next.js, React, Node.js, TypeScript, and AI integrations.",
+      "Applied AI Systems Engineer building production RAG, agent, and LLM systems with Next.js, TypeScript, Node.js, Python, and LangChain/LangGraph.",
   },
 }
 

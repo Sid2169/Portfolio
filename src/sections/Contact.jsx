@@ -84,7 +84,7 @@ const Contact = () => {
 
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white">Siddhartha Suman</h3>
-                    <p className="text-sm text-cyan-400 font-medium">Full-Stack Web Dev</p>
+                    <p className="text-sm text-cyan-400 font-medium">Applied AI Systems Engineer</p>
                   </div>
                 </div>
 
@@ -266,7 +266,7 @@ const Contact = () => {
             />
             <div className="text-center pb-2">
               <h4 className="text-xl font-bold text-white">Siddhartha Suman</h4>
-              <p className="text-sm text-cyan-400 font-medium">Full-Stack Web Dev</p>
+              <p className="text-sm text-cyan-400 font-medium">Applied AI Systems Engineer</p>
             </div>
           </div>
         </div>
