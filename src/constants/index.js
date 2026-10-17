@@ -93,39 +93,37 @@ const techStackImgs = [
 
 
 const appliedAIStack = [
-  { name: "LLM APIs (Claude, Gemini, OpenAI)", iconPaths: ["/images/logos/claude.svg", "/images/logos/gemini.svg", "/images/logos/openai.svg"] },
-  { name: "RAG", iconPath: "/images/logos/rag.svg" },
-  { name: "AI Agents", iconPath: "/images/logos/ai-agents.svg" },
-  { name: "MCP", iconPath: "/images/logos/mcp.svg" },
-  { name: "Embeddings", iconPath: "/images/logos/embeddings.svg" },
-  { name: "Hybrid Search", iconPath: "/images/logos/hybrid-search.svg" },
-  { name: "Reranking", iconPath: "/images/logos/reranking.svg" },
-  { name: "LLM Evaluation", iconPath: "/images/logos/llm-evaluation.svg" },
+  { name: "LLM APIs (Claude, Gemini, OpenAI)", level: "Provider APIs", iconPaths: ["/images/logos/claude.svg", "/images/logos/gemini.svg", "/images/logos/openai.svg"] },
+  { name: "RAG", level: "Retrieval Pipeline", iconPath: "/images/logos/rag.svg" },
+  { name: "AI Agents", level: "Agentic Workflows", iconPath: "/images/logos/ai-agents.svg" },
+  { name: "MCP", level: "Tool Protocol", iconPath: "/images/logos/mcp.svg" },
+  { name: "Embeddings", level: "Semantic Vectors", iconPath: "/images/logos/embeddings.svg" },
+  { name: "Hybrid Search", level: "Dense + Sparse", iconPath: "/images/logos/hybrid-search.svg" },
+  { name: "Reranking", level: "Result Refinement", iconPath: "/images/logos/reranking.svg" },
+  { name: "LLM Evaluation", level: "Quality & Metrics", iconPath: "/images/logos/llm-evaluation.svg" },
 ];
 
 const corePrimaryStack = [
   { name: "TypeScript", level: "Primary Language", iconPath: "/images/logos/typescript.svg" },
+  { name: "React", level: "UI Library", iconPath: "/images/logos/react.png" },
   { name: "Next.js (App Router)", level: "Primary Framework", iconPath: "/images/logos/nextjs-light.svg" },
-  { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
+  { name: "Node.js", level: "Runtime", iconPath: "/images/logos/node.png" },
   { name: "Express.js", level: "API Framework", iconPath: "/images/logos/express-light.svg" },
-  { name: "LangChain", level: "LLM Orchestration", iconPath: "/images/logos/langchain.svg" },
-  { name: "LangGraph", level: "Agent Workflows", iconPath: "/images/logos/langgraph.svg" },
-  { name: "Qdrant", level: "Vector Database", iconPath: "/images/logos/qdrant.svg" },
-  { name: "pgVector", level: "Vector Store", iconPath: "/images/logos/postgresql.webp" },
+  { name: "PostgreSQL", level: "Database Core", iconPath: "/images/logos/postgresql.webp" },
+  { name: "Python", level: "AI/ML Language", iconPath: "/images/logos/python.svg" },
+  { name: "LangChain", level: "LLM Framework / RAG", iconPath: "/images/logos/langchain.svg" },
+  { name: "LangGraph", level: "Agent Orchestration", iconPath: "/images/logos/langgraph.svg" },
+  { name: "pgVector", level: "Postgres Vector Search", iconPath: "/images/logos/postgresql.webp" },
 ];
 
 const techCategories = [
   {
     title: "Frontend",
     icon: "💻",
-    description: "App Router, Server Components & State Management",
+    description: "Server Components, Server Actions & State Management",
     skills: [
-      { name: "React", iconPath: "/images/logos/react.png" },
-      { name: "Next.js", iconPath: "/images/logos/nextjs-light.svg" },
-      { name: "App Router", iconPath: "/images/logos/nextjs-light.svg" },
       { name: "Server Components", iconPath: "/images/logos/react.png" },
       { name: "Server Actions", iconPath: "/images/logos/react.png" },
-      { name: "TypeScript", iconPath: "/images/logos/typescript.svg" },
       { name: "Tailwind CSS", iconPath: "/images/logos/tailwindcss.svg" },
       { name: "Zustand", iconPath: "/images/logos/zustand.svg" },
     ],
@@ -133,15 +131,13 @@ const techCategories = [
   {
     title: "Backend & Data",
     icon: "⚙️",
-    description: "APIs, Relational & NoSQL Databases",
+    description: "APIs, Relational, NoSQL & Vector Databases",
     skills: [
-      { name: "Node.js", iconPath: "/images/logos/node.png" },
-      { name: "Express", iconPath: "/images/logos/express.svg" },
-      { name: "PostgreSQL", iconPath: "/images/logos/postgresql.webp" },
       { name: "MongoDB", iconPath: "/images/logos/mongodb.svg" },
       { name: "Mongoose", iconPath: "/images/logos/mongodb.svg" },
       { name: "Convex", iconPath: "/images/logos/convex.svg" },
       { name: "Redis", iconPath: "/images/logos/redis.svg" },
+      { name: "Qdrant", iconPath: "/images/logos/qdrant.svg" },
       { name: "pytest", iconPath: "/images/logos/pytest.svg" },
     ],
   },
