@@ -28,9 +28,13 @@ const Contact = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setLoading(true);
+    setSubmitted(false);
 
     try {
       await emailjs.sendForm(
@@ -41,6 +45,8 @@ const Contact = () => {
       );
 
       setForm({ name: "", email: "", message: "" });
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
     } catch (error) {
       console.error("EmailJS Error:", error);
     } finally {
@@ -223,8 +229,13 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
-                  <div className="cta-button group w-full justify-center">
+                {submitted && (
+                  <div className="text-emerald-400 text-sm font-medium text-center">
+                    ✓ Message sent successfully!
+                  </div>
+                )}
+                <button type="submit" disabled={loading}>
+                  <div className={`cta-button group w-full justify-center ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}>
                     <div className="bg-circle" />
                     <p className="text">
                       {loading ? "Sending..." : "Send Message"}
