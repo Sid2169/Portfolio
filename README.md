@@ -84,3 +84,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **routing** — Prefer small, focused changes over broad rewrites.
 - **Vercel deployment** — Note any external service limits or required keys.
 - **routing** — Add a screenshot or example when it clarifies the workflow.
+- **responsive layout** — Use the existing project patterns when extending this area.
