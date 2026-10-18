@@ -82,3 +82,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **project scripts** — Update the documentation if the visible behavior changes.
 - **browser support** — Note any external service limits or required keys.
 - **routing** — Prefer small, focused changes over broad rewrites.
+- **Vercel deployment** — Note any external service limits or required keys.
