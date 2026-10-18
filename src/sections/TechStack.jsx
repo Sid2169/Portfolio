@@ -7,6 +7,8 @@ import { gsap } from 'gsap'
 const TechStack = () => {
   const containerRef = useRef(null)
   const categoryRefs = useRef([])
+  const coreRef = useRef(null)
+  const supportingRef = useRef(null)
 
   useGSAP(() => {
     categoryRefs.current.forEach((card, index) => {
@@ -28,6 +30,40 @@ const TechStack = () => {
         )
       }
     })
+
+    if (coreRef.current) {
+      gsap.fromTo(
+        coreRef.current,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: coreRef.current,
+            start: 'top bottom-=80',
+          },
+        }
+      )
+    }
+
+    if (supportingRef.current) {
+      gsap.fromTo(
+        supportingRef.current,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: supportingRef.current,
+            start: 'top bottom-=80',
+          },
+        }
+      )
+    }
   }, [])
 
   return (
@@ -51,7 +87,9 @@ const TechStack = () => {
         </div>
 
         {/* PRIMARY CORE STACK HIGHLIGHT BANNER */}
-        <div className="mb-10 bg-gradient-to-r from-cyan-950/40 via-gray-900/60 to-purple-950/40 rounded-2xl p-6 md:p-8 border border-cyan-500/30 shadow-xl relative overflow-hidden">
+        <div 
+          ref={coreRef}
+          className="mb-10 bg-gradient-to-r from-cyan-950/40 via-gray-900/60 to-purple-950/40 rounded-2xl p-6 md:p-8 border border-cyan-500/30 shadow-xl relative overflow-hidden">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-2">
@@ -128,7 +166,7 @@ const TechStack = () => {
         </div>
 
         {/* Supporting Technologies Heading */}
-        <div className="text-center mb-8 md:mb-12">
+        <div ref={supportingRef} className="text-center mb-8 md:mb-12">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
             <span className="text-white">Supporting </span>
             <span className="text-cyan-400">Technologies & Ecosystem</span>
