@@ -85,3 +85,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **Vercel deployment** — Note any external service limits or required keys.
 - **routing** — Add a screenshot or example when it clarifies the workflow.
 - **responsive layout** — Use the existing project patterns when extending this area.
+- **environment configuration** — Use the existing project patterns when extending this area.
