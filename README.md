@@ -175,3 +175,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **SEO metadata** — Check the relevant browser or runtime support.
 - **React component structure** — Confirm the expected behavior on a clean checkout.
 - **Vite setup** — Keep commands copy-pasteable for new contributors.
+- **content updates** — Keep the related setup steps aligned with the current scripts.
