@@ -1,11 +1,14 @@
 "use client"
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 import { socialImgs } from "../constants";
 
 const Contact = () => {
   const formRef = useRef(null);
+  const lightboxRef = useRef(null);
+  const lightboxCloseRef = useRef(null);
+  const profileTriggerRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -90,6 +93,50 @@ const Contact = () => {
     }
   };
 
+  useEffect(() => {
+    if (!isImageOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const focusTimer = requestAnimationFrame(() => lightboxCloseRef.current?.focus());
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setIsImageOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusable = lightboxRef.current?.querySelectorAll(
+        'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])'
+      );
+
+      if (!focusable || focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      cancelAnimationFrame(focusTimer);
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      profileTriggerRef.current?.focus();
+    };
+  }, [isImageOpen]);
+
   return (
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
@@ -107,8 +154,19 @@ const Contact = () => {
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div 
-                    className="relative group cursor-pointer shrink-0" 
+                    ref={profileTriggerRef}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="View profile photo"
+                    aria-haspopup="dialog"
+                    className="relative group cursor-pointer shrink-0 rounded-full"
                     onClick={() => setIsImageOpen(true)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        setIsImageOpen(true);
+                      }
+                    }}
                     title="Click to enlarge photo"
                   >
                     <img 
@@ -349,12 +407,20 @@ const Contact = () => {
           onClick={() => setIsImageOpen(false)}
         >
           <div 
+            ref={lightboxRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lightbox-title"
+            aria-describedby="lightbox-description"
             className="relative max-w-md w-full bg-[#1c1c21] border border-cyan-400/30 rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col items-center gap-4"
             onClick={(e) => e.stopPropagation()}
           >
             <button
+              ref={lightboxCloseRef}
+              type="button"
               onClick={() => setIsImageOpen(false)}
               className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-sm font-bold transition-all z-10"
+              aria-label="Close profile photo"
               title="Close"
             >
               ✕
@@ -365,8 +431,8 @@ const Contact = () => {
               className="w-full max-h-[70vh] object-cover rounded-xl border border-white/10"
             />
             <div className="text-center pb-2">
-              <h4 className="text-xl font-bold text-white">Siddhartha Suman</h4>
-              <p className="text-sm text-cyan-400 font-medium">Applied AI Systems Engineer</p>
+              <h4 id="lightbox-title" className="text-xl font-bold text-white">Siddhartha Suman</h4>
+              <p id="lightbox-description" className="text-sm text-cyan-400 font-medium">Applied AI Systems Engineer</p>
             </div>
           </div>
         </div>
