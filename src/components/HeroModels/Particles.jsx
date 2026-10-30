@@ -1,8 +1,28 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
+
+const usePrefersReducedMotion = () => {
+  const [reduced, setReduced] = useState(() =>
+    typeof window !== "undefined" &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handleChange = () => setReduced(mq.matches);
+
+    handleChange();
+    mq.addEventListener("change", handleChange);
+
+    return () => mq.removeEventListener("change", handleChange);
+  }, []);
+
+  return reduced;
+};
 
 const Particles = ({ count = 200 }) => {
   const mesh = useRef();
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const particles = useMemo(() => {
     const temp = [];
@@ -20,6 +40,8 @@ const Particles = ({ count = 200 }) => {
   }, [count]);
 
   useFrame(() => {
+    if (prefersReducedMotion || !mesh.current) return;
+
     const positions = mesh.current.geometry.attributes.position.array;
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];

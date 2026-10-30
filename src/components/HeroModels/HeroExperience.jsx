@@ -60,12 +60,20 @@ const HeroExperience = () => {
 
     gsap.set(group.rotation, { y: ROOM_START_ROTATION_Y });
 
-    roomTweenRef.current = gsap.to(group.rotation, {
-      y: ROOM_START_ROTATION_Y - ROOM_SWING_ANGLE,
-      duration: ROOM_SWING_DURATION,
-      ease: 'sine.inOut',
-      repeat: -1,
-      yoyo: true
+    const mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      roomTweenRef.current = gsap.to(group.rotation, {
+        y: ROOM_START_ROTATION_Y - ROOM_SWING_ANGLE,
+        duration: ROOM_SWING_DURATION,
+        ease: 'sine.inOut',
+        repeat: -1,
+        yoyo: true
+      });
+
+      return () => {
+        roomTweenRef.current = null;
+      };
     });
   }, []);
 

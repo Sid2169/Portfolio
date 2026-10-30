@@ -27,6 +27,27 @@ body {
   font-family: var(--font-mona), "Mona Sans", sans-serif;
 }
 
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent-color) !important;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Custom Subtle & Elegant Scrollbar */
 * {
   scrollbar-width: thin;
@@ -226,6 +247,16 @@ section {
 
           .underline {
             @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full;
+          }
+
+          &.active {
+            span {
+              @apply text-cyan-400;
+            }
+
+            .underline {
+              @apply w-full;
+            }
           }
         }
       }
