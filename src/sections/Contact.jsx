@@ -131,40 +131,50 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* MIDDLE: DIRECT EMAIL BOX WITH COPY BUTTON */}
-              <div className="p-5 rounded-xl bg-[#1c1c21] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3 overflow-hidden w-full">
-                  <div className="p-3 rounded-lg bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 shrink-0">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="min-w-0 overflow-x-auto">
-                    <p className="text-xs text-white-50 font-medium uppercase tracking-wider">Direct Email</p>
-                    <a 
-                      href={`mailto:${emailAddress}`}
-                      className="text-white hover:text-cyan-400 transition-colors font-mono text-sm md:text-base font-semibold whitespace-nowrap inline-block"
-                    >
-                      {emailAddress}
-                    </a>
-                  </div>
+              {/* MIDDLE: DIRECT EMAIL BOX WITH ACTION BUTTONS */}
+              <div className="p-5 rounded-xl bg-[#1c1c21] border border-white/10 flex flex-col gap-4">
+                <div className="min-w-0 overflow-x-auto">
+                  <p className="text-xs text-white-50 font-medium uppercase tracking-wider">Email</p>
+                  <a
+                    href={`mailto:${emailAddress}`}
+                    className="text-white hover:text-cyan-400 transition-colors font-mono text-sm md:text-base font-semibold whitespace-nowrap inline-block"
+                  >
+                    {emailAddress}
+                  </a>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={handleCopyEmail}
-                  className="px-4 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold transition-all shrink-0 flex items-center gap-2"
-                >
-                  {copied ? (
-                    <>
-                      <span className="text-emerald-400">✓ Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>📋 Copy Address</span>
-                    </>
-                  )}
-                </button>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href={`mailto:${emailAddress}`}
+                    className="group flex items-center gap-2 p-2.5 pr-3 rounded-lg bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 shrink-0 hover:bg-cyan-400 hover:text-black hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/25 active:scale-95 transition-all"
+                    title={`Open your email app to write to ${emailAddress}`}
+                    aria-label={`Open email app to write to ${emailAddress}`}
+                  >
+                    <svg className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                    <span className="text-xs font-bold whitespace-nowrap">Email Me</span>
+                    <svg className="w-3.5 h-3.5 shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17L17 7M9 7h8v8" />
+                    </svg>
+                  </a>
+
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="px-4 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold transition-all shrink-0 flex items-center gap-2"
+                  >
+                    {copied ? (
+                      <>
+                        <span className="text-emerald-400">✓ Copied!</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>📋 Copy Address</span>
+                      </>
+                    )}
+                  </button>
+                </div>
               </div>
 
               {/* BOTTOM: LOCATION & SOCIAL PROFILES */}
