@@ -57,6 +57,13 @@ const NavBar = () => {
     }, [isOpen]);
 
     return (
+    <>
+      {isOpen && (
+        <div
+          className="lg:hidden fixed inset-0 z-[90] bg-black/50 backdrop-blur-md"
+          aria-hidden="true"
+        />
+      )}
     <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
         <div className="inner">
             <a href="#hero" className="logo">Siddhartha</a>
@@ -136,6 +143,7 @@ const NavBar = () => {
             </nav>
         )}
     </header>
+    </>
   )
 }
 
