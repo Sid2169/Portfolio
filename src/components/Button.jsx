@@ -18,6 +18,7 @@ const Button = ({ text, className, id, targetId = "work", href, outlined = false
   // Scroll-to-section variant (default)
   return (
     <a
+      href={`#${targetId}`}
       onClick={(e) => {
         e.preventDefault();
         const target = document.getElementById(targetId);
