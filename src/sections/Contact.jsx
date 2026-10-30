@@ -9,6 +9,8 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState({});
+  const [submitError, setSubmitError] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -20,6 +22,25 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+    setFieldErrors((prev) => {
+      if (!prev[name]) return prev;
+      const next = { ...prev };
+      delete next[name];
+      return next;
+    });
+    setSubmitError("");
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!form.name.trim()) errors.name = "Please enter your name.";
+    if (!form.email.trim()) {
+      errors.email = "Please enter your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
+      errors.email = "Please enter a valid email address.";
+    }
+    if (!form.message.trim()) errors.message = "Please enter a message.";
+    return errors;
   };
 
   const handleCopyEmail = () => {
@@ -33,8 +54,20 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (loading) return;
-    setLoading(true);
+
+    setSubmitError("");
     setSubmitted(false);
+
+    const errors = validateForm();
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      const firstInvalid = Object.keys(errors)[0];
+      formRef.current?.querySelector(`[name="${firstInvalid}"]`)?.focus();
+      return;
+    }
+
+    setFieldErrors({});
+    setLoading(true);
 
     try {
       await emailjs.sendForm(
@@ -49,6 +82,9 @@ const Contact = () => {
       setTimeout(() => setSubmitted(false), 4000);
     } catch (error) {
       console.error("EmailJS Error:", error);
+      setSubmitError(
+        "Sorry, your message couldn't be sent. Please try again, or email me directly."
+      );
     } finally {
       setLoading(false);
     }
@@ -195,6 +231,7 @@ const Contact = () => {
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
+                noValidate
                 className="w-full flex flex-col gap-6"
               >
                 <div>
@@ -207,8 +244,19 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What's your name?"
                     required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                    aria-invalid={Boolean(fieldErrors.name)}
+                    aria-describedby={fieldErrors.name ? "name-error" : undefined}
+                    className={`w-full p-4 rounded-lg bg-[#1c1c21] border text-white focus:outline-none transition-colors ${
+                      fieldErrors.name
+                        ? "border-red-400/70 focus:border-red-400"
+                        : "border-white/10 focus:border-cyan-400"
+                    }`}
                   />
+                  {fieldErrors.name && (
+                    <p id="name-error" role="alert" className="mt-1.5 text-xs text-red-400">
+                      {fieldErrors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -221,8 +269,19 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="What's your email address?"
                     required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                    aria-invalid={Boolean(fieldErrors.email)}
+                    aria-describedby={fieldErrors.email ? "email-error" : undefined}
+                    className={`w-full p-4 rounded-lg bg-[#1c1c21] border text-white focus:outline-none transition-colors ${
+                      fieldErrors.email
+                        ? "border-red-400/70 focus:border-red-400"
+                        : "border-white/10 focus:border-cyan-400"
+                    }`}
                   />
+                  {fieldErrors.email && (
+                    <p id="email-error" role="alert" className="mt-1.5 text-xs text-red-400">
+                      {fieldErrors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -235,13 +294,33 @@ const Contact = () => {
                     placeholder="How can I help you?"
                     rows="5"
                     required
-                    className="w-full p-4 rounded-lg bg-[#1c1c21] border border-white/10 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                    aria-invalid={Boolean(fieldErrors.message)}
+                    aria-describedby={fieldErrors.message ? "message-error" : undefined}
+                    className={`w-full p-4 rounded-lg bg-[#1c1c21] border text-white focus:outline-none transition-colors resize-none ${
+                      fieldErrors.message
+                        ? "border-red-400/70 focus:border-red-400"
+                        : "border-white/10 focus:border-cyan-400"
+                    }`}
                   />
+                  {fieldErrors.message && (
+                    <p id="message-error" role="alert" className="mt-1.5 text-xs text-red-400">
+                      {fieldErrors.message}
+                    </p>
+                  )}
                 </div>
 
                 {submitted && (
-                  <div className="text-emerald-400 text-sm font-medium text-center">
+                  <div role="status" aria-live="polite" className="text-emerald-400 text-sm font-medium text-center">
                     ✓ Message sent successfully!
+                  </div>
+                )}
+
+                {submitError && (
+                  <div role="alert" aria-live="assertive" className="rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-300 text-center">
+                    {submitError}{" "}
+                    <a href={`mailto:${emailAddress}`} className="font-semibold underline hover:text-red-200">
+                      {emailAddress}
+                    </a>
                   </div>
                 )}
                 <button type="submit" disabled={loading}>
