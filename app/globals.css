@@ -248,6 +248,16 @@ section {
           .underline {
             @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full;
           }
+
+          &.active {
+            span {
+              @apply text-cyan-400;
+            }
+
+            .underline {
+              @apply w-full;
+            }
+          }
         }
       }
     }

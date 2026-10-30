@@ -8,6 +8,7 @@ const NavBar = () => {
     const menuRef = useRef(null);
     const toggleRef = useRef(null);
     const wasOpenRef = useRef(false);
+    const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,6 +21,42 @@ const NavBar = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     },  [])
+
+    useEffect(() => {
+        const sectionIds = [
+            ...navLinks
+                .filter(({ name }) => name !== "Resume")
+                .map(({ link }) => link.replace("#", "")),
+            "contact",
+        ];
+        const sections = sectionIds
+            .map((id) => document.getElementById(id))
+            .filter(Boolean);
+
+        if (!sections.length) return;
+
+        const handleScroll = () => {
+            const offset = 120;
+            let current = "";
+
+            for (const section of sections) {
+                if (section.getBoundingClientRect().top <= offset) {
+                    current = section.id;
+                }
+            }
+
+            setActiveSection(current);
+        };
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
+    }, [])
 
     useEffect(() => {
         if (!isOpen) return;
@@ -70,21 +107,24 @@ const NavBar = () => {
 
             <nav className="desktop">
                 <ul>
-                    {navLinks.map(({ link, name }) => (
-                        <li key={name} className="group">
-                            {name === "Resume" ? (
-                                <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                                    <span>{name}</span>
-                                    <span className="underline" />
-                                 </a>
-                                ) : (
-                                 <a href={link}>
-                                    <span>{name}</span>
-                                    <span className="underline" />
-                                </a>
-                            )}
-                        </li>
-                    ))}
+                    {navLinks.map(({ link, name }) => {
+                        const isActive = activeSection === link.replace("#", "");
+                        return (
+                            <li key={name} className={`group ${isActive ? "active" : ""}`}>
+                                {name === "Resume" ? (
+                                    <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                        <span>{name}</span>
+                                        <span className="underline" />
+                                     </a>
+                                    ) : (
+                                     <a href={link} aria-current={isActive ? "location" : undefined}>
+                                        <span>{name}</span>
+                                        <span className="underline" />
+                                    </a>
+                                )}
+                            </li>
+                        );
+                    })}
                 </ul>
             </nav>
 
@@ -121,19 +161,26 @@ const NavBar = () => {
                 className="lg:hidden absolute left-0 right-0 top-full mt-3 mx-4 p-6 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl flex flex-col gap-6 animate-fadeIn"
             >
                 <ul className="flex flex-col gap-4">
-                    {navLinks.map(({ link, name }) => (
-                        <li key={name} onClick={() => setIsOpen(false)}>
-                            {name === "Resume" ? (
-                                <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-lg text-white hover:text-cyan-400 transition-colors block font-medium">
-                                    {name}
-                                </a>
-                            ) : (
-                                <a href={link} className="text-lg text-white hover:text-cyan-400 transition-colors block font-medium">
-                                    {name}
-                                </a>
-                            )}
-                        </li>
-                    ))}
+                    {navLinks.map(({ link, name }) => {
+                        const isActive = activeSection === link.replace("#", "");
+                        return (
+                            <li key={name} onClick={() => setIsOpen(false)}>
+                                {name === "Resume" ? (
+                                    <a href={link} download="Siddhartha_Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-lg text-white hover:text-cyan-400 transition-colors block font-medium">
+                                        {name}
+                                    </a>
+                                ) : (
+                                    <a
+                                        href={link}
+                                        aria-current={isActive ? "location" : undefined}
+                                        className={`text-lg hover:text-cyan-400 transition-colors block font-medium ${isActive ? "text-cyan-400" : "text-white"}`}
+                                    >
+                                        {name}
+                                    </a>
+                                )}
+                            </li>
+                        );
+                    })}
                 </ul>
                 <a href="#contact" onClick={() => setIsOpen(false)} className="contact-btn group w-full">
                     <div className="inner w-full text-center py-3">
