@@ -23,7 +23,8 @@ const Button = ({ text, className, id, targetId = "work", href, outlined = false
         e.preventDefault();
         const target = document.getElementById(targetId);
         if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start'});
+          const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start'});
         }
       }}
       className={`${className ?? ''} cta-wrapper`}

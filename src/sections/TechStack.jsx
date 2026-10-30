@@ -11,6 +11,9 @@ const TechStack = () => {
   const supportingRef = useRef(null)
 
   useGSAP(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
     categoryRefs.current.forEach((card, index) => {
       if (card) {
         gsap.fromTo(
@@ -64,6 +67,7 @@ const TechStack = () => {
         }
       )
     }
+    })
   }, [])
 
   return (

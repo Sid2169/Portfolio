@@ -43,12 +43,15 @@ const ShowcaseSection = () => {
   };
 
   useGSAP(() => {
-    // Animate section fade in
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
+    const mm = gsap.matchMedia();
+
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      // Animate section fade in
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5 }
+      );
 
     // Animate title
     gsap.fromTo(
@@ -87,6 +90,7 @@ const ShowcaseSection = () => {
           }
         );
       }
+    });
     });
   }, []);
 
