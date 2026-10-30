@@ -1,10 +1,13 @@
 "use client"
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { navLinks } from '../constants'
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const menuRef = useRef(null);
+    const toggleRef = useRef(null);
+    const wasOpenRef = useRef(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,6 +20,41 @@ const NavBar = () => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     },  [])
+
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') setIsOpen(false);
+        };
+
+        const handlePointerDown = (event) => {
+            const clickedMenu = menuRef.current?.contains(event.target);
+            const clickedToggle = toggleRef.current?.contains(event.target);
+            if (!clickedMenu && !clickedToggle) setIsOpen(false);
+        };
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', handleKeyDown);
+        document.addEventListener('pointerdown', handlePointerDown);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener('keydown', handleKeyDown);
+            document.removeEventListener('pointerdown', handlePointerDown);
+        };
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (isOpen) {
+            wasOpenRef.current = true;
+            menuRef.current?.querySelector('a')?.focus();
+        } else if (wasOpenRef.current) {
+            wasOpenRef.current = false;
+            toggleRef.current?.focus();
+        }
+    }, [isOpen]);
 
     return (
     <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
@@ -52,9 +90,13 @@ const NavBar = () => {
 
                 {/* Mobile Hamburger Toggle */}
                 <button
+                    ref={toggleRef}
+                    type="button"
                     onClick={() => setIsOpen(!isOpen)}
                     className="lg:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors focus:outline-none"
-                    aria-label="Toggle Navigation Menu"
+                    aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                    aria-expanded={isOpen}
+                    aria-controls="mobile-navigation"
                 >
                     <span className={`w-5 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-[2px]' : '-translate-y-1'}`} />
                     <span className={`w-5 h-0.5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0' : 'opacity-100 my-0.5'}`} />
@@ -65,7 +107,12 @@ const NavBar = () => {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-            <div className="lg:hidden absolute left-0 right-0 top-full mt-3 mx-4 p-6 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl flex flex-col gap-6 animate-fadeIn">
+            <nav
+                ref={menuRef}
+                id="mobile-navigation"
+                aria-label="Mobile navigation"
+                className="lg:hidden absolute left-0 right-0 top-full mt-3 mx-4 p-6 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl flex flex-col gap-6 animate-fadeIn"
+            >
                 <ul className="flex flex-col gap-4">
                     {navLinks.map(({ link, name }) => (
                         <li key={name} onClick={() => setIsOpen(false)}>
@@ -86,7 +133,7 @@ const NavBar = () => {
                         <span>Contact Me</span>
                     </div>
                 </a>
-            </div>
+            </nav>
         )}
     </header>
   )
