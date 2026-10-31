@@ -1,6 +1,11 @@
 import { useRef, useMemo, useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
+const SPAWN_Y_MIN = 5;
+const SPAWN_Y_RANGE = 10;
+const INITIAL_Y_MIN = -2;
+const INITIAL_Y_RANGE = 6;
+
 const usePrefersReducedMotion = () => {
   const [reduced, setReduced] = useState(() =>
     typeof window !== "undefined" &&
@@ -30,7 +35,7 @@ const Particles = ({ count = 200 }) => {
       temp.push({
         position: [
           (Math.random() - 0.5) * 10,
-          Math.random() * 10 + 5, // higher starting point
+          Math.random() * SPAWN_Y_RANGE + SPAWN_Y_MIN,
           (Math.random() - 0.5) * 10,
         ],
         speed: 0.005 + Math.random() * 0.001,
@@ -46,18 +51,21 @@ const Particles = ({ count = 200 }) => {
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
       y -= particles[i].speed;
-      if (y < -2) y = Math.random() * 10 + 5;
+      if (y < INITIAL_Y_MIN) y = particles[i].position[1];
       positions[i * 3 + 1] = y;
     }
     mesh.current.geometry.attributes.position.needsUpdate = true;
   });
 
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
-  });
+  const positions = useMemo(() => {
+    const array = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      array[i * 3] = p.position[0];
+      array[i * 3 + 1] = Math.random() * INITIAL_Y_RANGE + INITIAL_Y_MIN;
+      array[i * 3 + 2] = p.position[2];
+    });
+    return array;
+  }, [count, particles]);
 
   return (
     <points ref={mesh} key={count}>

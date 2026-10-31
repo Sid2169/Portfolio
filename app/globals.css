@@ -23,7 +23,6 @@ body {
   overflow-x: hidden;
   background-color: black;
   color: #30b6c0;
-  scroll-behavior: smooth;
   font-family: var(--font-mona), "Mona Sans", sans-serif;
 }
 

@@ -1,4 +1,8 @@
+"use client"
+import { useSmoothScroll } from "./SmoothScroll";
+
 const Button = ({ text, className, id, targetId = "work", href, outlined = false }) => {
+  const { scrollTo } = useSmoothScroll();
 
   // Direct link variant (e.g. Download Resume)
   if (href) {
@@ -22,10 +26,7 @@ const Button = ({ text, className, id, targetId = "work", href, outlined = false
       onClick={(e) => {
         e.preventDefault();
         const target = document.getElementById(targetId);
-        if (target) {
-          const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-          target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start'});
-        }
+        if (target) scrollTo(target);
       }}
       className={`${className ?? ''} cta-wrapper`}
     >

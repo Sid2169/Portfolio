@@ -1,5 +1,7 @@
 import { Mona_Sans } from "next/font/google"
+import "lenis/dist/lenis.css"
 import "./globals.css"
+import SmoothScroll from "../src/components/SmoothScroll"
 
 const mona = Mona_Sans({
   subsets: ["latin"],
@@ -45,7 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={mona.variable}>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   )
 }

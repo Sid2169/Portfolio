@@ -1,8 +1,10 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
 import { navLinks } from '../constants'
+import { useSmoothScroll } from './SmoothScroll'
 
 const NavBar = () => {
+    const { stop: stopScroll, start: startScroll } = useSmoothScroll();
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
@@ -61,6 +63,8 @@ const NavBar = () => {
     useEffect(() => {
         if (!isOpen) return;
 
+        stopScroll();
+
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') setIsOpen(false);
         };
@@ -80,8 +84,9 @@ const NavBar = () => {
             document.body.style.overflow = previousOverflow;
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('pointerdown', handlePointerDown);
+            startScroll();
         };
-    }, [isOpen]);
+    }, [isOpen, stopScroll, startScroll]);
 
     useEffect(() => {
         if (isOpen) {
