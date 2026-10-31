@@ -9,16 +9,16 @@ import Particles from "./Particles.jsx"
 import { useCallback, useEffect, useRef, useState } from "react"
 
 const ROOM_START_ROTATION_Y = -Math.PI / 4
-const ROOM_SWING_ANGLE = Math.PI / 6
-const ROOM_SWING_DURATION = 11
+const SCENE_SWING_ANGLE = Math.PI / 6
+const SCENE_SWING_DURATION = 11
 const TOUCH_DIRECTION_THRESHOLD = 8
 const TOUCH_ROTATION_SPEED = 0.005
 
 const HeroExperience = () => {
   const containerRef = useRef(null);
   const cameraRef = useRef(null);
-  const roomGroupRef = useRef(null);
-  const roomTweenRef = useRef(null);
+  const sceneGroupRef = useRef(null);
+  const sceneTweenRef = useRef(null);
   const touchGestureRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -32,11 +32,11 @@ const HeroExperience = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
 
-        if (roomTweenRef.current) {
+        if (sceneTweenRef.current) {
           if (entry.isIntersecting) {
-            roomTweenRef.current.play();
+            sceneTweenRef.current.play();
           } else {
-            roomTweenRef.current.pause();
+            sceneTweenRef.current.pause();
           }
         }
       },
@@ -55,32 +55,32 @@ const HeroExperience = () => {
   }, []);
 
   useGSAP(() => {
-    const group = roomGroupRef.current;
+    const group = sceneGroupRef.current;
     if (!group) return;
 
-    gsap.set(group.rotation, { y: ROOM_START_ROTATION_Y });
+    gsap.set(group.rotation, { y: 0 });
 
     const mm = gsap.matchMedia();
 
     mm.add('(prefers-reduced-motion: no-preference)', () => {
-      roomTweenRef.current = gsap.to(group.rotation, {
-        y: ROOM_START_ROTATION_Y - ROOM_SWING_ANGLE,
-        duration: ROOM_SWING_DURATION,
+      sceneTweenRef.current = gsap.to(group.rotation, {
+        y: -SCENE_SWING_ANGLE,
+        duration: SCENE_SWING_DURATION,
         ease: 'sine.inOut',
         repeat: -1,
         yoyo: true
       });
 
       return () => {
-        roomTweenRef.current = null;
+        sceneTweenRef.current = null;
       };
     });
   }, []);
 
-  const stopRoomRotation = useCallback(() => {
-    if (roomTweenRef.current) {
-      roomTweenRef.current.kill();
-      roomTweenRef.current = null;
+  const stopSceneRotation = useCallback(() => {
+    if (sceneTweenRef.current) {
+      sceneTweenRef.current.kill();
+      sceneTweenRef.current = null;
     }
   }, []);
 
@@ -134,7 +134,7 @@ const HeroExperience = () => {
         if (Math.max(Math.abs(deltaX), Math.abs(deltaY)) < TOUCH_DIRECTION_THRESHOLD) return;
 
         gesture.direction = Math.abs(deltaX) > Math.abs(deltaY) ? 'horizontal' : 'vertical';
-        if (gesture.direction === 'horizontal') stopRoomRotation();
+        if (gesture.direction === 'horizontal') stopSceneRotation();
       }
 
       if (gesture.direction !== 'horizontal') return;
@@ -161,7 +161,7 @@ const HeroExperience = () => {
       node.removeEventListener('touchend', resetGesture, listenerOptions);
       node.removeEventListener('touchcancel', resetGesture, listenerOptions);
     };
-  }, [isTablet, stopRoomRotation]);
+  }, [isTablet, stopSceneRotation]);
 
   return (
     <div ref={containerRef} data-lenis-prevent-wheel className="w-full h-full">
@@ -182,21 +182,22 @@ const HeroExperience = () => {
            minDistance={5}
            minPolarAngle={Math.PI / 5}
            maxPolarAngle={Math.PI / 2}
-           onStart={stopRoomRotation}
+           onStart={stopSceneRotation}
           />
         )}
 
-        <HeroLights />
+        <group ref={sceneGroupRef}>
+          <HeroLights />
 
-        <Particles count={isMobile ? 40 : 100} />
+          <Particles count={isMobile ? 40 : 100} />
 
-        <group
-         ref={roomGroupRef}
-         scale={isMobile ? 0.7 : 1}
-         position={[0, -3.5, 0]}
-         rotation={[0, ROOM_START_ROTATION_Y, 0]}
-        >
-          <Room />
+          <group
+            scale={isMobile ? 0.7 : 1}
+            position={[0, -3.5, 0]}
+            rotation={[0, ROOM_START_ROTATION_Y, 0]}
+          >
+            <Room />
+          </group>
         </group>
       </Canvas>
     </div>
