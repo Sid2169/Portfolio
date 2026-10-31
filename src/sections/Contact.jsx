@@ -3,8 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 import { socialImgs } from "../constants";
+import { useSmoothScroll } from "../components/SmoothScroll";
 
 const Contact = () => {
+  const { stop: stopScroll, start: startScroll } = useSmoothScroll();
   const formRef = useRef(null);
   const lightboxRef = useRef(null);
   const lightboxCloseRef = useRef(null);
@@ -96,6 +98,9 @@ const Contact = () => {
   useEffect(() => {
     if (!isImageOpen) return;
 
+    stopScroll();
+
+    const trigger = profileTriggerRef.current;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -133,9 +138,10 @@ const Contact = () => {
       cancelAnimationFrame(focusTimer);
       document.body.style.overflow = previousOverflow;
       document.removeEventListener("keydown", handleKeyDown);
-      profileTriggerRef.current?.focus();
+      startScroll();
+      trigger?.focus();
     };
-  }, [isImageOpen]);
+  }, [isImageOpen, stopScroll, startScroll]);
 
   return (
     <section id="contact" className="flex-center section-padding">

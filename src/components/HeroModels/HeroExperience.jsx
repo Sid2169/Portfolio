@@ -164,7 +164,7 @@ const HeroExperience = () => {
   }, [isTablet, stopRoomRotation]);
 
   return (
-    <div ref={containerRef} className="w-full h-full">
+    <div ref={containerRef} data-lenis-prevent-wheel className="w-full h-full">
       <Canvas
         frameloop={isVisible ? "always" : "never"}
         dpr={[1, 1.5]}
