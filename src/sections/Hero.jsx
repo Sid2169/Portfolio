@@ -75,7 +75,7 @@ const Hero = () => {
                                 key={social.name}
                                 href={social.url}
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="noopener"
                                 aria-label={`${social.name === "github" ? "GitHub" : "LinkedIn"} profile`}
                                 className="group w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60"
                             >

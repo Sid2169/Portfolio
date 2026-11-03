@@ -218,7 +218,7 @@ const Contact = () => {
                       key={index}
                       href={social.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                       className="w-10 h-10 rounded-lg bg-[#1c1c21] border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 transition-all group"
                     >
                       <img 

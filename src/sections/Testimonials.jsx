@@ -33,7 +33,7 @@ const Testimonials = ({ initialTestimonials }) => {
                         <div className="flex items-center gap-3">
                             <div>
                                 {testimonial.profileLink ? (
-                                    <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" aria-label={`${testimonial.name} on LinkedIn`} className="inline-block cursor-pointer">
+                                    <a href={testimonial.profileLink} target="_blank" rel="noopener" aria-label={`${testimonial.name} on LinkedIn`} className="inline-block cursor-pointer">
                                         {testimonial.imgPath ? (
                                             <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
                                         ) : (
@@ -57,7 +57,7 @@ const Testimonials = ({ initialTestimonials }) => {
 
                             <div className="flex-1 min-w-0">
                                 {testimonial.profileLink ? (
-                                    <a href={testimonial.profileLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:underline">
+                                    <a href={testimonial.profileLink} target="_blank" rel="noopener" className="flex items-center gap-2 cursor-pointer hover:underline">
                                         <p className="font-bold truncate">{testimonial.name}</p>
                                         <img src="/images/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
                                     </a>
