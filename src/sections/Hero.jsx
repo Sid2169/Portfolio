@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react"
 import dynamic from "next/dynamic"
 import { words, socialImgs } from '../constants/index.js'
 import  Button  from '../components/Button.jsx'
@@ -15,6 +16,7 @@ const heroSocials = socialImgs.filter(
 )
 
 const Hero = () => {
+  const [introExpanded, setIntroExpanded] = useState(false)
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -66,7 +68,21 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS.
+                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate
+                        {!introExpanded && <span aria-hidden="true">...</span>}
+                        <span id="hero-intro-details" hidden={!introExpanded}>
+                            <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS. <br/> At Cosminder Solutions, I build applied AI and ML systems <br/> that turn financial data and market signals into forecasting, <br/> recommendations, and risk insights for SaaS products.
+                        </span>
+                        {" "}
+                        <button
+                            type="button"
+                            onClick={() => setIntroExpanded((prev) => !prev)}
+                            aria-expanded={introExpanded}
+                            aria-controls="hero-intro-details"
+                            className="pointer-events-auto relative z-20 whitespace-nowrap italic font-medium text-white/75 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
+                        >
+                            {introExpanded ? "Read less" : "Read more"}
+                        </button>
                     </p>
 
                     <div className="flex items-center gap-3 relative z-10">
