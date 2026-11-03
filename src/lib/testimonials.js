@@ -9,13 +9,34 @@ export const TESTIMONIALS_TIMEOUT_MS = 20000;
 
 export const TESTIMONIALS_ATTEMPTS = 2;
 
+function normalizeLinkedInUrl(value) {
+  if (typeof value !== "string" || !value.trim()) return value;
+
+  try {
+    const url = new URL(value.trim());
+    if (!/(^|\.)linkedin\.com$/i.test(url.hostname)) return value;
+
+    url.protocol = "https:";
+    url.search = "";
+    url.hash = "";
+
+    if (/^\/in\/[^/]+$/i.test(url.pathname)) {
+      url.pathname = `${url.pathname}/`;
+    }
+
+    return url.toString();
+  } catch {
+    return value;
+  }
+}
+
 export function normalizeTestimonial(item) {
   return {
     id: item.id,
     name: item.name,
     review: item.view,
     designation: item.designation,
-    profileLink: item.linkedin,
+    profileLink: normalizeLinkedInUrl(item.linkedin),
     imgPath: item.photoUrl,
     mentions: item.company,
     companyLink: item.companyUrl ?? item.companyLink,
