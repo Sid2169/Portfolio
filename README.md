@@ -178,3 +178,4 @@ If you are developing a production application, we recommend using TypeScript wi
 - **content updates** — Keep the related setup steps aligned with the current scripts.
 - **content updates** — Keep commands copy-pasteable for new contributors.
 - **asset optimization** — Use the existing project patterns when extending this area.
+- **responsive layout** — Keep the related setup steps aligned with the current scripts.
