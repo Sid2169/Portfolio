@@ -1,6 +1,6 @@
 "use client"
 import dynamic from "next/dynamic"
-import { words } from '../constants/index.js'
+import { words, socialImgs } from '../constants/index.js'
 import  Button  from '../components/Button.jsx'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -8,6 +8,10 @@ import gsap from 'gsap';
 const HeroExperience = dynamic(
   () => import('../components/HeroModels/HeroExperience.jsx'),
   { ssr: false }
+)
+
+const heroSocials = socialImgs.filter(
+  ({ name }) => name === "github" || name === "linkedin"
 )
 
 const Hero = () => {
@@ -64,6 +68,25 @@ const Hero = () => {
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
                         Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS.
                     </p>
+
+                    <div className="flex items-center gap-3 relative z-10">
+                        {heroSocials.map((social) => (
+                            <a
+                                key={social.name}
+                                href={social.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${social.name === "github" ? "GitHub" : "LinkedIn"} profile`}
+                                className="group w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 hover:border-cyan-400/50 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60"
+                            >
+                                <img
+                                    src={social.imgPath}
+                                    alt=""
+                                    className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
+                                />
+                            </a>
+                        ))}
+                    </div>
 
                     <div className="flex flex-wrap gap-4">
                       <Button
