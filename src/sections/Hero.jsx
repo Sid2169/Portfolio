@@ -79,7 +79,7 @@ const Hero = () => {
                             onClick={() => setIntroExpanded((prev) => !prev)}
                             aria-expanded={introExpanded}
                             aria-controls="hero-intro-details"
-                            className="pointer-events-auto relative z-20 whitespace-nowrap italic font-medium text-white/75 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
+                            className="pointer-events-auto relative z-20 appearance-none bg-transparent border-0 p-0 m-0 cursor-pointer whitespace-nowrap italic font-medium text-white/75 underline decoration-solid decoration-1 underline-offset-4 decoration-white/30 [font-family:inherit] [font-size:inherit] [line-height:inherit] [-webkit-tap-highlight-color:transparent] hover:text-white hover:decoration-white/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded-sm"
                         >
                             {introExpanded ? "Read less" : "Read more"}
                         </button>

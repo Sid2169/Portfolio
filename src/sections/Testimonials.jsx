@@ -57,7 +57,7 @@ const Testimonials = ({ initialTestimonials }) => {
 
                             <div className="flex-1 min-w-0">
                                 {testimonial.profileLink ? (
-                                    <a href={testimonial.profileLink} target="_blank" rel="noopener" className="flex items-center gap-2 cursor-pointer hover:underline">
+                                    <a href={testimonial.profileLink} target="_blank" rel="noopener" className="flex items-center gap-2 cursor-pointer decoration-solid decoration-1 underline-offset-4 hover:underline">
                                         <p className="font-bold truncate">{testimonial.name}</p>
                                         <img src="/images/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
                                     </a>
@@ -68,7 +68,7 @@ const Testimonials = ({ initialTestimonials }) => {
                                 <div className="mt-2">
                                     {testimonial.mentions && (
                                         testimonial.companyLink ? (
-                                            <a href={testimonial.companyLink} target="_blank" rel="noopener noreferrer" className="text-white-50 cursor-pointer hover:underline break-all">@{testimonial.mentions.replace(/^@/, '')}</a>
+                                            <a href={testimonial.companyLink} target="_blank" rel="noopener noreferrer" className="text-white-50 cursor-pointer decoration-solid decoration-1 underline-offset-4 hover:underline break-all">@{testimonial.mentions.replace(/^@/, '')}</a>
                                         ) : (
                                             <p className="text-white-50 break-all">@{testimonial.mentions.replace(/^@/, '')}</p>
                                         )

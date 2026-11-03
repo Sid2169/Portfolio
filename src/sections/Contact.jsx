@@ -382,7 +382,7 @@ const Contact = () => {
                 {submitError && (
                   <div role="alert" aria-live="assertive" className="rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-300 text-center">
                     {submitError}{" "}
-                    <a href={`mailto:${emailAddress}`} className="font-semibold underline hover:text-red-200">
+                    <a href={`mailto:${emailAddress}`} className="font-semibold underline decoration-solid decoration-1 underline-offset-4 hover:text-red-200">
                       {emailAddress}
                     </a>
                   </div>
