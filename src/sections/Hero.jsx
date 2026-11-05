@@ -68,10 +68,12 @@ const Hero = () => {
                     </div>
 
                     <p className="text-white/75 md:text-xl relative z-10 pointer-events-none">
-                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br/> I build AI-powered products that turn data into insights and automate
+                        Hi, I&apos;m Siddhartha — an <strong>Applied AI Systems Engineer.</strong> <br className="hidden md:inline" /> I build AI-powered products that
+                        <span className="hidden md:inline"> turn data into insights and<br/>automate workflows</span>
                         {!introExpanded && <span aria-hidden="true">...</span>}
                         <span id="hero-intro-details" hidden={!introExpanded}>
-                            <br/> workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS. <br/> At Cosminder Solutions, I build applied AI and ML systems <br/> that turn financial data and market signals into forecasting, <br/> recommendations, and risk insights for SaaS products.
+                            <span className="hidden md:inline">, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS. <br/> At Cosminder Solutions, I build applied AI and ML systems <br/> that turn financial data and market signals into forecasting, <br/> recommendations, and risk insights for SaaS products.</span>
+                            <span className="md:hidden"> turn data into insights and automate workflows, specializing in <strong>LLMs, RAG &amp; AI agents</strong> for SaaS. At Cosminder Solutions, I build applied AI and ML systems that turn financial data and market signals into forecasting, recommendations, and risk insights for SaaS products.</span>
                         </span>
                         {" "}
                         <button
