@@ -35,7 +35,7 @@ const Testimonials = ({ initialTestimonials }) => {
                                 {testimonial.profileLink ? (
                                     <a href={testimonial.profileLink} target="_blank" rel="noopener" aria-label={`${testimonial.name} on LinkedIn`} className="inline-block cursor-pointer">
                                         {testimonial.imgPath ? (
-                                            <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                                            <img src={testimonial.imgPath} alt={testimonial.name} width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover" />
                                         ) : (
                                             <div className="w-12 h-12 rounded-full bg-black-200 flex items-center justify-center text-white-50 font-bold text-lg" aria-hidden="true">
                                                 {getInitials(testimonial.name)}
@@ -45,7 +45,7 @@ const Testimonials = ({ initialTestimonials }) => {
                                 ) : (
                                     <>
                                         {testimonial.imgPath ? (
-                                            <img src={testimonial.imgPath} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                                            <img src={testimonial.imgPath} alt={testimonial.name} width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 rounded-full object-cover" />
                                         ) : (
                                             <div className="w-12 h-12 rounded-full bg-black-200 flex items-center justify-center text-white-50 font-bold text-lg" aria-hidden="true">
                                                 {getInitials(testimonial.name)}
@@ -59,7 +59,7 @@ const Testimonials = ({ initialTestimonials }) => {
                                 {testimonial.profileLink ? (
                                     <a href={testimonial.profileLink} target="_blank" rel="noopener" className="flex items-center gap-2 cursor-pointer decoration-solid decoration-1 underline-offset-4 hover:underline">
                                         <p className="font-bold truncate">{testimonial.name}</p>
-                                        <img src="/images/linkedin.png" alt="LinkedIn" className="w-4 h-4" />
+                                        <img src="/images/linkedin.png" alt="LinkedIn" loading="lazy" decoding="async" className="w-4 h-4" />
                                     </a>
                                 ) : (
                                     <p className="font-bold truncate">{testimonial.name}</p>

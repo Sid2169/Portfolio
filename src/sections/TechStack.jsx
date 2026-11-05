@@ -120,7 +120,7 @@ const TechStack = () => {
                   className="p-3.5 rounded-xl bg-black/60 border border-cyan-500/20 hover:border-cyan-400 flex flex-col items-center text-center gap-2 transition-all hover:scale-105 group"
                 >
                   {tech.iconPath ? (
-                    <img src={tech.iconPath} alt={tech.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                    <img src={tech.iconPath} alt={tech.name} loading="lazy" decoding="async" className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
                   ) : (
                     <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
                       <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
@@ -149,11 +149,11 @@ const TechStack = () => {
                   {skill.iconPaths ? (
                     <span className="h-8 flex items-center gap-1">
                       {skill.iconPaths.map((path) => (
-                        <img key={path} src={path} alt={skill.name} className="w-6 h-6 object-contain group-hover:scale-110 transition-transform" />
+                        <img key={path} src={path} alt={skill.name} loading="lazy" decoding="async" className="w-6 h-6 object-contain group-hover:scale-110 transition-transform" />
                       ))}
                     </span>
                   ) : skill.iconPath ? (
-                    <img src={skill.iconPath} alt={skill.name} className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
+                    <img src={skill.iconPath} alt={skill.name} loading="lazy" decoding="async" className="w-8 h-8 object-contain group-hover:scale-110 transition-transform" />
                   ) : (
                     <span className="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center">
                       <span className="w-2.5 h-2.5 rounded-full bg-cyan-400" />
@@ -210,7 +210,7 @@ const TechStack = () => {
                       className="inline-flex items-center gap-2 px-3.5 py-2 bg-white/5 border border-white/10 rounded-xl text-xs md:text-sm font-medium text-gray-200 hover:text-white hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:scale-[1.03] transition-all duration-300"
                     >
                       {skill.iconPath ? (
-                        <img src={skill.iconPath} alt={skill.name} className="w-4 h-4 object-contain" />
+                        <img src={skill.iconPath} alt={skill.name} loading="lazy" decoding="async" className="w-4 h-4 object-contain" />
                       ) : (
                         <span className="w-2 h-2 rounded-full bg-cyan-400" />
                       )}

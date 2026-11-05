@@ -176,8 +176,12 @@ const Contact = () => {
                     title="Click to enlarge photo"
                   >
                     <img 
-                      src="/images/siddhartha.webp" 
+                      src="/images/siddhartha-avatar.webp" 
                       alt="Siddhartha Suman" 
+                      width={80}
+                      height={80}
+                      loading="lazy"
+                      decoding="async"
                       className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-cyan-400/50 object-cover shadow-lg group-hover:scale-105 group-hover:border-cyan-400 group-hover:shadow-cyan-400/25 transition-all duration-300"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
@@ -224,6 +228,8 @@ const Contact = () => {
                       <img 
                         src={social.imgPath} 
                         alt={social.name} 
+                        loading="lazy"
+                        decoding="async"
                         className="w-5 h-5 object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
                       />
                     </a>
@@ -394,7 +400,7 @@ const Contact = () => {
                       {loading ? "Sending..." : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
+                      <img src="/images/arrow-down.svg" alt="arrow" loading="lazy" decoding="async" />
                     </div>
                   </div>
                 </button>

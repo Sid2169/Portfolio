@@ -16,7 +16,7 @@ const Footer = () => {
               key={index}
             >
                 <div className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
+              <img src={socialImg.imgPath} alt="social icon" loading="lazy" decoding="async" />
             </div>
             </a>
           ))}

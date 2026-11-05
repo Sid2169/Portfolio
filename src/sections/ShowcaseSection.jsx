@@ -142,6 +142,10 @@ const ShowcaseSection = () => {
                     <img
                       src={project.imagePath}
                       alt={project.name}
+                      width={1360}
+                      height={768}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover/image:scale-105 group-hover:scale-105 transition-transform duration-500"
                     />
 
@@ -154,6 +158,10 @@ const ShowcaseSection = () => {
                     <img
                       src={project.imagePath}
                       alt={project.name}
+                      width={1360}
+                      height={768}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
@@ -209,7 +217,7 @@ const ShowcaseSection = () => {
                           className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-gray-300 hover:text-white hover:border-cyan-500/40 hover:bg-cyan-500/10 transition-all duration-300"
                         >
                           {iconPath ? (
-                            <img src={iconPath} alt={tech} className="w-3.5 h-3.5 object-contain" />
+                            <img src={iconPath} alt={tech} loading="lazy" decoding="async" className="w-3.5 h-3.5 object-contain" />
                           ) : (
                             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                           )}

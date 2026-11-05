@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
         <div className="absolute top-0 left-0 z-0">
-            <img src="/images/bg.webp" alt="background"/>
+            <img src="/images/bg.webp" alt="background" width={418} height={327} fetchPriority="high" decoding="async" />
         </div>
 
         <div className="hero-layout">
