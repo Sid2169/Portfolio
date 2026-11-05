@@ -1,15 +1,10 @@
 "use client"
 import { useState } from "react"
-import dynamic from "next/dynamic"
 import { words, socialImgs } from '../constants/index.js'
 import  Button  from '../components/Button.jsx'
+import HeroScene from '../components/HeroModels/HeroScene.jsx'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
-const HeroExperience = dynamic(
-  () => import('../components/HeroModels/HeroExperience.jsx'),
-  { ssr: false }
-)
 
 const heroSocials = socialImgs.filter(
   ({ name }) => name === "github" || name === "linkedin"
@@ -124,7 +119,7 @@ const Hero = () => {
             {/*RIGHT: 3D MODEL */}
             <figure>
                 <div className="hero-3d-layout">
-                    <HeroExperience />
+                    <HeroScene />
                 </div>
             </figure>
         </div>
