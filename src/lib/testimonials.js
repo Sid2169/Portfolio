@@ -5,9 +5,9 @@ export const TESTIMONIALS_QUERY = "sort=newest&page=1&limit=6";
 
 export const TESTIMONIALS_REVALIDATE = 300;
 
-export const TESTIMONIALS_TIMEOUT_MS = 20000;
+export const TESTIMONIALS_TIMEOUT_MS = 4000;
 
-export const TESTIMONIALS_ATTEMPTS = 2;
+export const TESTIMONIALS_ATTEMPTS = 1;
 
 function normalizeLinkedInUrl(value) {
   if (typeof value !== "string" || !value.trim()) return value;
@@ -61,11 +61,10 @@ const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * between the server and the client, so nothing below it can move.
  *
  * The upstream is a Render free-tier service, so it can be asleep and take tens
- * of seconds to wake up. Regeneration happens in the background (ISR serves
- * the cached page immediately), which makes a generous timeout free, and one
- * retry covers most cold starts. Returning null instead of throwing keeps the
- * page renderable: the caller falls back to the bundled testimonials and the
- * next successful revalidation picks the live list back up.
+ * of seconds to wake up. The first render must not wait that long, so the fetch
+ * is bounded and the bundled testimonials are used as the fallback; the next
+ * successful revalidation picks the live list back up. Returning null instead
+ * of throwing keeps the page renderable.
  */
 export async function getTestimonials() {
   const url = `${TESTIMONIALS_API_BASE}/api/testimonials?${TESTIMONIALS_QUERY}`;
