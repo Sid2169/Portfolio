@@ -13,15 +13,26 @@ const NavBar = () => {
     const [activeSection, setActiveSection] = useState("");
 
     useEffect(() => {
-        const handleScroll = () => {
+        let frame = 0;
+
+        const updateScrolled = () => {
+            frame = 0;
             const isScrolled = window.scrollY > 10;
             setScrolled(prev => prev !== isScrolled ? isScrolled : prev);
         };
 
-        handleScroll() //Initial Check
-        window.addEventListener('scroll', handleScroll);
+        const handleScroll = () => {
+            if (frame) return;
+            frame = window.requestAnimationFrame(updateScrolled);
+        };
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        handleScroll() //Initial Check
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            if (frame) window.cancelAnimationFrame(frame);
+            window.removeEventListener('scroll', handleScroll);
+        };
     },  [])
 
     useEffect(() => {
@@ -37,7 +48,10 @@ const NavBar = () => {
 
         if (!sections.length) return;
 
-        const handleScroll = () => {
+        let frame = 0;
+
+        const updateActiveSection = () => {
+            frame = 0;
             const offset = 120;
             let current = "";
 
@@ -50,11 +64,17 @@ const NavBar = () => {
             setActiveSection(current);
         };
 
+        const handleScroll = () => {
+            if (frame) return;
+            frame = window.requestAnimationFrame(updateActiveSection);
+        };
+
         handleScroll();
         window.addEventListener('scroll', handleScroll, { passive: true });
         window.addEventListener('resize', handleScroll);
 
         return () => {
+            if (frame) window.cancelAnimationFrame(frame);
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleScroll);
         };

@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 import { socialImgs } from "../constants";
 import { useSmoothScroll } from "../components/SmoothScroll";
@@ -75,6 +74,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
+      const { default: emailjs } = await import("@emailjs/browser");
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_APP_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_APP_EMAILJS_TEMPLATE_ID,
