@@ -1,215 +1,93 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1>Siddhartha Suman</h1>
 
-Currently, two official plugins are available:
+**Applied AI Systems Engineer** building production RAG, agent, and LLM systems.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a href="https://sidsingh.vercel.app/">
+  <img src="https://img.shields.io/badge/View_Live_Portfolio-46E3B7?style=for-the-badge&logo=vercel&logoColor=black" alt="View live portfolio" />
+</a>
+<a href="https://www.linkedin.com/in/siddhartha-suman-952a64256/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+<a href="https://github.com/Sid2169">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="https://x.com/Singh_Sid2169">
+  <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" />
+</a>
 
-## React Compiler
+<sub>Next.js · React Three Fiber · GSAP · Tailwind CSS · Vercel</sub>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## The short version
 
-## Additional Notes
+I build AI products that survive production: RAG pipelines, agentic workflows, and LLM applications with interfaces people actually want to use. This is the source for the portfolio that shows the work.
 
-- **build output** — Check the required environment values before deploying.
-- **React component structure** — Include a short reproduction step when reporting issues.
-- **image loading** — Verify the change in both development and production builds.
-- **performance checks** — Check that metadata changes are reflected in the deployed preview.
-- **styling conventions** — Use the existing project patterns when extending this area.
-- **environment configuration** — Confirm the expected behavior on a clean checkout.
-- **Vercel deployment** — Document any manual steps that cannot be automated.
-- **image loading** — Verify that links and references still resolve.
-- **Vite setup** — Verify the change in both development and production builds.
-- **routing** — Include a short reproduction step when reporting issues.
-- **Vercel deployment** — Verify that links and references still resolve.
-- **Vite setup** — Check the relevant browser or runtime support.
-- **performance checks** — Prefer small, focused changes over broad rewrites.
-- **accessibility** — Document any manual steps that cannot be automated.
-- **performance checks** — Add a screenshot or example when it clarifies the workflow.
-- **project scripts** — Check the relevant browser or runtime support.
-- **error states** — Add a screenshot or example when it clarifies the workflow.
-- **error states** — Note any external service limits or required keys.
-- **build output** — Add a screenshot or example when it clarifies the workflow.
-- **content updates** — Document any manual steps that cannot be automated.
-- **SEO metadata** — Verify that links and references still resolve.
-- **navigation** — Update the documentation if the visible behavior changes.
-- **build output** — Keep the terminology consistent with the rest of the project.
-- **styling conventions** — Verify the change in both development and production builds.
-- **browser support** — Keep the terminology consistent with the rest of the project.
-- **asset optimization** — Add a screenshot or example when it clarifies the workflow.
-- **accessibility** — Prefer small, focused changes over broad rewrites.
-- **performance checks** — Note any external service limits or required keys.
-- **SEO metadata** — Add a screenshot or example when it clarifies the workflow.
-- **navigation** — Keep the terminology consistent with the rest of the project.
-- **content updates** — Confirm the layout at mobile, tablet, and desktop widths.
-- **environment configuration** — Add a screenshot or example when it clarifies the workflow.
-- **project scripts** — Verify that links and references still resolve.
-- **error states** — Keep the terminology consistent with the rest of the project.
-- **content updates** — Check that metadata changes are reflected in the deployed preview.
-- **project scripts** — Keep the terminology consistent with the rest of the project.
-- **environment configuration** — Keep commands copy-pasteable for new contributors.
-- **content updates** — Check the required environment values before deploying.
-- **Vercel deployment** — Verify the change in both development and production builds.
-- **navigation** — Document any manual steps that cannot be automated.
-- **accessibility** — Keep commands copy-pasteable for new contributors.
-- **accessibility** — Include a short reproduction step when reporting issues.
-- **build output** — Keep commands copy-pasteable for new contributors.
-- **styling conventions** — Verify that links and references still resolve.
-- **routing** — Keep commands copy-pasteable for new contributors.
-- **Vercel deployment** — Keep the terminology consistent with the rest of the project.
-- **accessibility** — Confirm the layout at mobile, tablet, and desktop widths.
-- **styling conventions** — Keep the terminology consistent with the rest of the project.
-- **browser support** — Update the documentation if the visible behavior changes.
-- **Vite setup** — Add a screenshot or example when it clarifies the workflow.
-- **browser support** — Keep commands copy-pasteable for new contributors.
-- **SEO metadata** — Note any external service limits or required keys.
-- **Vite setup** — Confirm the expected behavior on a clean checkout.
-- **error states** — Update the documentation if the visible behavior changes.
-- **Vite setup** — Keep the related setup steps aligned with the current scripts.
-- **React component structure** — Add a screenshot or example when it clarifies the workflow.
-- **navigation** — Check that metadata changes are reflected in the deployed preview.
-- **React component structure** — Keep the related setup steps aligned with the current scripts.
-- **routing** — Verify that links and references still resolve.
-- **routing** — Verify the change in both development and production builds.
-- **routing** — Use the existing project patterns when extending this area.
-- **performance checks** — Keep commands copy-pasteable for new contributors.
-- **project scripts** — Update the documentation if the visible behavior changes.
-- **browser support** — Note any external service limits or required keys.
-- **routing** — Prefer small, focused changes over broad rewrites.
-- **Vercel deployment** — Note any external service limits or required keys.
-- **routing** — Add a screenshot or example when it clarifies the workflow.
-- **responsive layout** — Use the existing project patterns when extending this area.
-- **environment configuration** — Use the existing project patterns when extending this area.
-- **Vercel deployment** — Confirm the expected behavior on a clean checkout.
-- **browser support** — Confirm the layout at mobile, tablet, and desktop widths.
-- **performance checks** — Document any manual steps that cannot be automated.
-- **routing** — Check that metadata changes are reflected in the deployed preview.
-- **React component structure** — Confirm the layout at mobile, tablet, and desktop widths.
-- **responsive layout** — Add a screenshot or example when it clarifies the workflow.
-- **error states** — Check the relevant browser or runtime support.
-- **performance checks** — Check the relevant browser or runtime support.
-- **navigation** — Add a screenshot or example when it clarifies the workflow.
-- **Vite setup** — Note any external service limits or required keys.
-- **project scripts** — Include a short reproduction step when reporting issues.
-- **navigation** — Check the relevant browser or runtime support.
-- **environment configuration** — Note any external service limits or required keys.
-- **responsive layout** — Prefer small, focused changes over broad rewrites.
-- **React component structure** — Verify that links and references still resolve.
-- **performance checks** — Keep the related setup steps aligned with the current scripts.
-- **responsive layout** — Include a short reproduction step when reporting issues.
-- **asset optimization** — Keep the terminology consistent with the rest of the project.
-- **project scripts** — Confirm the expected behavior on a clean checkout.
-- **Vercel deployment** — Check that metadata changes are reflected in the deployed preview.
-- **browser support** — Verify the change in both development and production builds.
-- **error states** — Keep commands copy-pasteable for new contributors.
-- **environment configuration** — Prefer small, focused changes over broad rewrites.
-- **build output** — Keep the related setup steps aligned with the current scripts.
-- **accessibility** — Use the existing project patterns when extending this area.
-- **performance checks** — Confirm the layout at mobile, tablet, and desktop widths.
-- **asset optimization** — Confirm the layout at mobile, tablet, and desktop widths.
-- **SEO metadata** — Keep commands copy-pasteable for new contributors.
-- **responsive layout** — Confirm the layout at mobile, tablet, and desktop widths.
-- **environment configuration** — Keep the related setup steps aligned with the current scripts.
-- **accessibility** — Check the relevant browser or runtime support.
-- **responsive layout** — Check the required environment values before deploying.
-- **responsive layout** — Document any manual steps that cannot be automated.
-- **SEO metadata** — Prefer small, focused changes over broad rewrites.
-- **content updates** — Prefer small, focused changes over broad rewrites.
-- **asset optimization** — Check that metadata changes are reflected in the deployed preview.
-- **image loading** — Note any external service limits or required keys.
-- **React component structure** — Keep commands copy-pasteable for new contributors.
-- **content updates** — Note any external service limits or required keys.
-- **Vite setup** — Prefer small, focused changes over broad rewrites.
-- **image loading** — Include a short reproduction step when reporting issues.
-- **React component structure** — Use the existing project patterns when extending this area.
-- **project scripts** — Keep the related setup steps aligned with the current scripts.
-- **routing** — Update the documentation if the visible behavior changes.
-- **browser support** — Prefer small, focused changes over broad rewrites.
-- **build output** — Use the existing project patterns when extending this area.
-- **content updates** — Add a screenshot or example when it clarifies the workflow.
-- **build output** — Document any manual steps that cannot be automated.
-- **Vercel deployment** — Prefer small, focused changes over broad rewrites.
-- **browser support** — Check the required environment values before deploying.
-- **Vercel deployment** — Include a short reproduction step when reporting issues.
-- **build output** — Update the documentation if the visible behavior changes.
-- **SEO metadata** — Keep the terminology consistent with the rest of the project.
-- **accessibility** — Note any external service limits or required keys.
-- **SEO metadata** — Check that metadata changes are reflected in the deployed preview.
-- **navigation** — Check the required environment values before deploying.
-- **image loading** — Prefer small, focused changes over broad rewrites.
-- **Vite setup** — Include a short reproduction step when reporting issues.
-- **build output** — Verify the change in both development and production builds.
-- **image loading** — Keep commands copy-pasteable for new contributors.
-- **routing** — Check the required environment values before deploying.
-- **content updates** — Verify the change in both development and production builds.
-- **content updates** — Include a short reproduction step when reporting issues.
-- **asset optimization** — Keep commands copy-pasteable for new contributors.
-- **React component structure** — Check the required environment values before deploying.
-- **routing** — Keep the terminology consistent with the rest of the project.
-- **accessibility** — Add a screenshot or example when it clarifies the workflow.
-- **image loading** — Check the relevant browser or runtime support.
-- **responsive layout** — Verify that links and references still resolve.
-- **accessibility** — Keep the related setup steps aligned with the current scripts.
-- **environment configuration** — Check that metadata changes are reflected in the deployed preview.
-- **error states** — Verify that links and references still resolve.
-- **image loading** — Check the required environment values before deploying.
-- **project scripts** — Confirm the layout at mobile, tablet, and desktop widths.
-- **build output** — Confirm the expected behavior on a clean checkout.
-- **image loading** — Check that metadata changes are reflected in the deployed preview.
-- **build output** — Confirm the layout at mobile, tablet, and desktop widths.
-- **image loading** — Keep the related setup steps aligned with the current scripts.
-- **navigation** — Keep commands copy-pasteable for new contributors.
-- **error states** — Confirm the layout at mobile, tablet, and desktop widths.
-- **responsive layout** — Verify the change in both development and production builds.
-- **performance checks** — Update the documentation if the visible behavior changes.
-- **SEO metadata** — Document any manual steps that cannot be automated.
-- **content updates** — Use the existing project patterns when extending this area.
-- **SEO metadata** — Include a short reproduction step when reporting issues.
-- **build output** — Verify that links and references still resolve.
-- **SEO metadata** — Check the relevant browser or runtime support.
-- **React component structure** — Confirm the expected behavior on a clean checkout.
-- **Vite setup** — Keep commands copy-pasteable for new contributors.
-- **content updates** — Keep the related setup steps aligned with the current scripts.
-- **content updates** — Keep commands copy-pasteable for new contributors.
-- **asset optimization** — Use the existing project patterns when extending this area.
-- **responsive layout** — Keep the related setup steps aligned with the current scripts.
-- **React component structure** — Check that metadata changes are reflected in the deployed preview.
-- **project scripts** — Use the existing project patterns when extending this area.
-- **styling conventions** — Update the documentation if the visible behavior changes.
-- **browser support** — Verify that links and references still resolve.
-- **accessibility** — Verify the change in both development and production builds.
-- **Vite setup** — Verify that links and references still resolve.
-- **SEO metadata** — Confirm the layout at mobile, tablet, and desktop widths.
-- **error states** — Use the existing project patterns when extending this area.
-- **responsive layout** — Keep commands copy-pasteable for new contributors.
-- **navigation** — Verify that links and references still resolve.
-- **responsive layout** — Confirm the expected behavior on a clean checkout.
-- **React component structure** — Prefer small, focused changes over broad rewrites.
-- **browser support** — Check the relevant browser or runtime support.
-- **content updates** — Check the relevant browser or runtime support.
-- **SEO metadata** — Keep the related setup steps aligned with the current scripts.
-- **browser support** — Add a screenshot or example when it clarifies the workflow.
-- **routing** — Note any external service limits or required keys.
-- **routing** — Confirm the expected behavior on a clean checkout.
-- **project scripts** — Check that metadata changes are reflected in the deployed preview.
-- **SEO metadata** — Use the existing project patterns when extending this area.
-- **error states** — Prefer small, focused changes over broad rewrites.
-- **navigation** — Include a short reproduction step when reporting issues.
-- **asset optimization** — Include a short reproduction step when reporting issues.
-- **environment configuration** — Check the relevant browser or runtime support.
-- **navigation** — Confirm the expected behavior on a clean checkout.
-- **environment configuration** — Document any manual steps that cannot be automated.
-- **asset optimization** — Verify that links and references still resolve.
-- **browser support** — Check that metadata changes are reflected in the deployed preview.
-- **SEO metadata** — Confirm the expected behavior on a clean checkout.
-- **styling conventions** — Check that metadata changes are reflected in the deployed preview.
-- **error states** — Document any manual steps that cannot be automated.
-- **asset optimization** — Confirm the expected behavior on a clean checkout.
-- **responsive layout** — Keep the terminology consistent with the rest of the project.
-- **styling conventions** — Check the relevant browser or runtime support.
+**Live:** [sidsingh.vercel.app](https://sidsingh.vercel.app/)
+
+## What's inside
+
+- **3D hero** — a custom React Three Fiber room, deferred until after page load so it never blocks the first paint.
+- **Selected work** — shipped projects with live demos, source code, and the stack behind each one.
+- **Experience** — outcomes and numbers, not a list of responsibilities.
+- **Testimonials** — server-rendered from a live API, so the section is in the initial HTML.
+- **Contact** — EmailJS form plus direct email and social channels.
+
+## Stack
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+## Selected work
+
+| Project | Stack | Links |
+| --- | --- | --- |
+| **Turbo** — AI code editor in the browser | Next.js 16 · Convex · Inngest · Vercel AI SDK | [Live](https://turbo-navy-iota.vercel.app/) · [Code](https://github.com/Sid2169/turbo) |
+| **DeepRead** — voice-first reading assistant | Next.js 16 · Gemini · Vapi · ElevenLabs | [Live](https://deep-read-ai-lac.vercel.app/) · [Code](https://github.com/Sid2169/DeepReadAI) |
+| **Odin Showcase** — project archive | React 19 · Vite · TypeScript | [Live](https://sid2169.github.io/odin-showcase/) · [Code](https://github.com/Sid2169/odin-showcase) |
+
+## Lighthouse
+
+| Performance | Accessibility | Best Practices | SEO |
+| :---: | :---: | :---: | :---: |
+| **100** desktop · **89** mobile | **98** | **100** | **100** |
+
+## Run locally
+
+```bash
+git clone https://github.com/Sid2169/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
+
+Open [localhost:3000](http://localhost:3000). For the contact form, create `.env.local`:
+
+```bash
+NEXT_PUBLIC_APP_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_APP_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_APP_EMAILJS_PUBLIC_KEY=
+```
+
+Production check:
+
+```bash
+npm run build
+npm start
+```
+
+All page copy and project data live in `src/constants/index.js`. No CMS, no database—just fast, static content with live testimonials.
+
+---
+
+<div align="center">
+<sub>Built by Siddhartha Suman · <a href="https://sidsingh.vercel.app/">Live site</a> · <a href="https://github.com/Sid2169">GitHub</a></sub>
+</div>
