@@ -9,6 +9,11 @@ import GlowCard from "../components/GlowCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const expImageDimensions = {
+  "/images/exp-cosminder.svg": { width: 140, height: 36 },
+  "/images/exp-grippi.png": { width: 426, height: 108 },
+};
+
 const ExperienceSection = () => {
   useGSAP(() => {
     const mm = gsap.matchMedia();
@@ -82,7 +87,7 @@ const ExperienceSection = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" loading="lazy" decoding="async" className="max-w-[140px] h-auto object-contain" />
+                      <img src={card.imgPath} alt="exp-img" width={expImageDimensions[card.imgPath]?.width} height={expImageDimensions[card.imgPath]?.height} loading="lazy" decoding="async" className="max-w-[140px] h-auto object-contain" />
                     </div>
                   </GlowCard>
                 </div>
