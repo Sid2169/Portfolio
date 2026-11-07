@@ -128,7 +128,15 @@ const NavBar = () => {
       )}
     <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
         <div className="inner">
-            <a href="#hero" className="logo">Siddhartha</a>
+            <a href="#hero" className="logo" aria-label="Siddhartha — home" onClick={() => setIsOpen(false)}>
+                <img
+                    src="/images/siddhartha-wordmark.svg"
+                    alt="Siddhartha"
+                    width="314"
+                    height="84"
+                    className="logo-wordmark"
+                />
+            </a>
 
             <nav className="desktop">
                 <ul>

@@ -224,9 +224,11 @@ section {
     }
 
     .logo {
-      @apply text-cyan-400 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply inline-flex min-h-11 shrink-0 items-center rounded-sm transition-opacity duration-300 hover:opacity-80;
+    }
 
-      font-family: var(--logo-font);
+    .logo-wordmark {
+      @apply block h-auto w-[112px] md:w-[134px];
     }
 
     nav.desktop {
