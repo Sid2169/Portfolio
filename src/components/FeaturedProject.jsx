@@ -33,8 +33,9 @@ const FeaturedProject = ({ project, index, total, reverse = false }) => {
   const totalNumber = String(total).padStart(2, "0");
 
   return (
-    <article className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-      <div className={reverse ? "lg:order-2" : ""}>
+    <article className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-16">
+      <div className={`contents lg:block ${reverse ? "lg:order-2" : ""}`}>
+        <div className="order-1">
         <p className="flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-[0.16em] text-gray-500">
           <span className="text-cyan-400">{buildNumber}</span>
           <span className="h-px w-8 bg-gray-700" aria-hidden="true" />
@@ -43,7 +44,9 @@ const FeaturedProject = ({ project, index, total, reverse = false }) => {
         <h3 className="mt-5 text-3xl font-bold tracking-tight text-white [text-wrap:balance] md:text-4xl lg:text-5xl">
           {project.name}
         </h3>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-400">
+        </div>
+        <div className="order-3">
+        <p className="max-w-2xl text-base leading-relaxed text-gray-400 lg:mt-5">
           {project.description}
         </p>
 
@@ -96,11 +99,12 @@ const FeaturedProject = ({ project, index, total, reverse = false }) => {
             </a>
           )}
         </div>
+        </div>
       </div>
 
       <div
-        className={`group/browser overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/60 shadow-2xl shadow-black/40 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 ${
-          reverse ? "lg:order-1" : ""
+        className={`group/browser order-2 min-w-0 w-full overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/60 shadow-2xl shadow-black/40 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 ${
+          reverse ? "lg:order-1" : "lg:order-2"
         }`}
       >
         <div className="flex items-center gap-3 border-b border-gray-800/80 bg-gray-900/80 px-4 py-3">
