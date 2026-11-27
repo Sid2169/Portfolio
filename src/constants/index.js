@@ -346,6 +346,16 @@ const socialImgs = [
 
 const projects = [
   {
+    name: "CSE27 — UPSC Civil Services Study Workspace",
+    description: "A UPSC CSE 2027 study workspace with a public chapter reader, searchable study library, and Mathematics optional material. Private tools include bookmarks, highlights, notes, completion quizzes, timed exam simulations, progress tracking, and scheduled revisions.",
+    techStack: ["Next.js", "React", "TypeScript", "Supabase", "Inngest", "Tailwind CSS"],
+    liveLink: "https://cse27.vercel.app/",
+    imagePath: "/images/projects/cse27.jpg",
+    githubLink: "https://github.com/Sid2169/cse27",
+    publishedDate: "2026-11-28",
+    featured: true,
+  },
+  {
     name: "Turbo - AI Code Editor(Web)",
     description: "A full-stack, browser-based AI code editor powered by WebContainers — runs Node.js entirely in the browser with zero backend. Streams AI responses token-by-token, uses Inngest for durable background job orchestration, and supports real-time multi-user state. Built to handle concurrent sessions with no cold-start latency.",
     techStack: ["Next.js 16", "Convex", "Inngest", "Vercel AI SDK", "WebContainer API"],
@@ -373,18 +383,7 @@ const projects = [
     imagePath: "/images/project4.webp",
     githubLink: "https://github.com/Sid2169/odin-showcase",
     publishedDate: "2026-09-21",
-    featured: true,
-  },
-  {
-    name: "UPSC CSE 2027 — Complete Preparation Guide",
-    description: "A complete, self-study preparation guide for the UPSC Civil Services Examination 2027. Covers every Prelims and Mains paper with syllabi, phased curricula, previous-year questions, tests, and answer-writing practice — including the Mathematics optional.",
-    techStack: ["Markdown", "Git", "Curriculum Design"],
-    liveLink: "https://github.com/Sid2169/cse27",
-    imagePath: "/images/projects/cse27.svg",
-    linkLabel: "View Repo",
-    publishedDate: "2026-11-28",
     featured: false,
-    upcoming: true,
   },
   {
     name: "MLPy — Python for Applied AI and Backend Engineering",
