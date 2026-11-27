@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { projects } from "../constants";
 import FeaturedProject from "../components/FeaturedProject";
 import ProjectCard from "../components/ProjectCard";
+import featuredStyles from "../components/FeaturedProject.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,12 +131,12 @@ const ShowcaseSection = () => {
         </div>
 
         {/* Featured Projects */}
-        <div className="space-y-16 lg:space-y-20">
+        <div className={featuredStyles.list}>
           {featuredProjects.map((project, index) => (
             <div
               key={project.name}
               ref={(el) => (featuredRefs.current[index] = el)}
-              className={index > 0 ? "border-t border-gray-800/60 pt-16 lg:pt-20" : ""}
+              className={featuredStyles.item}
             >
               <FeaturedProject
                 project={project}
